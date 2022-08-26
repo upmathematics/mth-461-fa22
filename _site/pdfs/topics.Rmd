@@ -1,0 +1,89 @@
+---
+title: '**Tentative Topics Schedule**'
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461 Probability \& Statistics I - Syllabus}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: yes
+    number_section: no
+urlcolor: blue
+link-citations: yes
+---
+
+<br>
+
+<center>**- See Books & Online Resources List for the reading materials -**</center>
+<center><span style="color:red">**The assigned reading materials are meant to be done before class.**</span></center>
+<center><span style="color:red">**Lecture slides will be available the day before class.**</span></center>
+
+<br>
+
+The "Reading" column in the table below contains a number on which it refers to a numbered item in the Books & Online Resources List. For example "[PSDR]" refers to the first item in the list, which is our main text book titled "Probability, Statistics, and Data: A fresh approach using R". 
+
+<br>
+
+## **Topics and Reading Materials**
+
+<br>
+
+| **Day** |                 **Topic**                 | **Reading** | **Assignment** | **Deadline** |
+|:-------:|:-----------------------------------------:|:-----------:|:--------------:|:------------:|
+|   8/30  |       Orientation \& Calculus Review      |     TBA     |       TBA      |     8/30     |
+|   9/1   |        Basics of Probability Theory       |     TBA     |       TBA      |      9/1     |
+|   9/6   |  Independence \& Conditional Probability  |     TBA     |       TBA      |      9/6     |
+|   9/8   |               Bayes Theorem               |     TBA     |       TBA      |      9/8     |
+|  **-**  |              **Module 1 Due**             |    **-**    |      **-**     |    **9/6**   |
+|   9/13  | Random Variables \& Probability Functions |     TBA     |       TBA      |     9/13     |
+|   9/15  |      Discrete Random Variables (DRVs)     |     TBA     |       TBA      |     9/15     |
+|   9/20  |         Probability Mass Functions        |     TBA     |       TBA      |     9/20     |
+|   9/22  |          Expected Values for DRVs         |     TBA     |       TBA      |     9/22     |
+|   9/27  |             Variance for DRVs             |     TBA     |       TBA      |     9/27     |
+|   9/29  |    Moment Generating Functions for DRVs   |     TBA     |       TBA      |     9/29     |
+|  **-**  |              **Module 2 Due**             |    **-**    |      **-**     |   **9/30**   |
+|   10/4  |  Joint \& Marginal Distributions for DRVs |     TBA     |       TBA      |     10/4     |
+|   10/6  |     Covariance \& Correlation for DRVs    |     TBA     |       TBA      |     10/6     |
+|  10/11  |         Geometric Random Variables        |     TBA     |       TBA      |     10/11    |
+|  10/13  |         Binomial Random Variables         |     TBA     |       TBA      |     10/13    |
+|  **-**  |           **Mini-Project 1 Due**          |    **-**    |      **-**     |   **10/14**  |
+|   _-_   |              _Fall Vacation_              |     _-_     |       _-_      |      _-_     |
+|  10/25  |                   Review                  |      -      |        -       |       -      |
+|  10/27  |     Continuous Random Variables (CRVs)    |     TBA     |       TBA      |     10/27    |
+|  **-**  |              **Module 3 Due**             |    **-**    |      **-**     |   **10/28**  |
+|   11/1  |       Probability Density Functions       |     TBA     |       TBA      |     11/1     |
+|   11/3  |    Moment Generating Functions for CRVs   |     TBA     |       TBA      |     11/3     |
+|   11/8  |  Joint \& Marginal Distributions for CRVs |     TBA     |       TBA      |     11/8     |
+|  11/10  |     Covariance \& Correlation for CRVs    |     TBA     |       TBA      |     11/10    |
+|  11/15  |        Exponential Random Variables       |     TBA     |       TBA      |     11/15    |
+|  11/17  |          Normal Random Variables          |     TBA     |       TBA      |     11/17    |
+|  **-**  |              **Module 4 Due**             |    **-**    |      **-**     |   **11/22**  |
+|  11/22  |            Special Office Hours           |     TBA     |       TBA      |     11/22    |
+|   _-_   |          _Thanksgiving Vacation_          |     _-_     |       _-_      |      _-_     |
+|  11/29  |          The Law of Large Numbers         |     TBA     |       TBA      |     11/29    |
+|   12/1  |         The Central Limit Theorem         |     TBA     |       TBA      |     12/1     |
+|   12/6  |              Point Estimators             |     TBA     |       TBA      |     12/6     |
+|   12/8  |       Maximum Likelihood Estimation       |     TBA     |       TBA      |     12/8     |
+|  **-**  |              **Module 5 Due**             |    **-**    |      **-**     |   **12/9**   |
+|  **-**  |           **Mini-Project 2 Due**          |    **-**    |      **-**     |   **12/15**  |
+
+<br>
+
+## **Books & Online Resources Lists**
+
+<br>
+
+### Main Textbook
+
+[PSDR]   [Speegle, D., & Clair, B. (2021). Probability, Statistics, and Data: A Fresh Approach Using R. Chapman and Hall/CRC.](https://mathstat.slu.edu/~speegle/_book/){target="_blank"}
+
+<br>
+
+### Supplementary Textbook
+
+[IPSR]   [Pishro-Nik, H. (2016). Introduction to probability, statistics, and random processes.](https://www.probabilitycourse.com/){target="_blank"}
+
+<br>
