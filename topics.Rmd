@@ -1,6 +1,6 @@
 ---
 title: '**Tentative Topics Schedule**'
-subtitle: 'University of Portland'
+subtitle: "Fall 2022 - University of Portland"
 ---
 
 <br>
@@ -21,7 +21,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 
 | **Day** |                 **Topic**                 | **Reading** | **Assignment** | **Deadline** |
 |:-------:|:-----------------------------------------:|:-----------:|:--------------:|:------------:|
-|   8/30  |       Orientation \& Calculus Review      |     TBA     |       TBA      |     8/30     |
+|   8/30  |       Orientation \& Calculus Review      |     [Syllabus](syllabus.html)     |       TBA      |     8/30     |
 |   9/1   |        Basics of Probability Theory       |     TBA     |       TBA      |      9/1     |
 |   9/6   |  Independence \& Conditional Probability  |     TBA     |       TBA      |      9/6     |
 |   9/8   |               Bayes Theorem               |     TBA     |       TBA      |      9/8     |

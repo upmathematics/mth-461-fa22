@@ -1,6 +1,6 @@
 ---
-title: '**MTH 461 Syllabus Fall 2022**'
-subtitle: 'University of Portland'
+title: '**MTH 461 Syllabus**'
+subtitle: "Fall 2022 - University of Portland"
 ---
 
 <br>
@@ -127,7 +127,7 @@ The University of Portland endeavors to make its courses and services fully acce
 
 ### Class Website
 
-Class Website: The syllabus, tentative topics schedule, lecture slides, assignments, mini-project information, and all other class materials are posted on this course website.
+The syllabus, tentative topics schedule, lecture slides, assignments, mini-project information, and all other class materials are posted on the [course website](https://upmathematics.github.io/mth-461-fa22/index.html).
 
 <br>
 
