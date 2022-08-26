@@ -17,4 +17,5 @@ output:
     lib_dir: site_libs
     toc: true
     toc_float: true
-    
+
+output_dir: docs
