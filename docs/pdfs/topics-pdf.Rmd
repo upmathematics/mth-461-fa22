@@ -20,7 +20,7 @@ link-citations: yes
 
 <center>**- See Books & Online Resources List for the reading materials -**</center>
 <center><span style="color:red">**The assigned reading materials are meant to be done before class.**</span></center>
-<center><span style="color:red">**Lecture slides will be available the day before class.**</span></center>
+<center><span style="color:red">**Lecture slides and Mini-Assignments will be available the day before class.**</span></center>
 
 <br>
 

@@ -30,7 +30,7 @@ MTH 461: Probability & Statistics I
 
 ### Description
 
-Probability and Statistics is fundamental in many scientific disciplines. In this course, a student will learn the concepts in probability, discrete and continuous random variables, expectation, important probability distributions, sampling, and estimation. This is a calculus-based probability and statistics course where we use analytical solutions to problems, as well as simulation-based reasoning using R. Students who complete this course will have a calculus-based knowledge of probability theory and statistics and be able to confidently apply these ideas to data.
+Probability and Statistics is fundamental in many scientific disciplines. In this course, a student will learn the concepts in probability, discrete and continuous random variables, expectation, important probability distributions, sampling, and estimation. This is a calculus-based probability and statistics course where we find analytical solutions to problems, as well as simulation-based reasoning using R. Students who complete this course will have a calculus-based knowledge of probability theory and statistics and be able to confidently apply these ideas to data.
 
 <br>
 
@@ -52,10 +52,10 @@ Probability and Statistics is fundamental in many scientific disciplines. In thi
 ### Office Hours
 
 * Alex John Quijano
-  * **Walk-in** (Buckley Center 279)
+  - **Walk-in** (Buckley Center 279)
     * MWF, 1:00 PM -  2:00 PM
     * TuTh, 4:00 PM - 5:00 PM
-  * **One-to-One** (Buckley Center 279 or in Teams)
+  - **One-to-One** (Buckley Center 279 or in Teams)
     * MWF, 2:00 PM - 5:00 PM ([sign-up for a 30-minute session](https://calendly.com/alexjohnquijano/quijano-fa22-scheduled-office-hours){target="_blank"})
 
 <br>
@@ -104,21 +104,21 @@ Upon completing MTH 461, students should understand
 
 ### Collaboration Policy
 
-We expect you to participate in the class through lectures, discussion, labs, and other engagements. We also expect you to make use of opportunities to get help outside of class (office hours, Teams, email, tutoring) if you need help. Concise and specific messages are the most helpful.
+I expect you to participate in the class through lectures, discussion, labs, and other engagements. I also expect you to make use of opportunities to get help outside of class (office hours, Teams, email, tutoring) if you need help. Concise and specific messages are the most helpful so I know how I can best help you.
 
-It is encouraged that students participate in discussions regarding mini-assignments, modules, and mini-projects. However, each student must take responsibility and ownership of their work and submit their work individually.
+Students are encouraged to participate in discussions with their peers (or each other) regarding mini-assignments, modules, and mini-projects. However, each student must take responsibility and ownership of their work and submit their work individually.
 
 <br>
 
 ### Office Hours Guidelines
 
-It is strongly recommended that you attend the walk-in office hours or set up a one-to-one office hours with the instructor if you feel like you are falling behind during our in-person class activities, or if you just need to clarify concepts discussed in class. In order to be more productive during a one-to-one office hours (or the walk-in office hours), these are three recommendations before you come-in:
+It is strongly recommended that you attend the walk-in office hours or set up a one-to-one meeting with the me if you feel like you are falling behind during our in-person class activities, or if you just need to clarify concepts discussed in class. In order to be more productive during a one-to-one meeting (or the walk-in office hours), these are three recommendations before you come in:
 
-* List all gaps in knowledge you have (missed concepts) or list all concepts that was unclear to you during class. We will address them one by one.
-* Prepare questions you want answered and be ready to show relevant materials.
-* Regarding assignments, prepare to show (a) what are the steps you have tried and (b) what are the errors you encountered and the solutions you have tried.
+  * List all gaps in knowledge you have (missed concepts) or list all concepts that were unclear to you during class. We will address them one by one.
+  * Prepare questions you want answered and be ready to show relevant materials.
+  * Regarding assignments, prepare to show (a) what are the steps you have tried and (b) what are the errors you encountered and the strategies you have tried.
 
-Note that these are recommendations so that you can get the most out of the Office hours allocated for you. If you just want to come-in and chat about something else, feel free to do so. If the dedicated time for one-to-one office hours does not work for you, send the instructor a message to set up an appointment.
+Note that these are recommendations so that you can get the most out of the Office hours allocated for you. If you just want to come in and chat about something else, feel free to do so. If the dedicated time for one-to-one meeting does not work for you, send me a message to set up an appointment.
 
 <br>
 
@@ -160,9 +160,9 @@ The main textbook is [Probability, Statistics, and Data: A fresh approach using 
 
 ### Computing
 
-This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R studio. Below are two ways to access R and R Studio.
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. Below are two ways to access R and R Studio.
 
-* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, you will have access to R and R Studio. The availability of R Studio is still unknown; pending confirmation.
+* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, you will have access to R (The availability of R Studio is still unknown; pending confirmation).
 
 * *Downloading and Installing on your own computer.* First, you need to install R; [r-project.org](https://www.r-project.org/){target="_blank"}. Next, you can install R Studio; [rstudio download](https://www.rstudio.com/products/rstudio/download/){target="_blank"}.
 
@@ -176,7 +176,7 @@ We will be using Teams [MTH-461A-fa22](https://teams.microsoft.com/l/team/19%3aZ
 
 <span style="color:red">Please check the class Teams regularly.</span> If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
 
-<span style="color:red">If you prefer communicating through email, note that the instructor has set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for the instructor to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful.
+<span style="color:red">If you prefer communicating through email, note that the instructor has set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for the instructor to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
 
 <br>
 
@@ -192,7 +192,7 @@ Student work products for this course may be used by the University for educatio
 
 ### Attendance and Participation
 
-It is strongly recommended that you attend classes promptly. Participation is an important part of learning. Be prepared to participate in the discussion by doing the assigned readings every week and submit mini-assignments during class.
+It is strongly recommended that you attend all classes and arrive promptly. Participation is an important part of learning. Be prepared to participate in the discussion by doing the assigned readings every week and submitting mini-assignments during class.
 
 <br>
 
@@ -245,7 +245,7 @@ Throughout the course, there will be opportunities for extra credit. You can sub
 
 ### Late Assignments and Incompletes
 
-You are expected to turn in all completed assignments on time. Circumstances that may disallow you to turn in your work on time – such as a medical reason – are understandable. Please let the instructor know if you are unable to submit your work and have missed the deadline way beyond its original posted date. Because every assignment is an important aspect of your learning in this class, we will discuss when you will turn in the assignment as well as decide upon an acceptable consequence for your turning it in late. We are committed to successfully helping you learn from this course.
+You are expected to turn in all completed assignments on time. Circumstances that may disallow you to turn in your work on time – such as a medical reason – are understandable. Please let the instructor know if you are unable to submit your work and have missed the deadline way beyond its original posted date. Because every assignment is an important aspect of your learning in this class, we will discuss when you will turn in the assignment as well as decide upon an acceptable consequence for your turning it in late. I am committed to successfully helping you learn from this course.
 
 <br>
 
@@ -259,11 +259,11 @@ You are expected to turn in all completed assignments on time. Circumstances tha
   
   * If you don’t agree with what someone else has to say, you are encouraged to express your point of view, but do so respectfully, and support your claims with textual evidence.
   
-  * Everyone has the right to be heard and maintain confidentiality if a person decides to share a personal experience.
+  * Everyone has the right to be heard. Maintain confidentiality if a person decides to share a personal experience.
 
   * No name calling and respect each person's identity.
 
-  * One person speaks at a time and give chance for other people to speak.
+  * One person speaks at a time. Give chances for other people to speak.
   
   * Maintain the highest standards of excellence for both you and others.
 
@@ -293,9 +293,9 @@ In your written work, follow the conventions of an appropriate citation using th
 
 ### Inclusion and Diversity
 
-The natural and mathematical sciences are often viewed as objective disciplines. Science is a method for us to understand how the world works. However, it is historically built from a small set of privileged populations that often ignores the biases. We acknowledge that there may be some parts in this course that have overt and covert biases. Science is a human endeavor, and the pursuit of knowledge and skill must incorporate a diverse set of experiences. 
+The natural and mathematical sciences are often viewed as objective disciplines. Science is a method for us to understand how the world works. However, it is historically built from a small set of privileged populations that often ignores the biases. I acknowledge that there may be some parts in this course that have overt and covert biases. Science is a human endeavor, and the pursuit of knowledge and skill must incorporate a diverse set of experiences. 
 
-We value all students regardless of their background, country of origin, race, religion, ethnicity, sexual orientation, disability status, etc. We are committed to providing a climate of excellence and inclusiveness within all aspects of this course. If you have any concerns, issues, or challenges, you are encouraged to discuss with the instructor (set up a meeting by email or a direct message in Teams) with the assurance of full confidentiality except for academic integrity code violations or sexual harassment.
+I value all students regardless of their background, country of origin, race, religion, ethnicity, sexual orientation, disability status, etc. I am are committed to providing a climate of excellence and inclusiveness within all aspects of this course. If you have any concerns, issues, or challenges, you are encouraged to discuss with the instructor (set up a meeting by email or a direct message in Teams) with the assurance of full confidentiality except for academic integrity code violations or sexual harassment (which I am obligated by law to report).
 
 <br>
 
