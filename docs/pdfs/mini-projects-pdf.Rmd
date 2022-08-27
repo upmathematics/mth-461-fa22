@@ -1,6 +1,19 @@
 ---
 title: "Mini-Projects"
 subtitle: "Fall 2022 - University of Portland"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461 Probability \& Statistics I - Syllabus}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: yes
+    number_section: no
+urlcolor: blue
+link-citations: yes
 ---
 
 <br>
@@ -11,7 +24,7 @@ This semester, we will focus on two distinct topics. The case studies below are 
 
 ## **Learning Objectives**
 
-There are three main objectives for the mini-projects, which is in line with the learning objectives of MTH 461 course:
+There are three main objectives for this project, which is in line with the learning objectives of MTH 461 course:
 
 1. To learn skills in data acumen, wrangling, and visualization.
 2. To learn effective and concise communication of data.
