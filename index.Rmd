@@ -58,9 +58,9 @@ The main textbook is [Probability, Statistics, and Data: A fresh approach using 
 
 ### Computing
 
-This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R studio. Below are two ways to access R and R Studio.
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. Below are two ways to access R and R Studio.
 
-* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, you will have access to R and R Studio. The availability of R Studio is still unknown; pending confirmation.
+* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, you will have access to R (The availability of R Studio is still unknown; pending confirmation).
 
 * *Downloading and Installing on your own computer.* First, you need to install R; [r-project.org](https://www.r-project.org/){target="_blank"}. Next, you can install R Studio; [rstudio download](https://www.rstudio.com/products/rstudio/download/){target="_blank"}.
 
@@ -74,6 +74,6 @@ We will be using Teams [MTH-461A-fa22](https://teams.microsoft.com/l/team/19%3aZ
 
 <span style="color:red">Please check the class Teams regularly.</span> If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
 
-<span style="color:red">If you prefer communicating through email, note that the instructor has set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for the instructor to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful.
+<span style="color:red">If you prefer communicating through email, note that the instructor has set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for the instructor to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
 
 <br>

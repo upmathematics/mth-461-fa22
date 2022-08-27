@@ -163,7 +163,7 @@ We will be using Teams [MTH-461A-fa22](https://teams.microsoft.com/l/team/19%3aZ
 
 <span style="color:red">Please check the class Teams regularly.</span> If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
 
-<span style="color:red">If you prefer communicating through email, note that the instructor has set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for the instructor to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
+<span style="color:red">If you prefer communicating through email, note that I had set up an email filter for this course and you must put the “MTH 461” keyword in your subject line.</span> It is easy for me to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
 
 <br>
 
