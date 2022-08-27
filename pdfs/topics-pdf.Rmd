@@ -39,7 +39,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   9/1   |        Basics of Probability Theory       |     TBA     |       TBA      |      9/1     |
 |   9/6   |  Independence \& Conditional Probability  |     TBA     |       TBA      |      9/6     |
 |   9/8   |               Bayes Theorem               |     TBA     |       TBA      |      9/8     |
-|  **-**  |              **Module 1 Due**             |    **-**    |      **-**     |    **9/6**   |
+|  **-**  |              **Module 1 Due**             |    **-**    |      **-**     |    **9/9**   |
 |   9/13  | Random Variables \& Probability Functions |     TBA     |       TBA      |     9/13     |
 |   9/15  |      Discrete Random Variables (DRVs)     |     TBA     |       TBA      |     9/15     |
 |   9/20  |         Probability Mass Functions        |     TBA     |       TBA      |     9/20     |
