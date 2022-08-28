@@ -1,4 +1,5 @@
 name: "MTH-461"
+output_dir: "docs"
 navbar:
   title: "MTH-461"
   left:
@@ -17,5 +18,4 @@ output:
     lib_dir: site_libs
     toc: true
     toc_float: true
-
-output_dir: docs
+    
