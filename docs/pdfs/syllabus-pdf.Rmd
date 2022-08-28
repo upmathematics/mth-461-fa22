@@ -172,7 +172,7 @@ If you need a computer, you can borrow computers - please see the [Clark Library
 
 ### Microsoft Teams
 
-We will be using Teams [MTH-461A-fa22](https://teams.microsoft.com/l/team/19%3aZWmNLgAQL0Vt__PZ2qLdmGNPJB0r6ChJXXVf2lzsT-E1%40thread.tacv2/conversations?groupId=e41b3e0c-9f5c-4496-a6a4-e51b0941d10e&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages. <span style="color:red">Please signup for the course Teams using your UP credentials along with this Teams code: **rg9ngv0**.</span>
+<span style="color:red">We will be using Teams [MTH-461A-fa22](https://teams.microsoft.com/l/team/19%3aZWmNLgAQL0Vt__PZ2qLdmGNPJB0r6ChJXXVf2lzsT-E1%40thread.tacv2/conversations?groupId=e41b3e0c-9f5c-4496-a6a4-e51b0941d10e&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages.</span> I added you to the Teams page already so you just need to log in using your UP credentials. If not, then send a request when you log-in. Let me know if you need any assistance.
 
 <span style="color:red">Please check the class Teams regularly.</span> If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
 
