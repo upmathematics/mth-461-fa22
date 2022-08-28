@@ -127,7 +127,7 @@ The University of Portland endeavors to make its courses and services fully acce
 
 ### Class Website
 
-The syllabus, tentative topics schedule, lecture slides, assignments, mini-project information, and all other class materials are posted on the [course website](https://upmathematics.github.io/mth-461a-fa22/index.html).
+The syllabus, tentative topics schedule, lecture slides, assignments, mini-project information, and all other class materials are posted on the [course website](https://upmathematics.github.io/mth-461a-fa22/index.html) - the website can be viewed in Teams.
 
 <br>
 
