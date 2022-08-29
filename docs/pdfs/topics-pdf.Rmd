@@ -19,7 +19,7 @@ link-citations: yes
 <br>
 
 <center>**- See Books & Online Resources List for the reading materials -**</center>
-<center><span style="color:red">**The assigned pre-readings are meant to be done before class. Post-readings are optional.**</span></center>
+<center><span style="color:red">**The pre-readings and post-readings are not mandatory but it is encouraged.**</span></center>
 <center><span style="color:red">**Lecture slides and Mini-Assignments will be available the day before class.**</span></center>
 <center><span style="color:red">**Modules will be available two weeks before the deadline.**</span></center>
 
@@ -35,7 +35,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 
 | **Day** |                 **Topic**                 |               **Pre-Reading**              | **Post-Reading** | **Assignment** | **Deadline** |
 |:-------:|:-----------------------------------------:|:------------------------------------------:|:----------------:|:--------------:|:------------:|
-|   8/30  |       Orientation \& Calculus Review      | [Syllabus](syllabus.html){target="_blank"} |         -        |       TBA      |     8/30     |
+|   8/30  |       Orientation \& Calculus Review      |                   Syllabus                 |         -        |       TBA      |     8/30     |
 |   9/1   |    Basics of Probability Theory Part 1    |      [PSDR] Ch. 2 (Preamble), Ch. 2.1      |         -        |       TBA      |      9/1     |
 |   9/6   |    Basics of Probability Theory Part 2    |     [PSDR] Ch. 2.1 Continued \& Ch. 2.4    |  [PSDR] Ch. 2.2  |       TBA      |      9/6     |
 |   9/8   |  Independence \& Conditional Probability  |   [PSDR] Ch. 2.3 (Preamble) \& Ch. 2.3.1   |         -        |       TBA      |      9/8     |

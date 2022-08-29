@@ -13,7 +13,7 @@
 
 <title>MTH 461 Syllabus</title>
 
-<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
@@ -144,15 +144,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -619,7 +615,8 @@ tool for general announcements, assignment submissions,
 question-answering discussions, and direct messages.</span> I added you
 to the Teams page already so you just need to log in using your UP
 credentials. If not, then send a request when you log in. Let me know if
-you need any assistance.</p>
+you need any assistance. If you need the Teams code for this class, use
+<strong>rg9ngv0</strong>.</p>
 <p><span style="color:red">Please check the class Teams
 regularly.</span> If you need to have Teams notifications sent to your
 email, please set up your email preferences within Teams.</p>
