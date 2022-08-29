@@ -4,7 +4,7 @@ subtitle: "Fall 2022 - University of Portland"
 header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
-  \fancyhead[RO,R]{MTH 461 Probability \& Statistics I - Syllabus}
+  \fancyhead[RO,R]{MTH 461A Probability \& Statistics I - Syllabus}
   \fancyfoot[CO,C]{}
   \fancyfoot[R]{\thepage}
   \usepackage{float}
@@ -19,7 +19,7 @@ link-citations: yes
 <br>
 
 <center>**- See Books & Online Resources List for the reading materials -**</center>
-<center><span style="color:red">**The pre-readings and post-readings are not mandatory but it is encouraged.**</span></center>
+<center><span style="color:red">**The readings are not mandatory but it is encouraged.**</span></center>
 <center><span style="color:red">**Lecture slides and Mini-Assignments will be available the day before class.**</span></center>
 <center><span style="color:red">**Modules will be available two weeks before the deadline.**</span></center>
 
@@ -39,7 +39,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   9/1   |    Basics of Probability Theory Part 1    |      [PSDR] Ch. 2 (Preamble), Ch. 2.1      |         -        |       TBA      |      9/1     |
 |   9/6   |    Basics of Probability Theory Part 2    |     [PSDR] Ch. 2.1 Continued \& Ch. 2.4    |  [PSDR] Ch. 2.2  |       TBA      |      9/6     |
 |   9/8   |  Independence \& Conditional Probability  |   [PSDR] Ch. 2.3 (Preamble) \& Ch. 2.3.1   |         -        |       TBA      |      9/8     |
-|  **-**  |              **Module 1 Due**             |                    **-**                   |       **-**      |      **-**     |    **9/6**   |
+|  **-**  |              **Module 1 Due**             |                    **-**                   |       **-**      |      **-**     |    **9/9**   |
 |   9/13  |               Bayes Theorem               |              [PSDR] Ch. 2.3.3              |         -        |       TBA      |     9/13     |
 |   9/15  | Random Variables \& Probability Functions |                      -                     |         -        |       TBA      |     9/15     |
 |   9/20  |      Discrete Random Variables (DRVs)     |           [PSDR] Ch. 3 (Preamble)          |         -        |       TBA      |     9/20     |
