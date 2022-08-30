@@ -35,7 +35,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 
 | **Day** |                 **Topic**                 |      **Pre-Reading [PSDR]**     | **Post-Reading [PSDR]** | **Mini-Assignment** | **Deadline** |
 |:-------:|:-----------------------------------------:|:-------------------------------:|:-----------------------:|:-------------------:|:------------:|
-|   8/30  |       [Orientation \& Calculus Review](lectures/20220830/orientation-and-calculus-review.html)      |             Syllabus            |            -            |         [[pdf](ma-mth461a-20220830.pdf){target="_blank"}] [[Rmd](ma-mth461a-20220830.pdf){target="_blank"}] [[tex](ma-mth461a-20220830.tex){target="_blank"}]         |     8/31     |
+|   8/30  |       [Orientation \& Calculus Review](lectures/20220830/orientation-and-calculus-review.html)      |             Syllabus            |            -            |         [[pdf](lectures/20220830/ma-mth461a-20220830.pdf){target="_blank"}] [[Rmd](lectures/20220830/ma-mth461a-20220830.pdf){target="_blank"}] [[tex](lectures/20220830/ma-mth461a-20220830.tex){target="_blank"}]         |     8/31     |
 |   9/1   |    Basics of Probability Theory Part 1    |    Ch. 2 (Preamble), Ch. 2.1    |            -            |         TBA         |      9/1     |
 |   9/6   |    Basics of Probability Theory Part 2    |     Ch. 2.1 Cont. \& Ch. 2.4    |         Ch. 2.2         |         TBA         |      9/6     |
 |   9/8   |  Independence \& Conditional Probability  | Ch. 2.3 (Preamble) \& Ch. 2.3.1 |            -            |         TBA         |      9/8     |

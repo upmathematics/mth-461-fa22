@@ -84,7 +84,7 @@ I like to get to know you and what are your motivations for taking this class.
   * What is the concentration of carbon monoxide in the ambient atmosphere in 20 years?
 </div>
 
-## Why Statistics? {.smaller}
+## Why Statistics?
 
 * Statistics is the science of learning from data.
 * Statistical knowledge is important in scientific studies:
@@ -124,6 +124,8 @@ I like to get to know you and what are your motivations for taking this class.
 *All assignments and mini-project reports are submitted through Teams Assignments.*
 </center>
 
-## Activity
+## Mini-Activity
 
 [Mini-Assignment: Calculus Review](ma-mth461a-20220830.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).
