@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-This is a calculus based probability & statistics class! As such, this first Homework Assignment will be an opportunity for you to review problems from calculus.
+This is a calculus-based probability & statistics class! As such, this first Mini-Assignment will be an opportunity for you to review problems from calculus.
 
 1. Find the derivative of the following:
 
@@ -91,4 +91,3 @@ $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}.$$
 8. Let $\lambda > 0$ by a fixed constant. Calculate
 
 $$\int_{0}^{\infty} \lambda x e^{-\lambda x}dx.$$
-
