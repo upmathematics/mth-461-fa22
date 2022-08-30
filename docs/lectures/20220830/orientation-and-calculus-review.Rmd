@@ -1,0 +1,129 @@
+---
+title: "Orientation & Calculus Review"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-08-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Welcome!
+
+<center>
+**Probability and Statistics I**
+</center>
+
+<center>
+<div class='left' style='text-align:left;width:60%'>
+**Agenda for Today**
+
+  - Introducing ourselves
+  - Course description and objectives
+  - Motivation for the course
+  - Expectations
+  - Calculus Review Activity
+</div>
+</center>
+
+## Introduction
+
+<div class='left' style='float:left;text-align:left;width:48%'>
+* Instructor Information
+
+  * **Instructor:** [Alex John Quijano](https://www.alexjohnquijano.com/){target="_blank"} <br>
+  * **Office:** Buckley Center 279 <br>
+  * **Email:** quijano@up.edu <br>
+</div>
+
+<div class='right' style='float:right;text-align:left;width:48%'>
+* Class Time and Location
+
+  * **Lectures:** TuTh 2:30 PM – 3:55 PM <br>
+  * **Rooms:** Franz Hall 128 <br>
+</div>
+
+## About You
+
+I like to get to know you and what are your motivations for taking this class.
+
+<center>
+<div class='left' style='text-align:left;width:60%'>
+  1. Name (preferred name)
+  2. Major/Minor
+  3. Share
+    - What are your career goals and aspirations?
+    - What are you research interests (if any)?
+    - What are your interests outside of college?
+</div>
+</center>
+
+## Why Probability? {.smaller}
+
+<div class='left' style='float:left;text-align:left;width:49%'>
+- **Applied Mathematics**
+  * Does a probabilistic sequence converge or diverge?
+  
+- **Bioengineering**
+  * What percentage of lyme disease patients would be cured with the current but experimental treatments?
+  
+- **Chemical Sciences**
+  * What proportion of reactants undergo a reaction early in the reaction?
+</div>
+
+<div class='right' style='float:left;text-align:left;width:49%'>
+- **Computer Science**
+  * How many computers in a given network would be affected after a virus infection?
+  
+- **Mechanical Engineering**
+  * What is the probability that two engines of a commercial airplane fail during flight? 
+  
+- **Environmental Science**
+  * What is the concentration of carbon monoxide in the ambient atmosphere in 20 years?
+</div>
+
+## Why Statistics? {.smaller}
+
+* Statistics is the science of learning from data.
+* Statistical knowledge is important in scientific studies:
+  - plan the studies to ensure that the data are collected efficiently and answer questions relevant to the investigation 
+  - analyze data, discover what conclusions can be reached from current study and what issues need to be investigated further
+* Various applications:
+  - weather forecasting
+  - drug/vaccination development (effectiveness and safety)
+  - automated question anwering
+  - text classification
+  - language translation
+
+## Course Description
+
+<center>
+<div class='left' style='text-align:left;width:80%'>
+* This is a calculus-based probability and statistics course. 
+* Students will learn the concepts in probability, discrete and continuous random variables, expectation, important probability distributions, sampling, and estimation. 
+* Simulation-based reasoning using R will help students understand how to apply these ideas to data.
+</div>
+</center>
+
+## Course Materials
+
+* We will be using Teams [mth-461a-fa22](https://teams.microsoft.com/l/team/19%3aZWmNLgAQL0Vt__PZ2qLdmGNPJB0r6ChJXXVf2lzsT-E1%40thread.tacv2/conversations?groupId=e41b3e0c-9f5c-4496-a6a4-e51b0941d10e&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool.
+* The syllabus, tentative topics schedule, lecture slides, assignments, mini-project information, and all other class materials are posted on the [course website](https://upmathematics.github.io/mth-461a-fa22/index.html) - the website can be viewed in Teams.
+* The main textbook is [Probability, Statistics, and Data: A fresh approach using R](https://mathstat.slu.edu/~speegle/_book/){target="_blank"} by Darrin Speegle and Bryan Clair. The textbook is free and open-source.
+* This class will use the R programming language and the R Studio Integrated Development Environment (IDE).
+
+## Mini-Assignments & Modules
+
+* *Mini-Assignments:* These are written assignments due each class time at end-of-class or end-of-day (27 mini-assignments in total).
+* *Modules:* These are both written and R assignments due every three weeks (5 Modules in total).
+* *Mini-Projects:* There are 2 mini-projects where we apply concepts and tools learned in class to understand real world data sets. These projects involve text data sets and spatio-temporal data sets.
+
+<center>
+*All assignments and mini-project reports are submitted through Teams Assignments.*
+</center>
+
+## Activity
+
+[Mini-Assignment: Calculus Review](ma-mth461a-20220830.pdf){target="_blank"}
