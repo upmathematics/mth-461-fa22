@@ -26,7 +26,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   9/1   |    [Basics of Probability Theory Part 1](topics/20220901/basics-of-probability-theory-part-1.html){target="_blank"}    |    Ch. 2 (Preamble), Ch. 2.1    |            -            |         [[pdf](topics/20220901/ma-mth461a-20220901.pdf){target="_blank"}] [[Rmd](topics/20220901/ma-mth461a-20220901.Rmd){target="_blank"}] [[tex](topics/20220901/ma-mth461a-20220901.tex){target="_blank"}]         |      9/1     |
 |   9/6   |    Basics of Probability Theory Part 2    |     Ch. 2.1 Cont. \& Ch. 2.4    |         Ch. 2.2         |         TBA         |      9/6     |
 |   9/8   |  Independence \& Conditional Probability  | Ch. 2.3 (Preamble) \& Ch. 2.3.1 |            -            |         TBA         |      9/8     |
-|  **-**  |              **Module 1 Due**             |              **-**              |          **-**          |        **-**        |    **9/6**   |
+|  **-**  |              **Module 1 Due**             |              **-**              |          **-**          |        **-**        |    **9/9**   |
 |   9/13  |               Bayes Theorem               |            Ch. 2.3.3            |            -            |         TBA         |     9/13     |
 |   9/15  | Random Variables \& Probability Functions |                -                |            -            |         TBA         |     9/15     |
 |   9/20  |      Discrete Random Variables (DRVs)     |         Ch. 3 (Preamble)        |            -            |         TBA         |     9/20     |
