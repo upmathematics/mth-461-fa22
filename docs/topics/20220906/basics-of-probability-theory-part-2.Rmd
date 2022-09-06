@@ -28,7 +28,7 @@ Sampling is an important part in probability and statistics. It is part of any p
 
 4. Drawing five cards from a standard deck - sampling without replacement.
 
-## Fair Coin (1/4)
+## Fair Coin (part 1/4)
 
 A fair coin has the following idealized scenario:
 
@@ -42,7 +42,7 @@ A fair coin has the following idealized scenario:
   
   * $P(\emptyset) = 0$
   
-## Fair Coin (2/4)
+## Fair Coin (part 2/4)
 
   * Let's say we **flip a fair coin three times**.
   
@@ -50,15 +50,15 @@ A fair coin has the following idealized scenario:
   
       - Answer: Since there are 2 outcomes per flip, then the number of possible outcomes is
   <center>
-    $$2 \times 2 \times 2 = 2^3 = 8.$$
+    $$2 \times 2 \times 2 = 8.$$
   </center>
   
    - The **sample space** for **three coin flips** is written as
   <center>
-  $$S = & \{HHH,HHT,HTT,TTT,TTH,THH,HTH,THT\}$$
+  $$S = \{HHH,HHT,HTT,TTT,TTH,THH,HTH,THT\}$$
   </center>
   
-## Fair Coin (3/4)
+## Fair Coin (part 3/4)
   
   - Question: What is the probability of getting $HHH$?
   
@@ -68,21 +68,21 @@ A fair coin has the following idealized scenario:
   
       - $P(HHH) = P(HHT) = \cdots = P(THT) = \frac{1}{8}$
   
-## Fair Coin (4/4) {.smaller}
+## Fair Coin (part 4/4)
 
   - Consider that order does not matter and we are only interested in the number of heads.
 
   - Question: If we flip the coin three times, what is the probability of getting **exactly** two heads in any order?
   
-      - Answer: $P(HHT,THH,HTH\}) = \frac{3}{8}$
+      - Answer: $P(HHT,THH,HTH) = \frac{3}{8}$
 
   - Question: If we flip the coin three times, what is the probability of getting **at least** two heads in any order?
  
-      - Answer: $P(HHH,HHT,THH,HTH\}) = \frac{4}{8} = \frac{1}{2}$
+      - Answer: $P(HHH,HHT,THH,HTH) = \frac{4}{8} = \frac{1}{2}$
  
   - Question: If we flip the coin three times, what is the probability of getting **at most** two heads in any order?
  
-      - Answer: $P(TTT,HTT,TTH,HTH,HHT,THH,HTH\}) = \frac{7}{8}$
+      - Answer: $P(TTT,HTT,TTH,HTH,HHT,THH,HTH) = \frac{7}{8}$
 
 ## Tossing a Fair Coin $\mathbf{n}$ Times
 
@@ -102,7 +102,7 @@ A fair coin has the following idealized scenario:
       
   - The number of total possible outcomes in the sample space increases by powers of two as $n$ increases.
   
-## Tossing Coins Simulations (1/3)
+## Tossing Coins Simulations (part 1/3)
 
   * We are uncertain on predicting the outcome of one fair coin toss but we have an **expected value** that with - for example - 20 tosses, we will get about 10 heads, which is half of 20.
   
@@ -110,7 +110,7 @@ A fair coin has the following idealized scenario:
   
   * For smaller number of tosses, we will see a lot of variation but as the number of tosses increases, the proportion of heads gets closer to $\frac{1}{2}$ or the number of heads gets closer to the **expected value**.
   
-## Tossing Coins Simulations (2/3)
+## Tossing Coins Simulations (part 2/3)
 
 ```{r echo=FALSE, fig.align="center", message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -169,7 +169,7 @@ ggplotCoinTosses(10000, .50)
 
 Source Code: [R - Law of Large Numbers Simulations](https://rstudio-pubs-static.s3.amazonaws.com/301283_8ba77a4c9d8d4a2db3d07372b7b22c82.html){target="_blank"}
 
-## Tossing Coins Simulations (3/3)
+## Tossing Coins Simulations (part 3/3)
 
 - If a fair coin is tossed a large number of times, the number of heads and the number of tails should be approximately equal. This is called the **law of large numbers**.
 
