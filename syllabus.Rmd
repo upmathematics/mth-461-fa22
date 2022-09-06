@@ -1,5 +1,5 @@
 ---
-title: '**MTH 461 Syllabus**'
+title: '**MTH 461A Syllabus**'
 subtitle: "Fall 2022 - University of Portland"
 ---
 
@@ -11,7 +11,7 @@ subtitle: "Fall 2022 - University of Portland"
 
 ### Course Title
 
-MTH 461: Probability & Statistics I
+MTH 461A: Probability & Statistics I
 
 <br>
 

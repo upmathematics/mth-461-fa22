@@ -1,0 +1,73 @@
+---
+title: '**Probability Theory Basics Part 2**'
+subtitle: "Mini-Assignment 2022-08-30 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+1. Consider a scenario where you roll a pair of six-sided fair dice *once*.
+
+    a. How many possible outcomes are there? Make a table of all possible outcomes and make another table that sums the numbers of each possible outcome.
+
+    b. What is the probability of rolling a (3,4) or (4,3) pair?
+
+    c. What is the probability of rolling a sum of 8 or a sum of 6?
+    
+    d. What is the probability of rolling at least a sum of 5?
+    
+    e. What is the probability of rolling a 3 in either dice?
+    
+    f. What is the probability of rolling either dice has a maximum of 4?
+    
+2. Consider a scenario where you roll a pair of six-sided fair dice *twice*.
+
+    a. How many possible outcomes are there? You don't have to make table.
+    
+    b. What is the probability that the first roll has a sum of 6 and the second roll has a sum of 4?
+    
+    c. What is the probability of rolling a total sum is 13?
+    
+    d. What is the probability of rolling that the total sum is at most 13?
+    
+    e. What is the probability of rolling exactly one 3 in any of the pairs?
+    
+    f. What is the probability of rolling at most 3 in any of the pairs?
+    

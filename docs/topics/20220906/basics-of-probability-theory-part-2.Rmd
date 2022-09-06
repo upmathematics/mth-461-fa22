@@ -1,0 +1,182 @@
+---
+title: "Basics of Probability Theory Part 2"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-09-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Sampling With or Without Replacement
+
+Sampling is an important part in probability and statistics. It is part of any probability scenario.
+
+* **Sampling WITH replacement:** A method of sampling that an *item is sampled more than once*. Sampling with replacement generally produces *independent events*. Usually scenarios - but not always - like this does not distinguish identical items. 
+
+* **Sampling WITHOUT replacement:** A method of sampling where an *item may not be sampled more than once*. Sampling without replacement generally produce *dependent events*. Usually - but not always - scenarios like this does distinguish identical items.
+
+## Example Scenarios
+
+1. Rolling a dice multiple times - sampling with replacement.
+
+2. Drawing a card from a standard deck, putting it back, reshuffle, and drawing again - sampling with replacement.
+
+3. Drawing three balls from a jar - sampling without replacement.
+
+4. Drawing five cards from a standard deck - sampling without replacement.
+
+## Fair Coin (1/4)
+
+A fair coin has the following idealized scenario:
+
+  * $P(H) = \frac{1}{2}$
+  
+  * $P(T) = \frac{1}{2}$
+  
+  * $P(H \cup T) = P(H) + P(T) = \frac{1}{2} + \frac{1}{2} = 1$
+  
+  * $P(H \cap T) = 0$
+  
+  * $P(\emptyset) = 0$
+  
+## Fair Coin (2/4)
+
+  * Let's say we **flip a fair coin three times**.
+  
+  - Question: How many **possible outcomes** are there?
+  
+      - Answer: Since there are 2 outcomes per flip, then the number of possible outcomes is
+  <center>
+    $$2 \times 2 \times 2 = 2^3 = 8.$$
+  </center>
+  
+   - The **sample space** for **three coin flips** is written as
+  <center>
+  $$S = & \{HHH,HHT,HTT,TTT,TTH,THH,HTH,THT\}$$
+  </center>
+  
+## Fair Coin (3/4)
+  
+  - Question: What is the probability of getting $HHH$?
+  
+      - Answer: $P(HHH) = P(H)P(H)P(H) = \frac{1}{2} \frac{1}{2} \frac{1}{2} = \frac{1}{8}$
+  
+  - The probability of getting any outcome from the sample space is $\frac{1}{8}$ if we consider that order matters.
+  
+      - $P(HHH) = P(HHT) = \cdots = P(THT) = \frac{1}{8}$
+  
+## Fair Coin (4/4) {.smaller}
+
+  - Consider that order does not matter and we are only interested in the number of heads.
+
+  - Question: If we flip the coin three times, what is the probability of getting **exactly** two heads in any order?
+  
+      - Answer: $P(HHT,THH,HTH\}) = \frac{3}{8}$
+
+  - Question: If we flip the coin three times, what is the probability of getting **at least** two heads in any order?
+ 
+      - Answer: $P(HHH,HHT,THH,HTH\}) = \frac{4}{8} = \frac{1}{2}$
+ 
+  - Question: If we flip the coin three times, what is the probability of getting **at most** two heads in any order?
+ 
+      - Answer: $P(TTT,HTT,TTH,HTH,HHT,THH,HTH\}) = \frac{7}{8}$
+
+## Tossing a Fair Coin $\mathbf{n}$ Times
+
+  - The sample space of tossing a fair coin three times is $2^3 = 8$.
+
+  - It gets complicated if we increase the number of tosses.
+      
+  - *For example:* <br>
+      $2^2 = 2 \longrightarrow$ two tosses <br>
+      $2^3 = 8 \longrightarrow$ three tosses <br>
+      $2^4 = 16 \longrightarrow$ four tosses <br>
+      $2^5 = 32 \longrightarrow$ five tosses <br>
+      $\vdots$ <br>
+      $2^{20} = 1048576 \longrightarrow$ twenty tosses <br>
+      $\vdots$ <br>
+      $2^{200} = 1.606938 \times 10^{60} \longrightarrow$ two hundred tosses <br>
+      
+  - The number of total possible outcomes in the sample space increases by powers of two as $n$ increases.
+  
+## Tossing Coins Simulations (1/3)
+
+  * We are uncertain on predicting the outcome of one fair coin toss but we have an **expected value** that with - for example - 20 tosses, we will get about 10 heads, which is half of 20.
+  
+  * Suppose that we simulate tossing coins with increasing number of tosses (trials) and record the cumulative number heads.
+  
+  * For smaller number of tosses, we will see a lot of variation but as the number of tosses increases, the proportion of heads gets closer to $\frac{1}{2}$ or the number of heads gets closer to the **expected value**.
+  
+## Tossing Coins Simulations (2/3)
+
+```{r echo=FALSE, fig.align="center", message=FALSE, warning=FALSE}
+library(tidyverse)
+
+## Source code: https://rstudio-pubs-static.s3.amazonaws.com/301283_8ba77a4c9d8d4a2db3d07372b7b22c82.html
+tossCoin = function(n=30, p=0.5) {
+
+  # create a probability distribution, a vector of outcomes (H/T are coded using 0/1)
+  # and their associated probabilities
+  outcomes = c(0,1) # sample space
+  probabilities = c(1-p,p)
+  
+  # create a random sample of n flips; this could also be done with
+  # the rbinom() function, but sample() is perhaps more useful
+  flips = sample(outcomes,n,replace=T,prob=probabilities)
+  
+  # now create a cumulative mean vector
+  cum_sum = cumsum(flips)
+  index = c(1:n)
+  cum_mean = cum_sum / index
+  
+  # now combine the index, flips and cum_mean vectors
+  # into a data frame and return it
+  # return(data.frame(index,flips,cum_mean))
+  return(data.frame(index,cum_mean))
+}
+
+ggplotCoinTosses = function(n=30, p=.50) {
+  # visualize how cumulative average converges on p  
+  # roll the dice n times and calculate means
+  trial1 = tossCoin(n,p)
+  max_y = ceiling(max(trial1$cum_mean))
+  if (max_y < .75) max_y = .75 
+  min_y = floor(min(trial1$cum_mean))
+  if (min_y > .4) min_y = .4
+  
+  # calculate last mean and standard error
+  last_mean = round(trial1$cum_mean[n],9)
+  
+  # plot the results together
+  plot1 = ggplot(trial1, aes(x=index,y=cum_mean)) +
+    geom_line(colour = "blue") +
+    geom_abline(intercept=0.5,slope=0, color = 'red', size=.5) +      
+    theme(plot.title = element_text(size=rel(1.5)),
+          panel.background = element_rect()) +
+    labs(x = "n (number of tosses)", 
+         y = "Cumulative Average") +
+    scale_y_continuous(limits = c(min_y, max_y)) +
+    scale_x_continuous(trans = "log10")
+
+  return(plot1)
+}  
+# call the function; let's use a fair coin
+ggplotCoinTosses(10000, .50)
+```
+
+Source Code: [R - Law of Large Numbers Simulations](https://rstudio-pubs-static.s3.amazonaws.com/301283_8ba77a4c9d8d4a2db3d07372b7b22c82.html){target="_blank"}
+
+## Tossing Coins Simulations (3/3)
+
+- If a fair coin is tossed a large number of times, the number of heads and the number of tails should be approximately equal. This is called the **law of large numbers**.
+
+- **The law of large numbers** is a theorem that describes the result of performing the same trials multiple times. As more trials are performed, the mean of the results obtained tends to become closer to the expected value. We will go back to this idea again in a few weeks.
+
+## Mini-Activity
+
+[Mini-Assignment: Probability Theory Basics Part 2](ma-mth461a-20220906.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).
