@@ -3,7 +3,7 @@ title: "Basics of Probability Theory Part 2"
 output:
   slidy_presentation:
     font_adjustment: 4
-date: "2022-09-01"
+date: "2022-09-06"
 ---
 
 ```{r setup, include=FALSE}
