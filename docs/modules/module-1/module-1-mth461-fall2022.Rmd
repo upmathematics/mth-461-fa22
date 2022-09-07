@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
  
  * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
  
- * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the module. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
  
  * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
  
@@ -120,17 +120,15 @@ $$
 
 ### Materials
 
-  * `sampling-from-urns.R` - This R script provides R script for you to exhibit your theoretical and experimental results on a plot and to demonstrate how to sample with and without replacement works in R.
+  * `sampling-from-urns.R` - This R script provides  R codes that simulates random sampling of balls from an urn and visualizes the result. It also provides example R codes on how to code in in the theoretical probabilities of the balls and an urn scenario.
 
 \newpage
 
 ### Exercises
 
-Consider the following scenario: 
-  
-You have an urn with a total of 20 balls: 9 black balls and 11 red balls. You will draw 7 balls from this urn without replacement. Estimate the probability of drawing 0, 1, 2, 3, 4, 5, or 6 black balls and compare this estimate to the true probabilities.
+Consider the scenario where you have an urn with a total of 20 balls: 9 black balls and 11 red balls. You will draw 7 balls from this urn without replacement. Estimate the probability of drawing 0, 1, 2, 3, 4, 5, 6, or 7 black balls and compare this estimate to the true probabilities.
 
-1. Shown below is an example R code block. Run it and provide your initial output of the R script. Describe what the output shows you. Note that the initial simulation does not match the given scenario.
+1. Shown below is an example R code block that runs the R script named `sampling-from-urns.R`. Run it and provide your initial output below. Describe what the output shows you. Note that the initial simulation does not match the given scenario.
 
 ```{r fig.align='center', out.width="70%"}
 source("sampling-from-urns.R")
@@ -138,7 +136,7 @@ source("sampling-from-urns.R")
 
 2. Calculate by hand the true probabilities in this scenario. (The code you received provides a lot of reasoning in the comments.)
 
-3. Modify the R script you were given to simulate the given scenario. When you modify the script, make sure you create a new file with a new file name and run it similarly from problem 1. Prove an output below and describe your observations.
+3. Modify the R script you were given to simulate the given scenario. When you modify the script, make sure you create a new file with a new file name and run it similarly from problem 1. Provide an output below and describe your observations.
 
 4. Provide outputs from your code (the figures comparing both probabilities) for at least these two different scenarios:
     a. `numTrials = 10^2`

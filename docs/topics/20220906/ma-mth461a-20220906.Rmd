@@ -59,11 +59,11 @@ knitr::opts_chunk$set(echo = TRUE)
     
 2. Consider a scenario where you roll a pair of six-sided fair dice *twice*.
 
-    a. How many possible outcomes are there? You don't have to make table.
+    a. How many possible outcomes are there? You don't have to make tables.
     
     b. What is the probability that the first roll has a sum of 6 and the second roll has a sum of 4?
     
-    c. What is the probability of rolling a total sum is 13?
+    c. What is the probability of rolling a total sum of exactly 13?
     
     d. What is the probability of rolling that the total sum is at most 13?
     
