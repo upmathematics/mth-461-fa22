@@ -1,6 +1,6 @@
 ---
-title: '**Probability Theory Basics Part 2**'
-subtitle: "Mini-Assignment 2022-09-06 - MTH 461 - Fall 2022"
+title: '**Independence and Conditional Probability**'
+subtitle: "Mini-Assignment 2022-09-08 - MTH 461 - Fall 2022"
 header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
@@ -43,21 +43,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-1. Consider a scenario where you roll a pair of six-sided fair dice *once*.
+1. Consider an experiment where you draw *four* balls from an urn without replacement. There are 10 balls in the urn; 4 black and 6 red. Compute the probability of the following events. Write your solutions in standard probability notations.
 
-    a. How many possible outcomes are there? Make a table of all possible outcomes and make another table that sums the numbers of each possible outcome.
-    b. What is the probability of rolling a (3,4) or (4,3) pair?
-    c. What is the probability of rolling a sum of 8 or a sum of 6?
-    d. What is the probability of rolling at least a sum of 5?
-    e. What is the probability of rolling a 3 in either dice?
-    f. What is the probability of rolling either dice has a maximum of 4?
+    a. Draw exactly 3 black balls.
+    b. Draw at least 3 black balls.
+    c. Draw at most 3 black balls.
+    d. Draw exactly 2 red balls.
+    e. Draw at least 2 red balls.
+    f. Draw at most 2 red balls.
     
-2. Consider a scenario where you roll a pair of six-sided fair dice *twice*.
+2. Consider an experiment where you draw *three* cards from a standard deck without replacement. Compute the probability of the following events. Write your solutions in standard probability notations.
 
-    a. How many possible outcomes are there? You don't have to make tables.
-    b. What is the probability that the first roll has a sum of 6 and the second roll has a sum of 4?
-    c. What is the probability of rolling a total sum of exactly 13?
-    d. What is the probability of rolling that the total sum is at most 13?
-    e. What is the probability of rolling exactly one 3 in any of the pairs?
-    f. What is the probability of rolling at most 3 in any of the pairs?
-    
+    a. Draw a king in the second draw.
+    b. Draw a queen in the first draw.
+    c. Draw at least one red face card.
+    d. Draw at least one black face card.
+    e. Draw a queen in the third draw given that queens are drawn in the first and second draws.
+    f. Draw a king in the third draw given that any face card are drawn in the first and second draw.
+  
