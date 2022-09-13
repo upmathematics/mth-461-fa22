@@ -446,7 +446,21 @@ P(\text{black balls} \ge 2) = &amp; \left(\frac{1}{5}\right) +
 <ul>
 <li>Method 2:</li>
 </ul>
-<p>Note: <span class="math inline">\({n \choose k} =
+<p><span class="math display">\[
+\scriptsize
+\begin{align*}
+P(\text{draw at least 2 black balls}) = &amp; \frac{\text{ways to draw
+exactly 2 black balls } + \text{ways to draw exactly 3 black
+balls}}{\text{all ways to draw 3 balls out of 6}} \\
+                                      = &amp;
+\frac{\binom{4}{2}\binom{2}{1} +
+\binom{4}{3}\binom{2}{0}}{\binom{6}{3}}\\
+                                      = &amp; \frac{6(2) +4(1) }{20} \\
+                                      = &amp; \frac{16}{20} \\
+                                      = &amp; \frac{4}{5}
+\end{align*}
+\]</span></p>
+<p>Note: <span class="math inline">\(\binom{n}{k} =
 \frac{n!}{k!(n-k)!}\)</span>.</p>
 </div>
 <div id="example-problem-2-13" class="slide section level2">
