@@ -10,7 +10,7 @@ date: "2022-09-13"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Previously..
+## Previously...
 
 **Conditional Probability**
 
