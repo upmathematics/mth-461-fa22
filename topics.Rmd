@@ -41,7 +41,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  10/13  |         Geometric Random Variables        |             Ch 3.3.2            |         Ch. 3.6         |         TBA         |     10/13    |
 |  **-**  |           **Mini-Project 1 Due**          |              **-**              |          **-**          |        **-**        |   **10/14**  |
 |   _-_   |              _Fall Vacation_              |               _-_               |           _-_           |         _-_         |      _-_     |
-|  10/25  |                   Review                  |                -                |            -            |          -          |       -      |
+|  10/25  |                   Reviews                  |                -                |            -            |          -          |       -      |
 |  10/27  |     Continuous Random Variables (CRVs)    |               TBA               |           TBA           |         TBA         |     10/27    |
 |  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **10/28**  |
 |   11/1  |       Probability Density Functions       |               TBA               |           TBA           |         TBA         |     11/1     |
