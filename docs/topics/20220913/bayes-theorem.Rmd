@@ -1,0 +1,164 @@
+---
+title: "Bayes Theorem"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-09-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously...
+
+**Conditional Probability**
+
+**[PSDR] Definition 2.18**
+
+Let $A$ and $B$ be events in the sample space $S$, with $P(B) \ne 0$. The conditional probability of $A$ given $B$ is 
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+
+## Example Problem 1 (1/3)
+
+Consider a scenario where you draw three balls from an urn without replacement. The urn has 6 balls in total; 2 reds and 4 black.
+
+What is the probability that at least two black balls are drawn?
+
+*Notation:* Let $R_i$ and $B_i$ be the $i$th draw of red and black ball respectively.
+
+## Example Problem 1 (2/3)
+
+* Method 1:
+
+\[
+\scriptsize
+\begin{align*}
+P(\text{black balls} \ge 2) = & P(B_1)P(B_2|B_1)P(B_3|B_1 \cap B_2) + \longrightarrow \{B_1,B_2,B_3\}\\ 
+                              & P(B_1)P(B_2|B_1)P(R_3|B_1 \cap B_2) + \longrightarrow \{B_1,B_2,R_3\} \\
+                              & P(B_1)P(R_2|B_1)P(B_3|B_1 \cap R_2) + \longrightarrow \{B_1,R_2,B_3\} \\ 
+                              & P(R_1)P(B_2|R_1)P(B_3|R_1 \cap B_2) \hspace{7px} \longrightarrow \{R_1,B_2,B_3\} \\
+                              & \\
+P(\text{black balls} \ge 2) = & \left(\frac{1}{5}\right) + \left(\frac{1}{5}\right) + \left(\frac{1}{5}\right) + \left(\frac{1}{5}\right) \\
+                            = & \frac{4}{5}
+\end{align*}
+\]
+
+## Example Problem 1 (3/3)
+
+* Method 2:
+
+\[
+\scriptsize
+\begin{align*}
+P(\text{draw at least 2 black balls}) = & \frac{\text{ways to draw exactly 2 black balls } + \text{ways to draw exactly 3 black balls}}{\text{all ways to draw 3 balls out of 6}} \\
+                                      = & \frac{{4 \choose 2}{2 \choose 1} + {4 \choose 3}{2 \choose 0}}{{6 \choose 3}}\\
+                                      = & \frac{6(2) +4(1) }{20} \\
+                                      = & \frac{16}{20} \\
+                                      = & \frac{4}{5}
+\end{align*}
+\]
+
+Note: ${n \choose k} = \frac{n!}{k!(n-k)!}$.
+
+## Example Problem 2 (1/3)
+
+Consider a scenario where you have *two* urns with contents shown in a table below.
+
+<center>
+|       | **Red** | **Black** |
+|:-------:|:-----:|:-------:|
+| **Urn 1** | 3   | 3     |
+| **Urn 2** | 4   | 2     |
+</center>
+
+One jar is chosen at random and a single ball is selected. If the ball is black, what is the probability that it came from Urn 1?
+
+Note: We don't know which Urn the black ball came from. The goal is to find the probability that the ball came from Urn 1 given that we observed that the ball is black.
+
+## Example Problem 2 (2/3)
+
+*Notations:* Let $U_1$ and $U_2$ be Urn 1 and Urn 2 respectively, $R$ be a red ball, and $B$ be a black ball.
+
+- $P(B) \longrightarrow \text{the probability of getting a black ball in urn 1 or urn 2.}$
+- $P(U_1) \longrightarrow \text{the probability of urn 1.}$
+- $P(U_2) \longrightarrow \text{the probability of urn 2.}$
+- $P(U_1 \cap B) = P(U_1)P(B|U_1) \longrightarrow \text{the probability of urn 1 and a black ball.}$
+- $P(U_2 \cap B) = P(U_2)P(B|U_2) \longrightarrow \text{the probability of urn 2 and a black ball.}$
+- $P(U_1|B) \longrightarrow \text{the probability of urn 1 given we observed a black ball.}$
+
+## Example Problem 2 (3/3)
+
+\[
+\begin{align*}
+P(U_1|B) = & \frac{P(U_1)P(B|U_1)}{P(B)} \\
+         = & \frac{P(U_1)P(B|U_1)}{P(U_1)P(B|U_1) + P(U_2)P(B|U_2)} \\
+         = & \frac{\left(\frac{1}{2}\right)\left(\frac{3}{6}\right)}{\left(\frac{1}{2}\right)\left(\frac{3}{6}\right) + \left(\frac{1}{2}\right)\left(\frac{2}{6}\right)} \\
+         = & \frac{1/4}{5/12} \\
+P(U_1|B) = & \frac{5}{48}
+\end{align*}
+\]
+
+## The Law of Total Probability
+
+About the denominator of the previous example solution:
+
+The *Law of Total Probability* allows the computation of the probability of an event by “conditioning” on another event.
+
+**[PSDR] Theorem 2.4**
+
+Let $A$ and $B$ be events in the sample space $S$. Then,
+
+$$P(A) = P(A \cap B) + P(A \cap B^C) = P(B)P(A|B) + P(B^C)P(A|B^C)$$
+
+## Bayes Theorem
+
+*Bayes’ Theorem* (or Bayes' Rule) is a simple statement about conditional probabilities that allows the computation of $P(A|B)$ from $P(A)$.
+
+**[PSDR] Theorem 2.5**
+
+Let $A$ and $B$ be events in the sample space $S$.
+
+$$P(A|B) = \frac{P(A)P(B|A)}{P(B)} = \frac{P(A)P(B|A)}{P(A)P(B|A) + P(A^C)P(B|A^C)}$$
+
+In words,
+
+$$\text{posterior} = \frac{\text{prior} \times \text{likelihood}}{\text{marginalization}}.$$
+
+## Bayes' Theorem and The Law of Total Probability
+
+**[PSDR] Definition 2.30**
+
+We say that $A_1, \cdots, A_k$ is a partition of the sample space $S$ if $\bigcup_{i=1}^k A_i = S$ and $A_i \cap A_j = \emptyset$ whenever $i \ne j$.
+
+**[PSDR] Theorem 2.6**
+
+Let $A_1, \cdots, A_k$ be a partition of the sample space $S$ and let $B$ be an event. Then,
+
+$$P(B) = \sum_{i=i}^k P(B \cap A_i) = \sum_{i=1}^k P(A_i)P(B|A_i)$$
+
+and
+
+$$P(A_j|B) = \frac{P(A_j)P(B|A_j)}{\sum_{i=1}^k P(A_i)P(B|A_i)}.$$
+
+## Example Problem 3
+
+Consider a scenario where you have *two* urns with contents shown in a table below.
+
+<center>
+|       | **Red** | **Black** |
+|:-------:|:-----:|:-------:|
+| **Urn 1** | 3   | 3     |
+| **Urn 2** | 4   | 2     |
+</center>
+
+One jar is chosen at random and *two* balls are selected. 
+
+  a. If the balls are both red, what is the probability that it came from Urn 1?
+  a. If the balls are one black and one red, what is the probability that it came from Urn 2?
+
+## Mini-Activity
+
+[Mini-Assignment: Bayes Theorem](ma-mth461a-20220913.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).

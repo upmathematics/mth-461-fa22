@@ -5,9 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="date" content="2022-09-08" />
+  <meta name="date" content="2022-09-13" />
   <meta name="font-size-adjustment" content="4" />
-  <title>Independence and Conditional Probability</title>
+  <title>Bayes Theorem</title>
   <style type="text/css">
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -394,75 +394,224 @@ list-style-type: none;
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">Independence and Conditional Probability</h1>
+  <h1 class="title">Bayes Theorem</h1>
   <p class="author">
 
   </p>
-  <p class="date">2022-09-08</p>
+  <p class="date">2022-09-13</p>
 </div>
-<div id="previously-part-12" class="slide section level2">
-<h1>Previously (Part 1/2)…</h1>
-<p><strong>Independence</strong></p>
-<p><strong>[PSDR] Definition 2.20</strong></p>
-<p>Two events are said to be <em>independent</em> if knowledge that one
-event occurs does not give any probabilistic information as to whether
-the other event occurs. Formally, we say that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if <span class="math inline">\(P(A \cap B) = P(A)P(B)\)</span>.</p>
-<p>Events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be dependent if they are
-not independent.</p>
-</div>
-<div id="previously-part-22" class="slide section level2">
-<h1>Previously (Part 2/2)…</h1>
-<p><strong>Sampling WITH or WITHOUT replacement</strong></p>
-<ul>
-<li><p><strong>Sampling WITH replacement:</strong> A method of sampling
-that an <em>item is sampled more than once</em>. Sampling with
-replacement generally produces <em>independent events</em>. Usually
-scenarios - but not always - like this does not distinguish identical
-items.</p></li>
-<li><p><strong>Sampling WITHOUT replacement:</strong> A method of
-sampling where an <em>item may not be sampled more than once</em>.
-Sampling without replacement generally produce <em>dependent
-events</em>. Usually - but not always - scenarios like this does
-distinguish identical items.</p></li>
-</ul>
-</div>
-<div id="conditional-probabability" class="slide section level2">
-<h1>Conditional Probabability</h1>
+<div id="previously" class="slide section level2">
+<h1>Previously…</h1>
+<p><strong>Conditional Probability</strong></p>
 <p><strong>[PSDR] Definition 2.18</strong></p>
 <p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events in the sample space <span class="math inline">\(S\)</span>, with <span class="math inline">\(P(B)
 \ne 0\)</span>. The conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is <span class="math display">\[P(A|B)
 = \frac{P(A \cap B)}{P(B)}\]</span></p>
-<p><strong>[PSDR] Proposition 2.1</strong></p>
-<p>Two simple facts about conditional probability are:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P((A \cap B) | B) =
-P(A|B)\)</span>.</li>
-<li><span class="math inline">\(P(A \cup B | B ) = 1\)</span>.</li>
-</ol>
 </div>
-<div id="independence-and-conditional-probability" class="slide section level2">
-<h1>Independence and Conditional Probability</h1>
-<p><strong>[PSDR] Theorem 2.3</strong></p>
-<p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events with non-zero probability in
-the sample space <span class="math inline">\(S\)</span>. The following
-are equivalent:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent.</li>
-<li><span class="math inline">\(P(A \cap B) = P(A)P(B)\)</span>.</li>
-<li><span class="math inline">\(P(A|B) = P(A)\)</span>.</li>
-<li><span class="math inline">\(P(B|A) = P(B)\)</span>.</li>
-</ol>
-</div>
-<div id="simple-example-problem" class="slide section level2">
-<h1>Simple Example Problem</h1>
+<div id="example-problem-1-13" class="slide section level2">
+<h1>Example Problem 1 (1/3)</h1>
 <p>Consider a scenario where you draw three balls from an urn without
 replacement. The urn has 6 balls in total; 2 reds and 4 black.</p>
 <p>What is the probability that at least two black balls are drawn?</p>
+<p><em>Notation:</em> Let <span class="math inline">\(R_i\)</span> and
+<span class="math inline">\(B_i\)</span> be the <span class="math inline">\(i\)</span>th draw of red and black ball
+respectively.</p>
+</div>
+<div id="example-problem-1-23" class="slide section level2">
+<h1>Example Problem 1 (2/3)</h1>
+<ul>
+<li>Method 1:</li>
+</ul>
+<p><span class="math display">\[
+\scriptsize
+\begin{align*}
+P(\text{black balls} \ge 2) = &amp; P(B_1)P(B_2|B_1)P(B_3|B_1 \cap B_2)
++ \longrightarrow \{B_1,B_2,B_3\}\\
+                              &amp; P(B_1)P(B_2|B_1)P(R_3|B_1 \cap B_2)
++ \longrightarrow \{B_1,B_2,R_3\} \\
+                              &amp; P(B_1)P(R_2|B_1)P(B_3|B_1 \cap R_2)
++ \longrightarrow \{B_1,R_2,B_3\} \\
+                              &amp; P(R_1)P(B_2|R_1)P(B_3|R_1 \cap B_2)
+\hspace{7px} \longrightarrow \{R_1,B_2,B_3\} \\
+                              &amp; \\
+P(\text{black balls} \ge 2) = &amp; \left(\frac{1}{5}\right) +
+\left(\frac{1}{5}\right) + \left(\frac{1}{5}\right) +
+\left(\frac{1}{5}\right) \\
+                            = &amp; \frac{4}{5}
+\end{align*}
+\]</span></p>
+</div>
+<div id="example-problem-1-33" class="slide section level2">
+<h1>Example Problem 1 (3/3)</h1>
+<ul>
+<li>Method 2:</li>
+</ul>
+<p><span class="math display">\[
+\scriptsize
+\begin{align*}
+P(\text{draw at least 2 black balls}) = &amp; \frac{\text{ways to draw
+exactly 2 black balls } + \text{ways to draw exactly 3 black
+balls}}{\text{all ways to draw 3 balls out of 6}} \\
+                                      = &amp; \frac{{4 \choose 2}{2
+\choose 1} + {4 \choose 3}{2 \choose 0}}{{6 \choose 3}}\\
+                                      = &amp; \frac{6(2) +4(1) }{20} \\
+                                      = &amp; \frac{16}{20} \\
+                                      = &amp; \frac{4}{5}
+\end{align*}
+\]</span></p>
+<p>Note: <span class="math inline">\({n \choose k} =
+\frac{n!}{k!(n-k)!}\)</span>.</p>
+</div>
+<div id="example-problem-2-13" class="slide section level2">
+<h1>Example Problem 2 (1/3)</h1>
+<p>Consider a scenario where you have <em>two</em> urns with contents
+shown in a table below.</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><strong>Red</strong></th>
+<th align="center"><strong>Black</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Urn 1</strong></td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Urn 2</strong></td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>One jar is chosen at random and a single ball is selected. If the
+ball is black, what is the probability that it came from Urn 1?</p>
+<p>Note: We don’t know which Urn the black ball came from. The goal is
+to find the probability that the ball came from Urn 1 given that we
+observed that the ball is black.</p>
+</div>
+<div id="example-problem-2-23" class="slide section level2">
+<h1>Example Problem 2 (2/3)</h1>
+<p><em>Notations:</em> Let <span class="math inline">\(U_1\)</span> and
+<span class="math inline">\(U_2\)</span> be Urn 1 and Urn 2
+respectively, <span class="math inline">\(R\)</span> be a red ball, and
+<span class="math inline">\(B\)</span> be a black ball.</p>
+<ul>
+<li><span class="math inline">\(P(B) \longrightarrow \text{the
+probability of getting a black ball in urn 1 or urn 2.}\)</span></li>
+<li><span class="math inline">\(P(U_1) \longrightarrow \text{the
+probability of urn 1.}\)</span></li>
+<li><span class="math inline">\(P(U_2) \longrightarrow \text{the
+probability of urn 2.}\)</span></li>
+<li><span class="math inline">\(P(U_1 \cap B) = P(U_1)P(B|U_1)
+\longrightarrow \text{the probability of urn 1 and a black
+ball.}\)</span></li>
+<li><span class="math inline">\(P(U_2 \cap B) = P(U_2)P(B|U_2)
+\longrightarrow \text{the probability of urn 2 and a black
+ball.}\)</span></li>
+<li><span class="math inline">\(P(U_1|B) \longrightarrow \text{the
+probability of urn 1 given we observed a black ball.}\)</span></li>
+</ul>
+</div>
+<div id="example-problem-2-33" class="slide section level2">
+<h1>Example Problem 2 (3/3)</h1>
+<p><span class="math display">\[
+\begin{align*}
+P(U_1|B) = &amp; \frac{P(U_1)P(B|U_1)}{P(B)} \\
+         = &amp; \frac{P(U_1)P(B|U_1)}{P(U_1)P(B|U_1) + P(U_2)P(B|U_2)}
+\\
+         = &amp;
+\frac{\left(\frac{1}{2}\right)\left(\frac{3}{6}\right)}{\left(\frac{1}{2}\right)\left(\frac{3}{6}\right)
++ \left(\frac{1}{2}\right)\left(\frac{2}{6}\right)} \\
+         = &amp; \frac{1/4}{5/12} \\
+P(U_1|B) = &amp; \frac{5}{48}
+\end{align*}
+\]</span></p>
+</div>
+<div id="the-law-of-total-probability" class="slide section level2">
+<h1>The Law of Total Probability</h1>
+<p>About the denominator of the previous example solution:</p>
+<p>The <em>Law of Total Probability</em> allows the computation of the
+probability of an event by “conditioning” on another event.</p>
+<p><strong>[PSDR] Theorem 2.4</strong></p>
+<p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events in the sample space <span class="math inline">\(S\)</span>. Then,</p>
+<p><span class="math display">\[P(A) = P(A \cap B) + P(A \cap B^C) =
+P(B)P(A|B) + P(B^C)P(A|B^C)\]</span></p>
+</div>
+<div id="bayes-theorem" class="slide section level2">
+<h1>Bayes Theorem</h1>
+<p><em>Bayes’ Theorem</em> (or Bayes’ Rule) is a simple statement about
+conditional probabilities that allows the computation of <span class="math inline">\(P(A|B)\)</span> from <span class="math inline">\(P(A)\)</span>.</p>
+<p><strong>[PSDR] Theorem 2.5</strong></p>
+<p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be events in the sample space <span class="math inline">\(S\)</span>.</p>
+<p><span class="math display">\[P(A|B) = \frac{P(A)P(B|A)}{P(B)} =
+\frac{P(A)P(B|A)}{P(A)P(B|A) + P(A^C)P(B|A^C)}\]</span></p>
+<p>In words,</p>
+<p><span class="math display">\[\text{posterior} = \frac{\text{prior}
+\times \text{likelihood}}{\text{marginalization}}.\]</span></p>
+</div>
+<div id="bayes-theorem-and-the-law-of-total-probability" class="slide section level2">
+<h1>Bayes’ Theorem and The Law of Total Probability</h1>
+<p><strong>[PSDR] Definition 2.30</strong></p>
+<p>We say that <span class="math inline">\(A_1, \cdots, A_k\)</span> is
+a partition of the sample space <span class="math inline">\(S\)</span>
+if <span class="math inline">\(\bigcup_{i=1}^k A_i = S\)</span> and
+<span class="math inline">\(A_i \cap A_j = \emptyset\)</span> whenever
+<span class="math inline">\(i \ne j\)</span>.</p>
+<p><strong>[PSDR] Theorem 2.6</strong></p>
+<p>Let <span class="math inline">\(A_1, \cdots, A_k\)</span> be a
+partition of the sample space <span class="math inline">\(S\)</span> and
+let <span class="math inline">\(B\)</span> be an event. Then,</p>
+<p><span class="math display">\[P(B) = \sum_{i=i}^k P(B \cap A_i) =
+\sum_{i=1}^k P(A_i)P(B|A_i)\]</span></p>
+<p>and</p>
+<p><span class="math display">\[P(A_j|B) =
+\frac{P(A_j)P(B|A_j)}{\sum_{i=1}^k P(A_i)P(B|A_i)}.\]</span></p>
+</div>
+<div id="example-problem-3" class="slide section level2">
+<h1>Example Problem 3</h1>
+<p>Consider a scenario where you have <em>two</em> urns with contents
+shown in a table below.</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><strong>Red</strong></th>
+<th align="center"><strong>Black</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Urn 1</strong></td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Urn 2</strong></td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>One jar is chosen at random and <em>two</em> balls are selected.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If the balls are both red, what is the probability that it came from
+Urn 1?</li>
+<li>If the balls are one black and one red, what is the probability that
+it came from Urn 2?</li>
+</ol>
 </div>
 <div id="mini-activity" class="slide section level2">
 <h1>Mini-Activity</h1>
-<p><a href="ma-mth461a-20220908.pdf" target="_blank">Mini-Assignment:
-Independence and Conditional Probability</a></p>
+<p><a href="ma-mth461a-20220913.pdf" target="_blank">Mini-Assignment:
+Bayes Theorem</a></p>
 <p>Back to <a href="../../topics.html">Tentative Topics
 Schedule</a>.</p>
 </div>

@@ -53,11 +53,11 @@ Let $A$ and $B$ be events with non-zero probability in the sample space $S$. The
   3. $P(A|B) = P(A)$.
   4. $P(B|A) = P(B)$.
 
-## Example (2/2)
+## Simple Example Problem
 
 Consider a scenario where you draw three balls from an urn without replacement. The urn has 6 balls in total; 2 reds and 4 black.
 
-What is the probability that at least two black balls are draw?
+What is the probability that at least two black balls are drawn?
 
 ## Mini-Activity
 
