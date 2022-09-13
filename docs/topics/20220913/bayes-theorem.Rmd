@@ -48,16 +48,6 @@ P(\text{black balls} \ge 2) = & \left(\frac{1}{5}\right) + \left(\frac{1}{5}\rig
 
 * Method 2:
 
-\[
-\scriptsize
-\begin{align*}
-P(\text{draw at least 2 black balls}) = & \frac{\text{ways to draw exactly 2 black balls } + \text{ways to draw exactly 3 black balls}}{\text{all ways to draw 3 balls out of 6}} \\
-                                      = & \frac{{4 \choose 2}{2 \choose 1} + {4 \choose 3}{2 \choose 0}}{{6 \choose 3}}\\
-                                      = & \frac{6(2) +4(1) }{20} \\
-                                      = & \frac{16}{20} \\
-                                      = & \frac{4}{5}
-\end{align*}
-\]
 
 Note: ${n \choose k} = \frac{n!}{k!(n-k)!}$.
 
