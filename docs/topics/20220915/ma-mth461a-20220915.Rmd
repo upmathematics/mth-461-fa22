@@ -1,0 +1,62 @@
+---
+title: '**Random Variables \& Probability Functions**'
+subtitle: "Mini-Assignment 2022-09-15 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+1. Determine the following scenarios whether they can be modeled using a discrete or continuous random variable. Explain why.
+
+    a. Wait times at a bus stop.
+    b. The number of students in a class.
+    c. Time length of flight delays in a day.
+    d. The number of cancelled flights in a month.
+    e. People's height and weight.
+    f. College exam scores.
+
+2. Consider an experiment where observing a six is a success (not observing a six is a failure). Suppose that the number of rolls is 3. Apply the Binomial Probability Mass Function to answer the following questions.
+
+    a. What is the probability of observing a success at most 2 times?
+    b. What is the probability of observing a success at least 2 times?
+    c. What is the probability of observing a failure at most 1 time?
+    d. What is the probability of observing a failure at least 1 time?
+    e. What is the probability of observing no successes?
+    f. What is the probability of observing no failures?

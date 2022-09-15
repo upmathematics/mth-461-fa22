@@ -1,0 +1,236 @@
+---
+title: "Random Variables & Probability Functions"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-09-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously... (1/2)
+
+**Independence**
+
+**[PSDR] Definition 2.20**
+
+Two events are said to be *independent* if knowledge that one event occurs does not give any probabilistic information as to whether the other event occurs. Formally, we say that $A$ and $B$ are independent if $P(A \cap B) = P(A)P(B)$.
+
+Events $A$ and $B$ are said to be dependent if they are not independent.
+
+**Conditional Probability**
+
+**[PSDR] Definition 2.18**
+
+Let $A$ and $B$ be events in the sample space $S$, with $P(B) \ne 0$. The conditional probability of $A$ given $B$ is 
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+## Previously... (2/2)
+
+**Bayes' Theorem and The Law of Total Probability**
+
+**[PSDR] Definition 2.30**
+
+We say that $A_1, \cdots, A_k$ is a partition of the sample space $S$ if $\bigcup_{i=1}^k A_i = S$ and $A_i \cap A_j = \emptyset$ whenever $i \ne j$.
+
+**[PSDR] Theorem 2.6**
+
+Let $A_1, \cdots, A_k$ be a partition of the sample space $S$ and let $B$ be an event. Then,
+
+$$P(B) = \sum_{i=i}^k P(B \cap A_i) = \sum_{i=1}^k P(A_i)P(B|A_i)$$
+
+and
+
+$$P(A_j|B) = \frac{P(A_j)P(B|A_j)}{\sum_{i=1}^k P(A_i)P(B|A_i)}.$$
+
+In words,
+
+$$\text{posterior} = \frac{\text{prior} \times \text{likelihood}}{\text{marginalization}}.$$
+
+## Example Problem 1 (1/2)
+
+Consider a scenario where you have only *one* urn with contents *one* black ball and one red.
+
+*You draw one ball.*
+
+* Sample space:
+  
+    $$S = \{B,R\}$$
+
+  * Let $X$ be random variable representing drawing a ball, and $x$ be the outcome of drawing a black ball ($x=1$) or red ball ($x=0$); 
+  
+<center>
+  $P(X = 1) = \frac{1}{2} \longrightarrow$ the probability of drawing black
+  
+  $P(X = 0) = \frac{1}{2} \longrightarrow$ the probability of drawing red
+</center>
+
+  * Here, $S$ is a **discrete** sample space and $X$ is a **discrete** random variable.
+
+## Example Problem 1 (2/2)
+
+We can model the ball drawing using a **probability function**.
+
+ * For one ball draw, we know the **probability function** to be
+      $$P(X = x; p) = \begin{cases} p & \text{if } x=1 \text{ (B)} \\ 1-p & \text{if } x=0 \text{ (R)}\end{cases}$$
+      where $p=\frac{1}{2}$ and $X$ is the **discrete random variable** for the outcome of the ball draw to be black or not black (which is red). 
+      
+  * This function is also known as the **Bernoulli Distribution**, a statistical model for only two possible outcomes (yes/no,success/failure,etc.) of any single experiment.
+  
+  * We can rewrite the above function as
+      $$P(X=x; p) = p^x (1-p)^{1-x}$$
+  * The term $p$ is the parameter of the function, which is the probability of observing a black ball.
+
+## Example Problem 2 (1/3)
+
+*You draw one ball with replacement three times.* Note that each draw are now independent events.
+
+  * Sample space: 
+    $$S = \{\{B,B,B\},\{B,B,R\},\{B,R,R\},\{R,R,R\}, \\
+    \{R,R,B\},\{R,B,B\},\{B,R,B\},\{R,B,R\}\}$$
+
+  * Let the random variable $X$ to be the number of black balls in this scenario;
+    $$X = \{x_0,x_1,x_2,x_3\} = {0,1,2,3}$$
+  
+  * *Example probabilities:* <br>
+    - $P(X = 3) = 1 \left( \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \right) = \frac{1}{8} \longrightarrow$ the probability of getting **exactly** black balls <br>
+    - $P(X = 2) = 3 \left( \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \right) = \frac{3}{8} \longrightarrow$ the probability of getting **exactly** two black balls <br>
+    - $P(X \ge 2) = 3 \left( \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \right) + 1 \left( \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \right) = \frac{4}{8} = \frac{1}{2} = \longrightarrow$ the probability of getting **at least** two heads <br>
+    
+  * Here, $S$ is a **discrete** sample space and $X$ is a **discrete random variable**.
+
+## Example Problem 2 (2/3)
+
+  * Let the **discrete random variable** $X$ to be the number of black balls (say observing a black ball is considered as a success). We want to define a **probability function** to compute the probability of observing the number of black balls (observing the number of successes).
+
+  * Let $n$ be the number of tosses and $p$ be the probability of success. In this example, $p=\frac{1}{2}$.
+  
+  * The **probability function** that models multiple ball drawings from an urn - with replacement - is the **Binomial**, which is used when there are exactly two **disjoint** (also called **mutually exclusive**) outcomes of a trial (in this case, a ball draw from an urn with two distinct balls).
+  
+  * These outcomes are labeled "success" (observing heads) and "failure" (observing not heads - which tails).
+  
+## Example Problem 2 (3/3)
+
+  * The general form of the **Binomial** Probability Function is given by
+      $$P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n$$
+      where $\binom{n}{x} = \frac{n!}{x!(n-x)!}$. 
+      
+  * The parameters of this function is $p$ and $n$. The binomial distribution assumes that $p$ is fixed for all $n$ trials.
+  
+      - $p$ is the probability of drawing a black ball.
+      - $n$ is the number of draws.
+  
+  * Notice that the term $p^x (1-p)^{(n-x)}$ is the **Bernoulli**. Here, a trial is also called a **Bernoulli trial**, a random experiment with exactly two possible outcomes.
+
+## Drawing a Ball from an Urn $\mathbf{n = 20}$ Times
+
+<div class='left' style='float:left;width:48%'>
+```{r echo=FALSE, fig.align="center", fig.asp=1, message=FALSE, warning=FALSE}
+n <- 20
+x <- 0:n
+probability <- dbinom(x = x,
+                      size = n, 
+                      prob = 0.5)
+df <- data.frame(x=x,probability=probability)
+
+library(ggplot2)
+p<-ggplot(df, aes(x=x, y=probability)) +
+  geom_point(size=4) +
+  scale_x_discrete(limit = x)
+p
+```
+</div>
+
+<div class='right' style='float:left;width:48%'>
+Using the **binomial** probability function, we can answer probability questions much more easily.
+</div>
+
+## Tossing a Fair Coin $\mathbf{n = 20}$ Times {.bigger}
+
+<div class='left' style='float:left;width:48%'>
+```{r echo=FALSE, fig.align="center", fig.asp=1, message=FALSE, warning=FALSE}
+n <- 20
+x <- 0:n
+probability <- dbinom(x = x,
+                      size = n, 
+                      prob = 0.5)
+df <- data.frame(x=x,probability=probability)
+
+x_7 <- 7
+p_7 <- dbinom(x = x_7,
+              size = n, 
+              prob = 0.5)
+
+library(ggplot2)
+p<-ggplot(df, aes(x=x, y=probability)) +
+  geom_point(size=4) + ggtitle("PMF of the Binomial Distribution") +
+  geom_point(x=x_7,y=p_7,color='red',size = 4) + 
+  geom_segment(x=x_7,y=0,xend=x_7, yend=p_7, color="red") +
+  scale_x_discrete(limit = x)
+p
+```
+</div>
+
+<div class='right' style='float:right;width:48%'>
+Using the **binomial** probability function, we can answer probability questions much more easily.
+
+The probability of observing **exacty** `r x_7` heads is
+$$P(X = `r x_7`) = `r p_7`$$
+</div>
+
+## Tossing a Fair Coin $\mathbf{n = 20}$ Times {.bigger}
+
+<div class='left' style='float:left;width:48%'>
+```{r echo=FALSE, fig.align="center", fig.asp=1, message=FALSE, warning=FALSE}
+n <- 20
+x <- 0:n
+probability <- dbinom(x = x,
+                      size = n, 
+                      prob = 0.5)
+df <- data.frame(x=x,probability=probability)
+
+x_al7 <- 7:n
+p_al7 <- probability[x_al7+1]
+p_al7_sum <- sum(p_al7)
+
+library(ggplot2)
+p<-ggplot(df, aes(x=x, y=probability)) +
+  geom_point(size=4) + ggtitle("PMF of the Binomial Distribution") +
+  scale_x_discrete(limit = x)
+
+for(i in 1:length(x_al7)) {
+  p <- p + geom_point(x=x_al7[i],y=p_al7[i],color='red',size = 4) + 
+           geom_segment(x=x_al7[i],y=0,xend=x_al7[i], yend=p_al7[i], color="red")
+}
+
+p
+```
+</div>
+
+<div class='right' style='float:right;width:48%'>
+Using the **binomial** probability function, we can answer probability questions much more easily.
+
+The probability of observing **at least** `r x_7[1]` heads is
+$$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r p_al7_sum`$$
+</div>
+
+## Discrete R.V. versus Continuous Random Variables
+
+  * **Discrete Random Variable**: A random variable that can take on only a finite or countably infinite set of outcomes. We can say that a discrete R.V. has distinct values that can be counted. <br>
+    *Example:* Coin Flips, Dice Rolls, Outcomes of a Test (positive/negative), gender (M/F), etc.
+
+  * **Continuous Random Variable**: A random variable that can take on any value along a continuum (but may be reported "discretely") <br>
+    *Example:* Height (really continuous, but we usually just report to the nearest inch/centimeter), temperatures, etc.
+    
+## Discrete versus Continuous Probability Functions
+    
+  * **Probability Functions = Probability Distributions** Table, Graph, or Formula that describes values a random variable can take on, and its corresponding probability (discrete R.V.) or density (continuous R.V.).
+  
+  * We call a Probability Function as **Probability Mass Function (PMF)** for *discrete random variables* and **Probability Density Function (PDF)** for *continuous random variables*.
+
+## Mini-Activity
+
+[Mini-Assignment: Bayes Theorem](ma-mth461a-20220915.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).

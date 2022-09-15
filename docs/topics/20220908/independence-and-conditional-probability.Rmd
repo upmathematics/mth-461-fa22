@@ -28,7 +28,7 @@ Events $A$ and $B$ are said to be dependent if they are not independent.
 
 * **Sampling WITHOUT replacement:** A method of sampling where an *item may not be sampled more than once*. Sampling without replacement generally produce *dependent events*. Usually - but not always - scenarios like this does distinguish identical items.
 
-## Conditional Probabability
+## Conditional Probability
 
 **[PSDR] Definition 2.18**
 
@@ -53,7 +53,7 @@ Let $A$ and $B$ be events with non-zero probability in the sample space $S$. The
   3. $P(A|B) = P(A)$.
   4. $P(B|A) = P(B)$.
 
-## Simple Example Problem
+## Example Problem
 
 Consider a scenario where you draw three balls from an urn without replacement. The urn has 6 balls in total; 2 reds and 4 black.
 
