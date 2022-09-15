@@ -216,7 +216,7 @@ The probability of observing **at least** `r x_7[1]` black balls is
 $$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r round(p_al7_sum,4)`$$
 </div>
 
-## Discrete R.V. versus Continuous Random Variables
+## Discrete versus Continuous Random Variables
 
   * **Discrete Random Variable**: A random variable that can take on only a finite or countably infinite set of outcomes. We can say that a discrete R.V. has distinct values that can be counted. <br>
     *Example:* Coin Flips, Dice Rolls, Outcomes of a Test (positive/negative), gender (M/F), etc.
@@ -232,6 +232,6 @@ $$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r round(p_al7_sum,4)`$$
 
 ## Mini-Activity
 
-[Mini-Assignment: Bayes Theorem](ma-mth461a-20220915.pdf){target="_blank"}
+[Mini-Assignment: Random Variables and Probability Functions](ma-mth461a-20220915.pdf){target="_blank"}
 
 Back to [Tentative Topics Schedule](../../topics.html).
