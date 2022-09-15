@@ -52,7 +52,7 @@ knitr::opts_chunk$set(echo = TRUE)
     e. People's height and weight.
     f. College exam scores.
 
-2. Consider an experiment where observing a six is a success (not observing a six is a failure). Suppose that the number of rolls is 3. Apply the Binomial Probability Mass Function to answer the following questions.
+2. Consider an experiment where observing a six is a success (not observing a six is a failure) of rolling a six sided dice. Suppose that the number of rolls is 3. Apply the Binomial Probability Mass Function to answer the following questions.
 
     a. What is the probability of observing a success at most 2 times?
     b. What is the probability of observing a success at least 2 times?

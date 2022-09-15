@@ -26,6 +26,7 @@ Events $A$ and $B$ are said to be dependent if they are not independent.
 
 Let $A$ and $B$ be events in the sample space $S$, with $P(B) \ne 0$. The conditional probability of $A$ given $B$ is 
 $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+
 ## Previously... (2/2)
 
 **Bayes' Theorem and The Law of Total Probability**
@@ -164,7 +165,7 @@ p_7 <- dbinom(x = x_7,
 
 library(ggplot2)
 p<-ggplot(df, aes(x=x, y=probability)) +
-  geom_point(size=4) + ggtitle("PMF of the Binomial Distribution") +
+  geom_point(size=4) +
   geom_point(x=x_7,y=p_7,color='red',size = 4) + 
   geom_segment(x=x_7,y=0,xend=x_7, yend=p_7, color="red") +
   scale_x_discrete(limit = x)
@@ -175,8 +176,8 @@ p
 <div class='right' style='float:right;width:48%'>
 Using the **binomial** probability function, we can answer probability questions much more easily.
 
-The probability of observing **exacty** `r x_7` heads is
-$$P(X = `r x_7`) = `r p_7`$$
+The probability of observing **exacty** `r x_7` black balls is
+$$P(X = `r x_7`) = `r round(p_7,4)`$$
 </div>
 
 ## Tossing a Fair Coin $\mathbf{n = 20}$ Times {.bigger}
@@ -196,7 +197,7 @@ p_al7_sum <- sum(p_al7)
 
 library(ggplot2)
 p<-ggplot(df, aes(x=x, y=probability)) +
-  geom_point(size=4) + ggtitle("PMF of the Binomial Distribution") +
+  geom_point(size=4) +
   scale_x_discrete(limit = x)
 
 for(i in 1:length(x_al7)) {
@@ -211,8 +212,8 @@ p
 <div class='right' style='float:right;width:48%'>
 Using the **binomial** probability function, we can answer probability questions much more easily.
 
-The probability of observing **at least** `r x_7[1]` heads is
-$$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r p_al7_sum`$$
+The probability of observing **at least** `r x_7[1]` black balls is
+$$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r round(p_al7_sum,4)`$$
 </div>
 
 ## Discrete R.V. versus Continuous Random Variables
