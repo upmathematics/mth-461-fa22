@@ -147,7 +147,7 @@ p
 Using the **binomial** probability function, we can answer probability questions much more easily.
 </div>
 
-## Tossing a Fair Coin $\mathbf{n = 20}$ Times {.bigger}
+## Drawing a Ball $\mathbf{n = 20}$ Times {.bigger}
 
 <div class='left' style='float:left;width:48%'>
 ```{r echo=FALSE, fig.align="center", fig.asp=1, message=FALSE, warning=FALSE}
@@ -180,7 +180,7 @@ The probability of observing **exacty** `r x_7` black balls is
 $$P(X = `r x_7`) = `r round(p_7,4)`$$
 </div>
 
-## Tossing a Fair Coin $\mathbf{n = 20}$ Times {.bigger}
+## Drawing a Ball $\mathbf{n = 20}$ Times {.bigger}
 
 <div class='left' style='float:left;width:48%'>
 ```{r echo=FALSE, fig.align="center", fig.asp=1, message=FALSE, warning=FALSE}
