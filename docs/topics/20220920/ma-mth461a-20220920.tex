@@ -136,20 +136,20 @@
   \item
     Find \(P(X>3|Y=2)\).
   \item
-    Let \(Z=X+Y\). Find the range and PMF of Z. Verify the PMF of Z if it satisfy the PMF properties.
+    Let \(Z=X+Y\). Find the range and PMF of Z. Verify the PMF of \(Z\) if it satisfy the PMF properties.
   \item
     Find \(P(X=4|Z=8)\).
   \end{enumerate}
 \item
   Let \(X\) be a Binomial random variable with PMF given as
+
+  \[P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n\]
+  where \(\binom{n}{x} = \frac{n!}{x!(n-x)!}\).
+
+  The parameters of this function is \(p\) and \(n\). The binomial distribution assumes that \(p\) is fixed for all \(n\) trials.
+
+  Prove that
+  \[\sum_{x=0}^{n} \binom{n}{x} p^x (1-p)^{(n-x)} =  1 \text{ for all } n \ge 1.\]
 \end{enumerate}
-
-\[P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n\]
-where \(\binom{n}{x} = \frac{n!}{x!(n-x)!}\).
-
-The parameters of this function is \(p\) and \(n\). The binomial distribution assumes that \(p\) is fixed for all \(n\) trials.
-
-Prove that
-\[\sum_{x=0}^{n} \binom{n}{x} p^x (1-p)^{(n-x)} =  1 \text{ for all } n \ge 1.\]
 
 \end{document}
