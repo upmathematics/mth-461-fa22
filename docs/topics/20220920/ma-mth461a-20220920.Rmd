@@ -1,0 +1,62 @@
+---
+title: '**Discrete Random Variables**'
+subtitle: "Mini-Assignment 2022-09-20 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+1. Consider a scenario where you roll a pair of dice and observe two numbers $X$ and $Y$.
+
+    a. Find the PMFs of $X$ and $Y$. Verify each PMF if they satisfy the PMF properties.
+    b. Find $P(X=2 \cap Y=6)$.
+    c. Find $P(X>3|Y=2)$.
+    d. Let $Z=X+Y$. Find the range and PMF of Z. Verify the PMF of Z if it satisfy the PMF properties.
+    e. Find $P(X=4|Z=8)$.
+
+2. Let $X$ be a Binomial random variable with PMF given as
+
+$$P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n$$
+      where $\binom{n}{x} = \frac{n!}{x!(n-x)!}$. 
+      
+    The parameters of this function is $p$ and $n$. The binomial distribution assumes that $p$ is fixed for all $n$ trials.
+
+    Prove that
+$$\sum_{x=0}^{n} \binom{n}{x} p^x (1-p)^{(n-x)} =  1.$$

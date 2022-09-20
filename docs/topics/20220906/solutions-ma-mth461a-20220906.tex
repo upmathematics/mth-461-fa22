@@ -209,4 +209,54 @@ P(\{*,4\}) + P(\{4,*\}) - P(\{*,\ge 4\}) - P(\{\ge 4,*\}) + P(\{4,4\}) = & \frac
   \end{enumerate}
 \end{enumerate}
 
+\textcolor{blue}{\textbf{a.}
+There are $36*36 = 1296$ possible outcomes.}
+
+\textcolor{blue}{\textbf{b.} Note that each roll is independent but a roll with a pair of dice is not independent.
+$$P_{\text{roll 1}}(6)P_{\text{roll 2}}(4) = \left(\frac{5}{36}\right)\left(\frac{3}{36}\right) = \frac{15}{1296} = \frac{5}{432}$$}
+
+\textcolor{blue}{\textbf{c.} There are multiple ways that we can get a sum of 13 using a pair of dice rolled twice.
+\begin{align*}
+  P(13) = & 2P_{roll 1}(11)P_{roll 2}(2) + \\
+          & 2P_{roll 1}(10)P_{roll 2}(3) + \\
+          & 2P_{roll 1}(9)P_{roll 2}(4) + \\
+          & 2P_{roll 1}(8)P_{roll 2}(5) + \\
+          & 2P_{roll 1}(7)P_{roll 2}(6) \\
+        = & 2 \left(\frac{2}{36}\right)\left(\frac{1}{36}\right) + \\
+          & 2 \left(\frac{3}{36}\right)\left(\frac{2}{36}\right) + \\
+          & 2 \left(\frac{4}{36}\right)\left(\frac{3}{36}\right) + \\
+          & 2 \left(\frac{5}{36}\right)\left(\frac{4}{36}\right) + \\
+          & 2 \left(\frac{6}{36}\right)\left(\frac{5}{36}\right) + \\
+        = & \frac{70}{1296}
+\end{align*}}
+
+\textcolor{blue}{\textbf{d.}
+\begin{align*}
+  P(\le 13) = & \sum_{n=4}^{13} 2P(n) \\
+            = & 2\left(P(4) + P(5) + P(6) + P(7) + P(8) + P(9) + P(10) + P(11) + P(12) + P(13)\right) \\
+            = & 2\big(P_{roll 1}(2)P_{roll 2}(2) + \\
+              & P_{roll 1}(2)P_{roll 2}(3) + \\
+              & P_{roll 1}(3)P_{roll 2}(3) + P_{roll 1}(4)P_{roll 2}(2) + \\
+              & P_{roll 1}(4)P_{roll 2}(3) + P_{roll 1}(5)P_{roll 2}(2) + \\
+              & P_{roll 1}(4)P_{roll 2}(4) + P_{roll 1}(5)P_{roll 2}(3) + P_{roll 1}(6)P_{roll 2}(6) + \\
+              & P_{roll 1}(5)P_{roll 2}(4) + P_{roll 1}(6)P_{roll 2}(3) + P_{roll 1}(7)P_{roll 2}(2) + \\
+              & P_{roll 1}(5)P_{roll 2}(5) + P_{roll 1}(6)P_{roll 2}(4) + P_{roll 1}(7)P_{roll 2}(3) + P_{roll 1}(8)P_{roll 2}(2) + \\
+              & P_{roll 1}(6)P_{roll 2}(5) + P_{roll 1}(7)P_{roll 2}(4) + P_{roll 1}(8)P_{roll 2}(3) + P_{roll 1}(9)P_{roll 2}(2) + \\
+              & P_{roll 1}(7)P_{roll 2}(5) + P_{roll 1}(8)P_{roll 2}(4) + P_{roll 1}(9)P_{roll 2}(3) + P_{roll 1}(10)P_{roll 2}(2) + \\
+              & P_{roll 1}(11)P_{roll 2}(2) + P_{roll 1}(10)P_{roll 2}(3) + P_{roll 1}(9)P_{roll 2}(4) + P_{roll 1}(8)P_{roll 2}(5) + P_{roll 1}(7)P_{roll 2}(6)\big) \\
+            = & \frac{316}{1296}\\
+\end{align*}}
+
+\textcolor{blue}{\textbf{e.} Let $A_1$ and $A_2$ be the event where pair 1 and pair 2 has exactly one 3. For one pair, there are 10 cases where there is exactly one 3.
+\begin{align*}
+  P(A_1)P(A_2^C) + P(A_1^C)P(A_2) = & \left(\frac{10}{36}\right) \left(1-\frac{10}{36}\right) + \left(1-\frac{10}{36}\right) \left(\frac{10}{36}\right) \\
+                                  = & \frac{13}{324}\\
+\end{align*}}
+
+\textcolor{blue}{\textbf{f.} Let $B_1$ and $B_2$ be 1st and 2nd roll events where one of the pair of dice lands on at most three respectively.
+\begin{align*}
+  P(B_1)P(B_2^C) + P(B_1^C)P(B_2) = & \left(\frac{9}{36}\right)\left(1 - \frac{9}{36}\right) + \left(1 - \frac{9}{36}\right)\left(\frac{9}{36}\right) \\
+                                  = & \frac{3}{8}\\
+\end{align*}}
+
 \end{document}

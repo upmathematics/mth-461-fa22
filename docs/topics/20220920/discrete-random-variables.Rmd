@@ -1,0 +1,152 @@
+---
+title: "Discrete Random Variables"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-09-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously... (1/2)
+
+**[PSDR] Definition 3.1**
+
+Let $S$ be the sample space of an experiment. A random variable is a function from $S$ to the real line. Random variables are usually denoted by a capital letter. Many times we will abbreviate the words random variable with rv.
+
+**Discrete versus Continuous Random Variables**
+
+  * **Discrete Random Variable**: A random variable that can take on only a finite or countably infinite set of outcomes. We can say that a discrete R.V. has distinct values that can be counted. <br>
+    *Example:* Coin Flips, Dice Rolls, Outcomes of a Test (positive/negative), gender (M/F), etc.
+
+  * **Continuous Random Variable**: A random variable that can take on any value along a continuum (but may be reported "discretely") <br>
+    *Example:* Height (really continuous, but we usually just report to the nearest inch/centimeter), temperatures, etc.
+
+## Previously... (2/2)
+
+**Discrete versus Continuous Probability Functions**
+    
+  * **Probability Functions = Probability Distributions** Table, Graph, or Formula that describes values a random variable can take on, and its corresponding probability (discrete random variable) or density (continuous random variable).
+  
+  * We call a Probability Function as **Probability Mass Function (PMF)** for *discrete random variables* and **Probability Density Function (PDF)** for *continuous random variables*.
+
+## Discrete Random Variables and Probability Mass Functions
+
+**[PSDR] Definition 3.3**
+
+A discrete random variable is a random variable that takes integer values. A discrete random variable is characterized by its **probability mass function (PMF)**. The PMF $p$ of a random variable $X$ is given by 
+$$p(x) = P (X=x).$$
+
+**[PSDR] Theorem 3.1**
+
+Let $p$ be the probability mass function of $X$.
+
+1. $p(x) \ge 0 \text{ for all } x$.
+2. $\sum_x p(x) = 1$.
+
+## The Bernoulli Probability Mass Function
+
+Let $X$ be a Bernoulli random variable with PMF given as
+
+$$P(X=x; p) = p^x (1-p)^{1-x}.$$
+
+The Bernoulli PMF models the probability of a success-failure trial with $p$ as the probability of success.
+
+Applying the properties of the PMF:
+
+1. $P(X=x; p) = p^x (1-p)^{1-x} \ge 0 \text{ for all } x \text{ and } 0 < p < 1$.
+2. \begin{align*}
+\sum_{x=0}^{1} P(X=x; p) = & \sum_{x=0}^{1} p^x (1-p)^{1-x} \\
+                         = & p^0 (1-p)^{1-0} + p^1 (1-p)^{1-1} \\ 
+                         = & (1-p) + p \\ 
+                         = & 1
+\end{align*}
+
+## The Binomial Probability Mass Function (1/2)
+
+Let $X$ be a Binomial random variable with PMF given as
+
+$$P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n$$
+      where $\binom{n}{x} = \frac{n!}{x!(n-x)!}$. 
+      
+The parameters of this function is $p$ and $n$. The binomial distribution assumes that $p$ is fixed for all $n$ trials.
+
+- $p$ is the probability of success.
+- $n$ is the number of Bernoulli trials.
+
+## The Binomial Probability Mass Function (2/2)
+
+Applying the properties of the PMF:
+
+1. $P(X=x; p; n) = \binom{n}{x} p^x (1-p)^{(n-x)} \ge 0 \text{ for all } x \text{ and } 0 < p < 1 \text{ and } n \ge 1$.
+2. \begin{align*}
+\sum_{x=0}^{n} P(X=x; p) = & \sum_{x=0}^{n} \binom{n}{x} p^x (1-p)^{(n-x)} \\
+                         = & 1
+\end{align*}
+
+*In your mini-assignment today, you are going to prove that the Binomial PMF satisfies the second property.*
+
+## Independent Discrete Random Variables
+
+Independent random variables and independent events share many similarities.
+
+It's important to keep in mind that two events $A$ and $B$ are independent if $P(A,B) = P(A \cap B)=P(A)P(B)$. The definition for independent discrete random variables is as follows.
+
+Take $X$ and $Y$, two discrete random variables. 
+
+If 
+$$P(X=x,Y=y)=P(X=x)P(Y=y),$$ 
+then $X$ and $Y$ are said to be independent for any $x$ and $y$.
+
+For $n$ discrete random variables $X_1,X_2,X_3,\cdots,X_n$. We say that $X_1,X_2,X_3,\cdots,X_n$ are independent if
+$$P(X_1=x_1,X_2=x_2,\cdots,X_n=x_n)=P(X_1=x_1)P(X_2=x_2)\cdots P(X_n=x_n)$$
+for all $x_1,x_2,\cdots,x_n$.
+
+## Example Problem 1
+
+I toss a coin twice and define $X$ to be the number of heads I observe. Then, I toss the coin two more times and define $Y$ to be the number of heads that I observe this time. 
+
+Find $P((X<2) \cap (Y>1))$.
+
+Since $X$ and $Y$ are the result of different independent coin tosses, the two random variables $X$ and $Y$ are independent. Also, note that both random variables have the Bernoulli PMF. We can write
+
+\begin{align*}
+P((X<2) \cap (Y>1)) = & P(X<2)P(Y>1) \text{ (because X and Y are independent) } \\
+                    = & \left(P_X(0) + P_X(1)\right)P_Y(2) \\
+                    = & \left(\frac{1}{4}+\frac{1}{2}\right)\frac{1}{4} \\
+                    = & \frac{3}{16} \\
+\end{align*}
+
+## The Sum of Two Independent Discrete Random Variables
+
+This is also known as the **convolution** of two random variables.
+
+The general formula for the distribution of the sum $Z=X+Y$ of two independent discrete random variables is
+
+$$P(Z=z)=\sum _{x \in S} P_X(x)P_Y(z-x)$$
+
+Where $P_X$ and $P_Y$ the probability mass functions of discrete random variables $X$ and $Y$ respectively.
+
+## Example Problem 2
+
+Suppose you have $X$ and $Y$ discrete random variable with Bernoulli PMFs with the same probability of success $p$. What is the PMF of $Z = X + Y$.
+
+Again, the Bernoulli PMFs is given as
+
+$$P_X(x) = p^x (1-p)^{1-x} \text{ and }$$
+
+$$P_Y(x) = p^y (1-p)^{1-y}.$$
+
+So,
+\begin{align*}
+P_Z(z) = & \sum _{x = 0}^{1} P_X(x)P_Y(z-x) \\
+       = & \sum _{x = 0}^{1} p^x (1-p)^{1-x} p^{z-x} (1-p)^{1-(z-x)} \\
+\end{align*}
+
+## Mini-Activity
+
+[Mini-Assignment: Discrete Random Variables](ma-mth461a-20220920.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).

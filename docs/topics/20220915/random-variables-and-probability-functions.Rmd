@@ -226,7 +226,7 @@ $$P(X \ge `r x_7[1]`) = \sum_{x=7}^{20} P(X = x) = `r round(p_al7_sum,4)`$$
     
 ## Discrete versus Continuous Probability Functions
     
-  * **Probability Functions = Probability Distributions** Table, Graph, or Formula that describes values a random variable can take on, and its corresponding probability (discrete R.V.) or density (continuous R.V.).
+  * **Probability Functions = Probability Distributions** Table, Graph, or Formula that describes values a random variable can take on, and its corresponding probability (discrete random variable) or density (continuous random variable).
   
   * We call a Probability Function as **Probability Mass Function (PMF)** for *discrete random variables* and **Probability Density Function (PDF)** for *continuous random variables*.
 
