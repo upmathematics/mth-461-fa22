@@ -1,0 +1,70 @@
+---
+title: '**Probability Mass Functions**'
+subtitle: "Mini-Assignment 2022-09-22 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+  
+1. Consider a scenario where you draw a card from a standard deck. Draw a card 20 times with replacement and consider drawing a face card a "success". What is the probability of drawing a at least 10 face cards?
+    
+    a. What is the random variable $X$?
+    b. What is the PMF of $X$? Include the relevant parameters.
+    c. What is $P(X \ge 10)$? Show the details and use R in your final computations. Describe in words what this probability mean.
+    
+2. Consider a scenario where you draw a card from a standard deck. Consider drawing a face card a "success". Draw a card multiple times with replacement. What is the probability of observing a 1st face card on and after 5 draws?
+
+    a. What is the random variable $X$?
+    b. What is the PMF of $X$? Include the relevant parameters.
+    c. What is $P(X \ge 5)$? Show the details and use R in your final computations. Describe in words what this probability mean.
+    
+3. Let $X$ be a geometric random variable with PMF given as
+$$P(X = x) = (1-p)^{x-1} p, \hspace{20px} x = 1, 2, 3, \cdots.$$
+
+    a. Verify that the above PMF is a valid PMF.
+    b. Prove that the CDF of the above PMF is given as
+        
+        \[
+        F(x) = \begin{cases}
+                  1-(1-p)^{x} & \text{ if } x \ge 1  \\
+                  0 & \text{ if } x < 1 \\
+               \end{cases}.
+        \]
+  

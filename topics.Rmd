@@ -31,10 +31,9 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   9/13  |               [Bayes Theorem](topics/20220913/bayes-theorem.html)               |            Ch. 2.3.3            |            -            |         [[pdf](topics/20220913/ma-mth461a-20220913.pdf){target="_blank"}] [[Rmd](topics/20220913/ma-mth461a-20220913.Rmd){target="_blank"}] [[tex](topics/20220913/ma-mth461a-20220913.tex){target="_blank"}]         |     9/13     |
 |   9/15  | [Random Variables \& Probability Functions](topics/20220915/random-variables-and-probability-functions.html) |                -                |            -            |         [[pdf](topics/20220915/ma-mth461a-20220915.pdf){target="_blank"}] [[Rmd](topics/20220915/ma-mth461a-20220915.Rmd){target="_blank"}] [[tex](topics/20220915/ma-mth461a-20220915.tex){target="_blank"}]         |     9/15     |
 |   9/20  |      [Discrete Random Variables (DRVs)](topics/20220920/discrete-random-variables.html)     |         Ch. 3 (Preamble)        |            -            |         [[pdf](topics/20220920/ma-mth461a-20220920.pdf){target="_blank"}] [[Rmd](topics/20220920/ma-mth461a-20220920.Rmd){target="_blank"}] [[tex](topics/20220920/ma-mth461a-20220920.tex){target="_blank"}]         |     9/20     |
-|   9/22  |         Probability Mass Functions        |             Ch. 3.1             |            -            |         TBA         |     9/22     |
+|   9/22  |         [Probability Mass Functions](topics/20220922/probability-mass-functions.html)        |             Ch. 3.1             |            -            |         [[pdf](topics/20220922/ma-mth461a-20220922.pdf){target="_blank"}] [[Rmd](topics/20220922/ma-mth461a-20220922.Rmd){target="_blank"}] [[tex](topics/20220922/ma-mth461a-20220922.tex){target="_blank"}]         |     9/22     |
 |   9/27  |          Expected Values for DRVs         |             Ch. 3.2             |            -            |         TBA         |     9/27     |
 |   9/29  |        Moment Generating Functions        |             Ch. 3.4             |            -            |         TBA         |     9/29     |
-|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **9/30**   |
 |   10/4  |             Variance for DRVs             |             Ch. 3.5             |            -            |         TBA         |     10/4     |
 |   10/6  |     Covariance \& Correlation for DRVs    |          Ch. 3.5 Cont.          |            -            |         TBA         |     10/6     |
 |  10/11  |         Binomial Random Variables         |            Ch. 3.3.1            |            -            |         TBA         |     10/11    |
@@ -43,21 +42,21 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   _-_   |              _Fall Vacation_              |               _-_               |           _-_           |         _-_         |      _-_     |
 |  10/25  |                   Reviews                  |                -                |            -            |          -          |       -      |
 |  10/27  |     Continuous Random Variables (CRVs)    |               TBA               |           TBA           |         TBA         |     10/27    |
-|  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **10/28**  |
+|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **10/28**  |
 |   11/1  |       Probability Density Functions       |               TBA               |           TBA           |         TBA         |     11/1     |
 |   11/3  |    Moment Generating Functions for CRVs   |               TBA               |           TBA           |         TBA         |     11/3     |
 |   11/8  |  Joint \& Marginal Distributions for CRVs |               TBA               |           TBA           |         TBA         |     11/8     |
 |  11/10  |     Covariance \& Correlation for CRVs    |               TBA               |           TBA           |         TBA         |     11/10    |
 |  11/15  |        Exponential Random Variables       |               TBA               |           TBA           |         TBA         |     11/15    |
 |  11/17  |          Normal Random Variables          |               TBA               |           TBA           |         TBA         |     11/17    |
-|  **-**  |              **Module 4 Due**             |              **-**              |          **-**          |        **-**        |   **11/22**  |
+|  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **11/22**  |
 |  11/22  |            Special Office Hours           |               TBA               |           TBA           |         TBA         |     11/22    |
 |   _-_   |          _Thanksgiving Vacation_          |               _-_               |           _-_           |         _-_         |      _-_     |
 |  11/29  |          The Law of Large Numbers         |               TBA               |           TBA           |         TBA         |     11/29    |
 |   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
-|  **-**  |              **Module 5 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
+|  **-**  |              **Module 4 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
 |  **-**  |           **Mini-Project 2 Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
 
 <br>
