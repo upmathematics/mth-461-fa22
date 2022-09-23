@@ -49,14 +49,13 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  11/10  |     Covariance \& Correlation for CRVs    |               TBA               |           TBA           |         TBA         |     11/10    |
 |  11/15  |        Exponential Random Variables       |               TBA               |           TBA           |         TBA         |     11/15    |
 |  11/17  |          Normal Random Variables          |               TBA               |           TBA           |         TBA         |     11/17    |
-|  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **11/22**  |
 |  11/22  |            Special Office Hours           |               TBA               |           TBA           |         TBA         |     11/22    |
 |   _-_   |          _Thanksgiving Vacation_          |               _-_               |           _-_           |         _-_         |      _-_     |
 |  11/29  |          The Law of Large Numbers         |               TBA               |           TBA           |         TBA         |     11/29    |
 |   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
-|  **-**  |              **Module 4 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
+|  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
 |  **-**  |           **Mini-Project 2 Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
 
 <br>

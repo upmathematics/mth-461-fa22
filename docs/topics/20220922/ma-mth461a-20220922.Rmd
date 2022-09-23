@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
   
-1. Consider a scenario where you draw a card from a standard deck. Draw a card 20 times with replacement and consider drawing a face card a "success". What is the probability of drawing a at least 10 face cards?
+1. Consider a scenario where you draw a card from a standard deck. Draw a card 20 times with replacement and consider drawing a face card a "success". What is the probability of drawing at least 10 face cards?
     
     a. What is the random variable $X$?
     b. What is the PMF of $X$? Include the relevant parameters.
