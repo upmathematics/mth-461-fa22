@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 
-student-submissions/
+docs/student-submissions/
+docs/topics/*/solutions*
+docs/modules/*/solutions*
