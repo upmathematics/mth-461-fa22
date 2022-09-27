@@ -164,7 +164,7 @@ Use `dbinom` in R.
 
 \begin{align*}
 F(x) = & P(X \le x; p) \\
-     = & \sum_{k=0}^x \binom{n}{k} p^x (1-p)^{(n-k)} \\
+     = & \sum_{k=0}^x \binom{n}{k} p^k (1-p)^{(n-k)} \\
 \end{align*}
 
 Use `pbinom` in R.

@@ -1,0 +1,127 @@
+---
+title: "Expected Values for DRVs"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-09-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously... (1/2)
+
+**The Binomial PMF and CDF**
+
+Let $X \sim Binomial(np)$ where $p$ is the probability of success and $n$ be the number of trials $n$.
+
+- PMF:
+
+$$P(X = x; n, p) = \binom{n}{x} p^x (1-p)^{(n-x)} \hspace{5px} \text{ for } x = 0,1,2,\cdots, n$$
+
+Use `dbinom` in R.
+
+- CDF:
+
+\begin{align*}
+F(x) = & P(X \le x; p) \\
+     = & \sum_{k=0}^x \binom{n}{k} p^k (1-p)^{(n-k)} \\
+\end{align*}
+
+Use `pbinom` in R.
+
+## Previously... (2/2)
+
+**The Geometric PMF and CDF**
+
+Let $X \sim Geometric(p)$ where $p$ is the probability of success.
+
+- PMF: 
+
+$$P(X = x; p) = (1-p)^{x-1} p, \hspace{20px} x = 1, 2, 3, \cdots$$
+
+Use `dgeom` in R. Note that the input for `dgeom` is $(x-1)$. So if $x=3$, then you need `dgeom(3-1)`.
+
+- CDF:
+
+\begin{align*}
+F(x) = & P(X \le x; p) \\
+     = & \sum_{k=0}^x (1-p)^k p \\
+\end{align*}
+
+\[
+F(x) = \begin{cases}
+          1-(1-p)^{x} & \text{ if } x \ge 1  \\
+          0 & \text{ if } x < 1 \\
+       \end{cases}
+\]
+
+Use `pgeom` in R.
+
+## Example 1 (1/2)
+
+**Coin Flipping Game.** Suppose you have a coin that comes up H 40% of times and T 60% of times. You get paid \$2 if H, and you pay out \$1 if T. What do you expect to have after 10 tosses?
+
+The intuition:
+
+- For 1 coin flip, you are expected value is 
+$$(2)P(H) + (-1)P(T) = (2)(0.40) + (-1)(0.60) = 0.20.$$
+
+- For 10 coin flips, you are expected value is 
+$$(10)(0.20) = 2.$$
+
+You would be expected to gain \$2 in 10 tosses *on average*.
+
+## Example 1 (2/2)
+
+In probability notation, we let $X \sim Binom(10,0.40)$ be the discrete random variable of the number of heads in 100 tosses, and $Y \sim Binom(10,0.60)$ be the number of tails. So, the PMFs are given by
+
+$$P_X(X = x; 10, 0.40) = \binom{10}{x} (0.40)^x (0.60)^{(10-x)}$$
+
+$$P_Y(Y = y; 10, 0.60) = \binom{10}{x} (0.60)^x (0.40)^{(10-x)}$$
+
+The expected value is written as
+
+\begin{align*}
+E[2X - Y] = & 2E[X] - E[Y] \\
+     = & 2 \sum_{x = 0}^{10} x P_X(x) - \sum_{y = 0}^{10} y P_X(y) \\
+     = & 2(10)(0.40) - (10)(0.60) \\
+     = & 10(2(0.40)-0.60) \\
+     = & 2 \\
+\end{align*}
+
+## Expected Values for Discrete Random Variables
+
+**[PSDR] Definition 3.8**
+For a discrete random variable $X$ with pmf $p$, the expected value of $X$ is
+$$E[X] = \sum_{x} x p(x)$$
+ 
+provided this sum exists, where the sum is taken over all possible values of the random variable $X$.
+
+**[PSDR] Theorem 3.2 (Law of Large Numbers)**
+The mean of *n* observations of a random variable $X$ converges to the expected value $E[X]$ as $n \to \infty$, assuming $E[X]$ is defined.
+
+## Properties of Expected Values
+
+Expected value of a constant:
+
+- If $a$ is a constant, then $E[a] = a$.
+
+Scalar multiplication of a random variable:
+
+- If $a$ is a scalar constant, then $E[aX] = aE[X]$.
+
+Sums of Random Variables:
+
+- If $X_1, X_2, \cdots, X_k$ are $k$ independent random variables, then $E[X_1 + X_2 + \cdots + X_k] = E[X_1] + E[X_2] + \cdots + E[X_k]$.
+
+Expectation of a product of random variables
+
+- If $X$ and $Y$ are random variables, then $E[XY] = E[X]E[Y]$.
+
+## Mini-Activity
+
+[Mini-Assignment: Expected Values for DRVs](ma-mth461a-20220927.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).
