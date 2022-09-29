@@ -13,7 +13,7 @@
 
 <title>Mini-Projects</title>
 
-<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
@@ -144,15 +144,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -379,13 +375,72 @@ and the learning outcomes outlined in the Syllabus.</p>
 <p><em>Note: The case studies are tentative and may change throughout
 the course.</em></p>
 <p><br></p>
-<div
-id="case-study-1-linguistic-patterns-in-published-books-and-news-articles"
+<div id="case-study-1-linguistic-patterns-in-text-data-sets"
 class="section level3">
-<h3>Case Study 1: Linguistic Patterns in Published Books and News
-Articles</h3>
-<p>TBW</p>
+<h3>Case Study 1: Linguistic Patterns in Text Data Sets</h3>
+<div id="overview" class="section level4">
+<h4>Overview</h4>
+<p>Text data is one of the most over abundant data that exist. Not all
+of them are useful but some can be very valuable. Extracting insights
+from text data can be very tedious and challenging. This mini-project
+case-study will guide you on the basics of the analysis of text
+data.</p>
+</div>
+<div id="datasets" class="section level4">
+<h4>Datasets</h4>
+<p>This project focuses on these independent data sets.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>AG’s News Topic Classification Dataset</strong></p>
+<p><em>Source:</em> <a
+href="https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset"
+target="_blank">Kaggle - News Classification</a>.</p>
+<p><em>R Access:</em> The <code>dataset_ag_news</code> data in the
+<code>textdata</code> package.</p></li>
+<li><p><strong>Sentence Polarity Dataset v1.0</strong></p>
+<p><em>Source:</em> <a
+href="https://www.kaggle.com/datasets/nltkdata/sentence-polarity"
+target="_blank">Kaggle - Sentence Polarity</a></p>
+<p><em>R Access:</em> The <code>dataset_sentence_polarity</code> data in
+the <code>textdata</code> package.</p></li>
+<li><p><strong>TREC: Question Answering Collections</strong></p>
+<p><em>Source:</em> <a href="https://trec.nist.gov/data/qa.html"
+target="_blank">TREC NIST</a></p>
+<p><em>R Access:</em> The <code>dataset_trec</code> data in the
+<code>textdata</code> package.</p></li>
+<li><p><strong>NRC Emotion Lexicon</strong></p>
+<p><em>Source:</em> <a
+href="https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm"
+target="_blank">NRC Emotion Lexicon</a></p>
+<p><em>R Access:</em> The <code>lexicon_nrc</code>,
+<code>lexicon_nrc_vad</code>, and <code>lexicon_nrc_eil</code> data in
+the <code>textdata</code> package.</p></li>
+</ol>
+</div>
+<div id="learning-objectives-1" class="section level4">
+<h4>Learning Objectives</h4>
+<p>By the end of this mini-project, the students should be able to do
+the following:</p>
+<ul>
+<li><p>Understand and process text data.</p></li>
+<li><p>Apply the concepts of Discrete random variables and probability
+mass functions using the datasets.</p></li>
+<li><p>Able to provide statistical analysis and conclusions, and relate
+them into probability and statistical concepts learned in
+class.</p></li>
+<li><p>Able to use R for data processing, visualization, and
+story-telling.</p></li>
+</ul>
+</div>
+<div id="learning-outcomes" class="section level4">
+<h4>Learning Outcomes</h4>
+<p>There two expected outcomes of this mini-project:</p>
+<ol style="list-style-type: decimal">
+<li><p>A final report in PDF-knitted Rmd.</p></li>
+<li><p>A short presentation.</p></li>
+</ol>
+<p>More details to follow.</p>
 <p><br></p>
+</div>
 </div>
 <div id="case-study-2-the-state-of-the-us-state-crimes"
 class="section level3">

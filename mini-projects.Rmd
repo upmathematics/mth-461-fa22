@@ -27,9 +27,61 @@ Each mini-project will be evaluated according to the above objectives and the le
 
 <br>
 
-### Case Study 1: Linguistic Patterns in Published Books and News Articles
+### Case Study 1: Linguistic Patterns in Text Data Sets
 
-TBW
+#### Overview
+
+Text data is one of the most over abundant data that exist. Not all of them are useful but some can be very valuable. Extracting insights from text data can be very tedious and challenging. This mini-project case-study will guide you on the basics of the analysis of text data.
+
+#### Datasets
+
+This project focuses on these independent data sets.
+
+1. **AG's News Topic Classification Dataset**
+
+    *Source:* [Kaggle - News Classification](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset){target="_blank"}.
+    
+    *R Access:* The `dataset_ag_news` data in the `textdata` package.
+
+2. **Sentence Polarity Dataset v1.0**
+
+    *Source:* [Kaggle - Sentence Polarity](https://www.kaggle.com/datasets/nltkdata/sentence-polarity){target="_blank"}
+
+    *R Access:* The `dataset_sentence_polarity` data in the `textdata` package.
+
+3. **TREC: Question Answering Collections**
+
+    *Source:* [TREC NIST](https://trec.nist.gov/data/qa.html){target="_blank"}
+
+    *R Access:* The `dataset_trec` data in the `textdata` package.
+
+4. **NRC Emotion Lexicon**
+
+    *Source:* [NRC Emotion Lexicon](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm){target="_blank"}
+
+    *R Access:* The `lexicon_nrc`, `lexicon_nrc_vad`, and `lexicon_nrc_eil` data in the `textdata` package.
+
+#### Learning Objectives
+
+By the end of this mini-project, the students should be able to do the following:
+
+* Understand and process text data.
+
+* Apply the concepts of Discrete random variables and probability mass functions using the datasets.
+
+* Able to provide statistical analysis and conclusions, and relate them into probability and statistical concepts learned in class.
+
+* Able to use R for data processing, visualization, and story-telling.
+
+#### Learning Outcomes
+
+There two expected outcomes of this mini-project:
+
+1. A final report in PDF-knitted Rmd.
+
+2. A short presentation.
+
+More details to follow.
 
 <br>
 
