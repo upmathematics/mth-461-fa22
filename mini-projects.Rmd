@@ -27,7 +27,7 @@ Each mini-project will be evaluated according to the above objectives and the le
 
 <br>
 
-### Case Study 1: Linguistic Patterns in Text Data Sets
+### Case Study: Linguistic Patterns in Text Data Sets
 
 #### Overview
 
@@ -37,25 +37,17 @@ Text data is one of the most over abundant data that exist. Not all of them are 
 
 This project focuses on these independent data sets.
 
-1. **AG's News Topic Classification Dataset**
+1. **Sentence Polarity Dataset v1.0**
+
+    *Source:* [Cornell - Sentence Polarity Movie Reviews](https://www.cs.cornell.edu/people/pabo/movie-review-data/){target="_blank"}
+
+2. **AG's News Topic Classification Dataset**
 
     *Source:* [Kaggle - News Classification](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset){target="_blank"}.
     
     *R Access:* The `dataset_ag_news` data in the `textdata` package.
 
-2. **Sentence Polarity Dataset v1.0**
-
-    *Source:* [Kaggle - Sentence Polarity](https://www.kaggle.com/datasets/nltkdata/sentence-polarity){target="_blank"}
-
-    *R Access:* The `dataset_sentence_polarity` data in the `textdata` package.
-
-3. **TREC: Question Answering Collections**
-
-    *Source:* [TREC NIST](https://trec.nist.gov/data/qa.html){target="_blank"}
-
-    *R Access:* The `dataset_trec` data in the `textdata` package.
-
-4. **NRC Emotion Lexicon**
+3. **NRC Emotion Lexicon**
 
     *Source:* [NRC Emotion Lexicon](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm){target="_blank"}
 
@@ -79,15 +71,7 @@ There two expected outcomes of this mini-project:
 
 1. A final report in PDF-knitted Rmd.
 
-2. A short presentation.
-
 More details to follow.
-
-<br>
-
-### Case Study 2: The State of The US State Crimes
-
-TBW
 
 <br>
 

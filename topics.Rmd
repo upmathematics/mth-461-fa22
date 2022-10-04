@@ -34,15 +34,14 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   9/22  |         [Probability Mass Functions](topics/20220922/probability-mass-functions.html)        |             Ch. 3.1             |            -            |         [[pdf](topics/20220922/ma-mth461a-20220922.pdf){target="_blank"}] [[Rmd](topics/20220922/ma-mth461a-20220922.Rmd){target="_blank"}] [[tex](topics/20220922/ma-mth461a-20220922.tex){target="_blank"}]         |     9/22     |
 |   9/27  |          [Expected Values for DRVs](topics/20220927/expected-values-for-drvs.html)         |             Ch. 3.2             |            -            |         [[pdf](topics/20220927/ma-mth461a-20220927.pdf){target="_blank"}] [[Rmd](topics/20220927/ma-mth461a-20220927.Rmd){target="_blank"}] [[tex](topics/20220927/ma-mth461a-20220927.tex){target="_blank"}]         |     9/27     |
 |   9/29  |        -        |             -             |            -            |         -         |     9/29     |
-|   10/4  |             Introduction to the Mini-Project 1             |             -             |            -            |         TBA         |     10/4     |
-|   10/6  |     Variance for DRVs    |          Ch. 3.4          |            -            |         TBA         |     10/6     |
-|  10/11  |         Moment Generating Functions for DRVs         |            Ch. 3.5            |            -            |         TBA         |     10/11    |
-|  10/13  |         Covariance \& Correlation for DRVs        |             Ch. 3.5 Cont.            |         Ch. 3.6         |         TBA         |     10/13    |
+|   10/4  |         [Moment Generating Functions for DRVs](topics/20221004/expected-values-for-drvs.html)            |             Ch. 3.4             |            -            |         [[pdf](topics/20221004/ma-mth461a-20221004.pdf){target="_blank"}] [[Rmd](topics/20221004/ma-mth461a-20221004.Rmd){target="_blank"}] [[tex](topics/20221004/ma-mth461a-20221004.tex){target="_blank"}]         |     10/4     |
+|   10/6  |     Variance for DRVs    |          Ch. 3.5          |            -            |         TBA         |     10/6     |
+|  10/11  |         Covariance and Correlation for DRVs         |            Ch. 3.5 Cont.            |            Ch. 3.6            |         TBA         |     10/11    |
+|  10/13  |         Introduction to the Mini-Project        |             -            |         -         |         TBA         |     10/13    |
 |   _-_   |              _Fall Vacation_              |               _-_               |           _-_           |         _-_         |      _-_     |
 |  10/25  |                   Reviews                  |                -                |            -            |          -          |       -      |
 |  10/27  |     Continuous Random Variables (CRVs)    |               TBA               |           TBA           |         TBA         |     10/27    |
-|  **-**  |           **Mini-Project 1 Due**          |              **-**              |          **-**          |        **-**        |   **10/28**  |
-|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **10/28**  |
+|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **11/1**  |
 |   11/1  |       Probability Density Functions       |               TBA               |           TBA           |         TBA         |     11/1     |
 |   11/3  |    Moment Generating Functions for CRVs   |               TBA               |           TBA           |         TBA         |     11/3     |
 |   11/8  |  Joint \& Marginal Distributions for CRVs |               TBA               |           TBA           |         TBA         |     11/8     |
@@ -56,7 +55,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
 |  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
-|  **-**  |           **Mini-Project 2 Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
+|  **-**  |           **Mini-Project Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
 
 <br>
 

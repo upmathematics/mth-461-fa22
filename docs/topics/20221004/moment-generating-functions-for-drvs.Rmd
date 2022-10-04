@@ -1,0 +1,136 @@
+---
+title: "Moment Generating Functions for DRVs"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-10-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously... (1/2)
+
+**Expected Values for Discrete Random Variables**
+
+**[PSDR] Definition 3.8**
+For a discrete random variable $X$ with pmf $p$, the expected value of $X$ is
+$$E[X] = \sum_{x} x p(x)$$
+ 
+provided this sum exists, where the sum is taken over all possible values of the random variable $X$.
+
+**[PSDR] Theorem 3.2 (Law of Large Numbers)**
+The mean of *n* observations of a random variable $X$ converges to the expected value $E[X]$ as $n \to \infty$, assuming $E[X]$ is defined.
+
+## Previously... (2/2)
+
+**Properties of Expected Values**
+
+Expected value of a constant:
+
+- If $a$ is a constant, then $E[a] = a$.
+
+Scalar multiplication of a random variable:
+
+- If $a$ is a scalar constant, then $E[aX] = aE[X]$.
+
+Sums of Random Variables:
+
+- If $X_1, X_2, \cdots, X_k$ are $k$ independent random variables, then $E[X_1 + X_2 + \cdots + X_k] = E[X_1] + E[X_2] + \cdots + E[X_k]$.
+
+Expectation of a product of random variables
+
+- If $X$ and $Y$ are random variables, then $E[XY] = E[X]E[Y]$.
+
+## Functions of a Random Variable
+
+**[PSDR] Theorem 3.7**
+
+Let $X$ be a discrete random variable with probability mass function $p$, and let $g$ be a function. Then,
+
+$$E[g(X)] = \sum g(x)p(x).$$
+
+## Example 1
+
+Let $X$ be the value of a six-sided die roll. Let $g(X) - X^2$. So the pmf of a six-sided die is $p(x) = \frac{1}{6}$.
+
+\begin{align*}
+E[X^2] = & \sum_{i=1}^{6} x^2 \frac{1}{6} \\
+       = & 1^2 \frac{1}{6} + 2^2 \frac{1}{6} + 3^2 \frac{1}{6} + 4^2 \frac{1}{6} + 5^2 \frac{1}{6} + 6^2 \frac{1}{6} \\
+       \approx & 15.2356 \\
+\end{align*}
+
+This is what is known as the **2nd moment** or the **variance**.
+
+## Moment Generating Functions (1/4)
+
+Moment generating functions are important for a variety of reasons, one of which is that they may be used to analyze sums of random variables.
+
+The **nth moment* of a random variable $X$ is defined to be $E[X^n]$. 
+
+The **nth central moment** of $X$ is defined to be $E[\left(X−E[X]\right)^n]$.
+
+- $n = 1: E[X] \longrightarrow$ **expected value (mean)**
+- $n = 2: E\left[\left(X - E[X]\right)^2\right] = Var[X] \longrightarrow$ **variance**
+- $n = 3: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^3\right] = Skew(X) \longrightarrow$ **skewness**
+- $n = 4: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^4\right] = Kurt(X) \longrightarrow$ **kurtosis**
+
+## Moment Generating Functions (2/4)
+
+The **moment generating function (MGF)** of a random variable $X$ is a function $M_X(s)$ defined as
+
+$$M_X(s)=E[e^{sX}].$$
+
+We say that MGF of $X$ exists, if there exists a positive constant a such that $M_X(s)$ is finite for all $s \in [−a,a]$.
+
+The MGF of $X$ gives us all moments of $X$, and - if it exists- it uniquely determines the distribution. That is, if two random variables have the same MGF, then they must have the same distribution. Thus, if you find the MGF of a random variable, you have indeed determined its distribution.
+
+## Moment Generating Functions (3/4)
+
+**Finding Moments from MGF:**
+Remember the Taylor series for $e^x$: for all $x\in \mathbb{R}$, we have
+$$e^x = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots = \sum_{k=0}^{\infty} \frac{x^k}{k!}.$$
+
+Now, we can write
+$$e^{sX} = \sum_{k=0}^{\infty} \frac{(sX)^k}{k!} = \sum_{k=0}^{\infty} \frac{X^k s^k}{k!}.$$
+
+Thus, we have
+$$M_X(s) = E\left[e^{sX}\right] = \sum_{k=0}^{\infty} E\left[X^k \right] \frac{s^k}{k!}.$$
+
+We conclude that the $k$th moment of $X$ is the coefficient of $\frac{s^k}{k!}$ in the Taylor series of $M_X(s)$. Thus, if we have the Taylor series of $M_X(s)$, we can obtain all moments of $X$.
+
+## Moment Generating Functions (4/4)
+
+We remember from calculus that the coefficient of $\frac{s^k}{k!}$ in the Taylor series of $M_X(s)$ is obtained by taking the $k$th derivative of $M_X(s)$ and evaluating it at $s=0$.
+
+Thus, we can write
+$$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
+
+We can obtain all moments of $X_k$ from its MGF:
+$$M_X(s) = \sum_{k=0}^{\infty} E\left[X^k\right] \frac{s^k}{k!},$$
+$$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
+
+## Example 2
+
+If $Y$ is a $Uniform(0,1)$ random variable. 
+
+a. Find the MGF.
+
+$$M_Y(s) = E\left[e^{sY}\right]= \int_0^1 e^{sy}\,dy = \frac{e^s − 1}{s}.$$
+ 
+Note that we always have $M_Y(0)=E[e^{0Y}]=1$, thus $M_Y(s)$ is also well-defined for all $s \in \mathbb{R}$.
+
+b. Find $E[Y^k]$ using $M_Y(s)$.
+
+$$M_Y(s) = \frac{e^s−1}{s} = \frac{1}{s} \left( \sum_{k=0}^{\infty} \frac{s^k}{k!} − 1 \right) = \frac{1}{s} \sum_{k=0}^{\infty} \frac{s^k}{k!} = \sum_{k=0}^{\infty} \frac{s^{k−1}}{k!} = \sum_{k=0}^{\infty} \frac{1}{k+1} \frac{s^k}{k!}.$$
+
+Thus, the coefficient of $\frac{s^k}{k!}$ in the Taylor series for $M_Y(s)$ is $\frac{1}{k+1}$, so
+
+$$E\left[X^k\right] = \frac{1}{k+1}.$$
+
+## Mini-Activity
+
+[Mini-Assignment: Moment Generating Functions for DRVs](ma-mth461a-20221004.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).
