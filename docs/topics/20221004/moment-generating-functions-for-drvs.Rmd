@@ -47,13 +47,13 @@ Expectation of a product of random variables
 
 **[PSDR] Theorem 3.7**
 
-Let $X$ be a discrete random variable with probability mass function $p$, and let $g$ be a function. Then,
+Let $X$ be a discrete random variable with probability mass function $P(x)$, and let $g$ be a function. Then,
 
-$$E[g(X)] = \sum g(x)p(x).$$
+$$E[g(X)] = \sum g(x)P(x).$$
 
 ## Example 1
 
-Let $X$ be the value of a six-sided die roll. Let $g(X) - X^2$. So the pmf of a six-sided die is $p(x) = \frac{1}{6}$.
+Let $X$ be the value of a six-sided die roll. Let $g(X) = X^2$. So the pmf of a six-sided die is $P(x) = \frac{1}{6}$.
 
 \begin{align*}
 E[X^2] = & \sum_{i=1}^{6} x^2 \frac{1}{6} \\
@@ -61,13 +61,13 @@ E[X^2] = & \sum_{i=1}^{6} x^2 \frac{1}{6} \\
        \approx & 15.2356 \\
 \end{align*}
 
-This is what is known as the **2nd moment** or the **variance**.
+This is what is known as the **2nd moment**.
 
 ## Moment Generating Functions (1/4)
 
 Moment generating functions are important for a variety of reasons, one of which is that they may be used to analyze sums of random variables.
 
-The **nth moment* of a random variable $X$ is defined to be $E[X^n]$. 
+The **nth moment** of a random variable $X$ is defined to be $E[X^n]$. 
 
 The **nth central moment** of $X$ is defined to be $E[\left(X−E[X]\right)^n]$.
 
@@ -111,23 +111,25 @@ We can obtain all moments of $X_k$ from its MGF:
 $$M_X(s) = \sum_{k=0}^{\infty} E\left[X^k\right] \frac{s^k}{k!},$$
 $$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
 
-## Example 2
+## Example 2 (1/2)
 
-If $Y$ is a $Uniform(0,1)$ random variable. 
+If $Y$ is a uniform discrete random variable for a fair six-sided die with probability $P(Y = y) = \frac{1}{6}$, for all $y = \{1,2,3,4,5,6\}$. 
 
 a. Find the MGF.
 
-$$M_Y(s) = E\left[e^{sY}\right]= \int_0^1 e^{sy}\,dy = \frac{e^s − 1}{s}.$$
+$$M_Y(s) = E\left[e^{sY}\right] = \sum_{y = 1}^{6} e^{sy} \frac{1}{6} = \frac{1}{6} \sum_{y = 1}^{6} e^{sy}.$$
  
-Note that we always have $M_Y(0)=E[e^{0Y}]=1$, thus $M_Y(s)$ is also well-defined for all $s \in \mathbb{R}$.
+Note that we always have $M_Y(0)=E[e^{0Y}]= 1$, thus $M_Y(s)$ is also well-defined for all $s \in \mathbb{R}$.
+
+## Example 2 (2/2)
 
 b. Find $E[Y^k]$ using $M_Y(s)$.
 
-$$M_Y(s) = \frac{e^s−1}{s} = \frac{1}{s} \left( \sum_{k=0}^{\infty} \frac{s^k}{k!} − 1 \right) = \frac{1}{s} \sum_{k=0}^{\infty} \frac{s^k}{k!} = \sum_{k=0}^{\infty} \frac{s^{k−1}}{k!} = \sum_{k=0}^{\infty} \frac{1}{k+1} \frac{s^k}{k!}.$$
-
-Thus, the coefficient of $\frac{s^k}{k!}$ in the Taylor series for $M_Y(s)$ is $\frac{1}{k+1}$, so
-
-$$E\left[X^k\right] = \frac{1}{k+1}.$$
+\begin{align*}
+M_Y(s) = & E\left[e^{sY}\right] = \frac{1}{6} \sum_{y = 1}^{6} e^{sy} \\
+\frac{dk}{ds^k} M_Y(s) \Big|_{s=0} = & \frac{1}{6} \sum_{y = 1}^{6} y^k e^{sy} \Big|_{s=0} \\
+E[Y^k] = & \frac{1}{6} \sum_{y = 1}^{6} y^k
+\end{align*}
 
 ## Mini-Activity
 

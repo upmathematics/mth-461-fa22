@@ -441,14 +441,14 @@ E[X_2] + \cdots + E[X_k]\)</span>.</li>
 <h1>Functions of a Random Variable</h1>
 <p><strong>[PSDR] Theorem 3.7</strong></p>
 <p>Let <span class="math inline">\(X\)</span> be a discrete random
-variable with probability mass function <span class="math inline">\(p\)</span>, and let <span class="math inline">\(g\)</span> be a function. Then,</p>
-<p><span class="math display">\[E[g(X)] = \sum g(x)p(x).\]</span></p>
+variable with probability mass function <span class="math inline">\(P(x)\)</span>, and let <span class="math inline">\(g\)</span> be a function. Then,</p>
+<p><span class="math display">\[E[g(X)] = \sum g(x)P(x).\]</span></p>
 </div>
 <div id="example-1" class="slide section level2">
 <h1>Example 1</h1>
 <p>Let <span class="math inline">\(X\)</span> be the value of a
-six-sided die roll. Let <span class="math inline">\(g(X) - X^2\)</span>.
-So the pmf of a six-sided die is <span class="math inline">\(p(x) =
+six-sided die roll. Let <span class="math inline">\(g(X) = X^2\)</span>.
+So the pmf of a six-sided die is <span class="math inline">\(P(x) =
 \frac{1}{6}\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
 E[X^2] = &amp; \sum_{i=1}^{6} x^2 \frac{1}{6} \\
@@ -456,15 +456,14 @@ E[X^2] = &amp; \sum_{i=1}^{6} x^2 \frac{1}{6} \\
 \frac{1}{6} + 5^2 \frac{1}{6} + 6^2 \frac{1}{6} \\
        \approx &amp; 15.2356 \\
 \end{align*}\]</span></p>
-<p>This is what is known as the <strong>2nd moment</strong> or the
-<strong>variance</strong>.</p>
+<p>This is what is known as the <strong>2nd moment</strong>.</p>
 </div>
 <div id="moment-generating-functions-14" class="slide section level2">
 <h1>Moment Generating Functions (1/4)</h1>
 <p>Moment generating functions are important for a variety of reasons,
 one of which is that they may be used to analyze sums of random
 variables.</p>
-<p>The **nth moment* of a random variable <span class="math inline">\(X\)</span> is defined to be <span class="math inline">\(E[X^n]\)</span>.</p>
+<p>The <strong>nth moment</strong> of a random variable <span class="math inline">\(X\)</span> is defined to be <span class="math inline">\(E[X^n]\)</span>.</p>
 <p>The <strong>nth central moment</strong> of <span class="math inline">\(X\)</span> is defined to be <span class="math inline">\(E[\left(X−E[X]\right)^n]\)</span>.</p>
 <ul>
 <li><span class="math inline">\(n = 1: E[X] \longrightarrow\)</span>
@@ -523,27 +522,30 @@ from its MGF: <span class="math display">\[M_X(s) = \sum_{k=0}^{\infty}
 E\left[X^k\right] \frac{s^k}{k!},\]</span> <span class="math display">\[E\left[X^k\right]= \frac{dk}{ds^k} M_X(s)
 \Big|_{s=0}.\]</span></p>
 </div>
-<div id="example-2" class="slide section level2">
-<h1>Example 2</h1>
-<p>If <span class="math inline">\(Y\)</span> is a <span class="math inline">\(Uniform(0,1)\)</span> random variable.</p>
+<div id="example-2-12" class="slide section level2">
+<h1>Example 2 (1/2)</h1>
+<p>If <span class="math inline">\(Y\)</span> is a uniform discrete
+random variable for a fair six-sided die with probability <span class="math inline">\(P(Y = y) = \frac{1}{6}\)</span>, for all <span class="math inline">\(y = \{1,2,3,4,5,6\}\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Find the MGF.</li>
 </ol>
-<p><span class="math display">\[M_Y(s) = E\left[e^{sY}\right]= \int_0^1
-e^{sy}\,dy = \frac{e^s − 1}{s}.\]</span></p>
-<p>Note that we always have <span class="math inline">\(M_Y(0)=E[e^{0Y}]=1\)</span>, thus <span class="math inline">\(M_Y(s)\)</span> is also well-defined for all <span class="math inline">\(s \in \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[M_Y(s) = E\left[e^{sY}\right] = \sum_{y
+= 1}^{6} e^{sy} \frac{1}{6} = \frac{1}{6} \sum_{y = 1}^{6}
+e^{sy}.\]</span></p>
+<p>Note that we always have <span class="math inline">\(M_Y(0)=E[e^{0Y}]= 1\)</span>, thus <span class="math inline">\(M_Y(s)\)</span> is also well-defined for all <span class="math inline">\(s \in \mathbb{R}\)</span>.</p>
+</div>
+<div id="example-2-22" class="slide section level2">
+<h1>Example 2 (2/2)</h1>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Find <span class="math inline">\(E[Y^k]\)</span> using <span class="math inline">\(M_Y(s)\)</span>.</li>
 </ol>
-<p><span class="math display">\[M_Y(s) = \frac{e^s−1}{s} = \frac{1}{s}
-\left( \sum_{k=0}^{\infty} \frac{s^k}{k!} − 1 \right) = \frac{1}{s}
-\sum_{k=0}^{\infty} \frac{s^k}{k!} = \sum_{k=0}^{\infty}
-\frac{s^{k−1}}{k!} = \sum_{k=0}^{\infty} \frac{1}{k+1}
-\frac{s^k}{k!}.\]</span></p>
-<p>Thus, the coefficient of <span class="math inline">\(\frac{s^k}{k!}\)</span> in the Taylor series for
-<span class="math inline">\(M_Y(s)\)</span> is <span class="math inline">\(\frac{1}{k+1}\)</span>, so</p>
-<p><span class="math display">\[E\left[X^k\right] =
-\frac{1}{k+1}.\]</span></p>
+<p><span class="math display">\[\begin{align*}
+M_Y(s) = &amp; E\left[e^{sY}\right] = \frac{1}{6} \sum_{y = 1}^{6}
+e^{sy} \\
+\frac{dk}{ds^k} M_Y(s) \Big|_{s=0} = &amp; \frac{1}{6} \sum_{y = 1}^{6}
+y^k e^{sy} \Big|_{s=0} \\
+E[Y^k] = &amp; \frac{1}{6} \sum_{y = 1}^{6} y^k
+\end{align*}\]</span></p>
 </div>
 <div id="mini-activity" class="slide section level2">
 <h1>Mini-Activity</h1>
