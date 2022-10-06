@@ -67,12 +67,12 @@ This is what is known as the **2nd moment**.
 
 Moment generating functions are important for a variety of reasons, one of which is that they may be used to analyze sums of random variables.
 
-The **nth moment** of a random variable $X$ is defined to be $E[X^n]$. 
+The **kth moment** of a random variable $X$ is defined to be $E\left[X^k\right]$. 
 
-The **nth central moment** of $X$ is defined to be $E[\left(X−E[X]\right)^n]$.
+The **kth central moment** of $X$ is defined to be $E\left[\left(X−E[X]\right)^k\right]$.
 
 - $n = 1: E[X] \longrightarrow$ **expected value (mean)**
-- $n = 2: E\left[\left(X - E[X]\right)^2\right] = Var[X] \longrightarrow$ **variance**
+- $n = 2: E\left[\left(X - E[X]\right)^2\right] = Var(X) \longrightarrow$ **variance**
 - $n = 3: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^3\right] = Skew(X) \longrightarrow$ **skewness**
 - $n = 4: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^4\right] = Kurt(X) \longrightarrow$ **kurtosis**
 
@@ -104,11 +104,10 @@ We conclude that the $k$th moment of $X$ is the coefficient of $\frac{s^k}{k!}$ 
 
 We remember from calculus that the coefficient of $\frac{s^k}{k!}$ in the Taylor series of $M_X(s)$ is obtained by taking the $k$th derivative of $M_X(s)$ and evaluating it at $s=0$.
 
-Thus, we can write
-$$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
-
 We can obtain all moments of $X_k$ from its MGF:
 $$M_X(s) = \sum_{k=0}^{\infty} E\left[X^k\right] \frac{s^k}{k!},$$
+
+and we can write the $k$th moment as the $k$th derivative of the MGF evaluated at $s = 0$.
 $$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
 
 ## Example 2 (1/2)

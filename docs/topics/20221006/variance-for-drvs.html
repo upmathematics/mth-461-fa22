@@ -5,9 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="date" content="2022-10-04" />
+  <meta name="date" content="2022-10-06" />
   <meta name="font-size-adjustment" content="4" />
-  <title>Moment Generating Functions for DRVs</title>
+  <title>Variance for DRVs</title>
   <style type="text/css">
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -394,72 +394,28 @@ list-style-type: none;
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">Moment Generating Functions for DRVs</h1>
+  <h1 class="title">Variance for DRVs</h1>
   <p class="author">
 
   </p>
-  <p class="date">2022-10-04</p>
+  <p class="date">2022-10-06</p>
 </div>
 <div id="previously-12" class="slide section level2">
 <h1>Previously… (1/2)</h1>
-<p><strong>Expected Values for Discrete Random Variables</strong></p>
-<p><strong>[PSDR] Definition 3.8</strong> For a discrete random variable
-<span class="math inline">\(X\)</span> with pmf <span class="math inline">\(p\)</span>, the expected value of <span class="math inline">\(X\)</span> is <span class="math display">\[E[X] =
-\sum_{x} x p(x)\]</span></p>
-<p>provided this sum exists, where the sum is taken over all possible
-values of the random variable <span class="math inline">\(X\)</span>.</p>
-<p><strong>[PSDR] Theorem 3.2 (Law of Large Numbers)</strong> The mean
-of <em>n</em> observations of a random variable <span class="math inline">\(X\)</span> converges to the expected value <span class="math inline">\(E[X]\)</span> as <span class="math inline">\(n \to
-\infty\)</span>, assuming <span class="math inline">\(E[X]\)</span> is
-defined.</p>
+<p>The <strong>Moment Generating Functions</strong> for DRVs is defined
+as</p>
+<p><span class="math display">\[M_X(s) = E\left[e^{sX}\right] =
+\sum_{k=0}^{\infty} E\left[X^k \right] \frac{s^k}{k!}.\]</span></p>
+<p>We can obtain all moments of <span class="math inline">\(X_k\)</span>
+from its MGF: <span class="math display">\[M_X(s) = \sum_{k=0}^{\infty}
+E\left[X^k\right] \frac{s^k}{k!},\]</span></p>
+<p>and we can write the <span class="math inline">\(k\)</span>th moment
+as the <span class="math inline">\(k\)</span>th derivative of the MGF
+evaluated at <span class="math inline">\(s = 0\)</span>. <span class="math display">\[E\left[X^k\right]= \frac{dk}{ds^k} M_X(s)
+\Big|_{s=0}.\]</span></p>
 </div>
 <div id="previously-22" class="slide section level2">
 <h1>Previously… (2/2)</h1>
-<p><strong>Properties of Expected Values</strong></p>
-<p>Expected value of a constant:</p>
-<ul>
-<li>If <span class="math inline">\(a\)</span> is a constant, then <span class="math inline">\(E[a] = a\)</span>.</li>
-</ul>
-<p>Scalar multiplication of a random variable:</p>
-<ul>
-<li>If <span class="math inline">\(a\)</span> is a scalar constant, then
-<span class="math inline">\(E[aX] = aE[X]\)</span>.</li>
-</ul>
-<p>Sums of Random Variables:</p>
-<ul>
-<li>If <span class="math inline">\(X_1, X_2, \cdots, X_k\)</span> are
-<span class="math inline">\(k\)</span> independent random variables,
-then <span class="math inline">\(E[X_1 + X_2 + \cdots + X_k] = E[X_1] +
-E[X_2] + \cdots + E[X_k]\)</span>.</li>
-</ul>
-<p>Expectation of a product of random variables</p>
-<ul>
-<li>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables, then <span class="math inline">\(E[XY] = E[X]E[Y]\)</span>.</li>
-</ul>
-</div>
-<div id="functions-of-a-random-variable" class="slide section level2">
-<h1>Functions of a Random Variable</h1>
-<p><strong>[PSDR] Theorem 3.7</strong></p>
-<p>Let <span class="math inline">\(X\)</span> be a discrete random
-variable with probability mass function <span class="math inline">\(P(x)\)</span>, and let <span class="math inline">\(g\)</span> be a function. Then,</p>
-<p><span class="math display">\[E[g(X)] = \sum g(x)P(x).\]</span></p>
-</div>
-<div id="example-1" class="slide section level2">
-<h1>Example 1</h1>
-<p>Let <span class="math inline">\(X\)</span> be the value of a
-six-sided die roll. Let <span class="math inline">\(g(X) = X^2\)</span>.
-So the pmf of a six-sided die is <span class="math inline">\(P(x) =
-\frac{1}{6}\)</span>.</p>
-<p><span class="math display">\[\begin{align*}
-E[X^2] = &amp; \sum_{i=1}^{6} x^2 \frac{1}{6} \\
-       = &amp; 1^2 \frac{1}{6} + 2^2 \frac{1}{6} + 3^2 \frac{1}{6} + 4^2
-\frac{1}{6} + 5^2 \frac{1}{6} + 6^2 \frac{1}{6} \\
-       \approx &amp; 15.2356 \\
-\end{align*}\]</span></p>
-<p>This is what is known as the <strong>2nd moment</strong>.</p>
-</div>
-<div id="moment-generating-functions-14" class="slide section level2">
-<h1>Moment Generating Functions (1/4)</h1>
 <p>Moment generating functions are important for a variety of reasons,
 one of which is that they may be used to analyze sums of random
 variables.</p>
@@ -479,79 +435,50 @@ E[X]}{\sqrt{Var[X]}}\right)^4\right] = Kurt(X) \longrightarrow\)</span>
 <strong>kurtosis</strong></li>
 </ul>
 </div>
-<div id="moment-generating-functions-24" class="slide section level2">
-<h1>Moment Generating Functions (2/4)</h1>
-<p>The <strong>moment generating function (MGF)</strong> of a random
-variable <span class="math inline">\(X\)</span> is a function <span class="math inline">\(M_X(s)\)</span> defined as</p>
-<p><span class="math display">\[M_X(s)=E[e^{sX}].\]</span></p>
-<p>We say that MGF of <span class="math inline">\(X\)</span> exists, if
-there exists a positive constant a such that <span class="math inline">\(M_X(s)\)</span> is finite for all <span class="math inline">\(s \in [−a,a]\)</span>.</p>
-<p>The MGF of <span class="math inline">\(X\)</span> gives us all
-moments of <span class="math inline">\(X\)</span>, and - if it exists-
-it uniquely determines the distribution. That is, if two random
-variables have the same MGF, then they must have the same distribution.
-Thus, if you find the MGF of a random variable, you have indeed
-determined its distribution.</p>
-</div>
-<div id="moment-generating-functions-34" class="slide section level2">
-<h1>Moment Generating Functions (3/4)</h1>
-<p><strong>Finding Moments from MGF:</strong> Remember the Taylor series
-for <span class="math inline">\(e^x\)</span>: for all <span class="math inline">\(x\in \mathbb{R}\)</span>, we have <span class="math display">\[e^x = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots =
-\sum_{k=0}^{\infty} \frac{x^k}{k!}.\]</span></p>
-<p>Now, we can write <span class="math display">\[e^{sX} =
-\sum_{k=0}^{\infty} \frac{(sX)^k}{k!} = \sum_{k=0}^{\infty} \frac{X^k
-s^k}{k!}.\]</span></p>
-<p>Thus, we have <span class="math display">\[M_X(s) =
-E\left[e^{sX}\right] = \sum_{k=0}^{\infty} E\left[X^k \right]
-\frac{s^k}{k!}.\]</span></p>
-<p>We conclude that the <span class="math inline">\(k\)</span>th moment
-of <span class="math inline">\(X\)</span> is the coefficient of <span class="math inline">\(\frac{s^k}{k!}\)</span> in the Taylor series of
-<span class="math inline">\(M_X(s)\)</span>. Thus, if we have the Taylor
-series of <span class="math inline">\(M_X(s)\)</span>, we can obtain all
-moments of <span class="math inline">\(X\)</span>.</p>
-</div>
-<div id="moment-generating-functions-44" class="slide section level2">
-<h1>Moment Generating Functions (4/4)</h1>
-<p>We remember from calculus that the coefficient of <span class="math inline">\(\frac{s^k}{k!}\)</span> in the Taylor series of
-<span class="math inline">\(M_X(s)\)</span> is obtained by taking the
-<span class="math inline">\(k\)</span>th derivative of <span class="math inline">\(M_X(s)\)</span> and evaluating it at <span class="math inline">\(s=0\)</span>.</p>
-<p>We can obtain all moments of <span class="math inline">\(X_k\)</span>
-from its MGF: <span class="math display">\[M_X(s) = \sum_{k=0}^{\infty}
-E\left[X^k\right] \frac{s^k}{k!},\]</span></p>
-<p>and we can write the <span class="math inline">\(k\)</span>th moment
-as the <span class="math inline">\(k\)</span>th derivative of the MGF
-evaluated at <span class="math inline">\(s = 0\)</span>. <span class="math display">\[E\left[X^k\right]= \frac{dk}{ds^k} M_X(s)
-\Big|_{s=0}.\]</span></p>
-</div>
-<div id="example-2-12" class="slide section level2">
-<h1>Example 2 (1/2)</h1>
-<p>If <span class="math inline">\(Y\)</span> is a uniform discrete
-random variable for a fair six-sided die with probability <span class="math inline">\(P(Y = y) = \frac{1}{6}\)</span>, for all <span class="math inline">\(y = \{1,2,3,4,5,6\}\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Find the MGF.</li>
-</ol>
-<p><span class="math display">\[M_Y(s) = E\left[e^{sY}\right] = \sum_{y
-= 1}^{6} e^{sy} \frac{1}{6} = \frac{1}{6} \sum_{y = 1}^{6}
-e^{sy}.\]</span></p>
-<p>Note that we always have <span class="math inline">\(M_Y(0)=E[e^{0Y}]= 1\)</span>, thus <span class="math inline">\(M_Y(s)\)</span> is also well-defined for all <span class="math inline">\(s \in \mathbb{R}\)</span>.</p>
-</div>
-<div id="example-2-22" class="slide section level2">
-<h1>Example 2 (2/2)</h1>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Find <span class="math inline">\(E[Y^k]\)</span> using <span class="math inline">\(M_Y(s)\)</span>.</li>
-</ol>
-<p><span class="math display">\[\begin{align*}
-M_Y(s) = &amp; E\left[e^{sY}\right] = \frac{1}{6} \sum_{y = 1}^{6}
-e^{sy} \\
-\frac{dk}{ds^k} M_Y(s) \Big|_{s=0} = &amp; \frac{1}{6} \sum_{y = 1}^{6}
-y^k e^{sy} \Big|_{s=0} \\
-E[Y^k] = &amp; \frac{1}{6} \sum_{y = 1}^{6} y^k
+<div id="variance-and-standard-deviation" class="slide section level2">
+<h1>Variance and Standard Deviation</h1>
+<p>The variance of a random variable measures the spread of the variable
+around its expected value.</p>
+<p><strong>[PSDR] Definition 3.31</strong> Let <strong>X</strong> be a
+random variable with expected value <span class="math inline">\(\mu =
+E[X]\)</span>. The variance of <span class="math inline">\(X\)</span> is
+defined as</p>
+<p><span class="math display">\[Var(X) =
+E\left[(X−\mu)^2\right]\]</span></p>
+<p>The standard deviation of <span class="math inline">\(X\)</span> is
+written <span class="math inline">\(\sigma(X)\)</span> and is the square
+root of the variance:</p>
+<p><span class="math display">\[\sigma(X) = \sqrt{Var(X)}.\]</span></p>
+<p><strong>[PSDR] Theorem 3.9</strong> <span class="math display">\[\begin{align*}
+Var(X) = &amp; E\left[(X - E[X])^2\right] \\
+       = &amp; E\left[X^2\right] − E[X]^2
 \end{align*}\]</span></p>
+</div>
+<div id="example-1" class="slide section level2">
+<h1>Example 1</h1>
+<p>Let <span class="math inline">\(X \sim Binom(3,0.5)\)</span>. Compute
+the standard deviation and variance of <span class="math inline">\(X\)</span>.</p>
+<p>The first moment is <span class="math inline">\(E[X] = np\)</span>
+(mean) for a Binomial random variable. We need to find the second moment
+<span class="math inline">\(E[X^2]\)</span>.</p>
+<p>Suppose that the MGF is <span class="math inline">\(M_X(s) = (1- p +
+pe^s)^n\)</span>. Then,</p>
+<p><span class="math display">\[E[X^2] = \frac{d2}{ds^2} M_X(s)
+\Big|_{s=0} = np(np-p+1) = n^2p^2 - np^2 + np.\]</span></p>
+<p>So,</p>
+<p><span class="math display">\[\begin{align*}
+Var(X) = &amp; E\left[X^2\right] − E[X]^2 \\
+       = &amp; n^2p^2 - np^2 + np - n^2p^2 \\
+       = np(1-p) \\
+\end{align*}\]</span></p>
+<p><span class="math display">\[\sigma(X) = \sqrt{np(1-p)}\]</span></p>
+<p><span class="math display">\[\sigma =
+\sqrt{3(0.50)(0.50)}\]</span></p>
 </div>
 <div id="mini-activity" class="slide section level2">
 <h1>Mini-Activity</h1>
-<p><a href="ma-mth461a-20221004.pdf" target="_blank">Mini-Assignment:
-Moment Generating Functions for DRVs</a></p>
+<p><a href="ma-mth461a-20221006.pdf" target="_blank">Mini-Assignment:
+Variance for DRVs</a></p>
 <p>Back to <a href="../../topics.html">Tentative Topics
 Schedule</a>.</p>
 </div>

@@ -1,0 +1,96 @@
+---
+title: "Variance for DRVs"
+output:
+  slidy_presentation:
+    font_adjustment: 4
+date: "2022-10-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Previously... (1/2)
+
+The **Moment Generating Functions** for DRVs is defined as
+
+$$M_X(s) = E\left[e^{sX}\right] = \sum_{k=0}^{\infty} E\left[X^k \right] \frac{s^k}{k!}.$$
+
+We can obtain all moments of $X_k$ from its MGF:
+$$M_X(s) = \sum_{k=0}^{\infty} E\left[X^k\right] \frac{s^k}{k!},$$
+
+and we can write the $k$th moment as the $k$th derivative of the MGF evaluated at $s = 0$.
+$$E\left[X^k\right]= \frac{dk}{ds^k} M_X(s) \Big|_{s=0}.$$
+
+## Previously... (2/2)
+
+Moment generating functions are important for a variety of reasons, one of which is that they may be used to analyze sums of random variables.
+
+The **kth moment** of a random variable $X$ is defined to be $E\left[X^k\right]$. 
+
+The **kth central moment** of $X$ is defined to be $E\left[\left(X−E[X]\right)^k\right]$.
+
+- $n = 1: E[X] \longrightarrow$ **expected value (mean)**
+- $n = 2: E\left[\left(X - E[X]\right)^2\right] = Var(X) \longrightarrow$ **variance**
+- $n = 3: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^3\right] = Skew(X) \longrightarrow$ **skewness**
+- $n = 4: E\left[\left(\frac{X - E[X]}{\sqrt{Var[X]}}\right)^4\right] = Kurt(X) \longrightarrow$ **kurtosis**
+
+## Variance and Standard Deviation
+
+The variance of a random variable measures the spread of the variable around its expected value.
+
+**[PSDR] Definition 3.31**
+Let **X** be a random variable with expected value $\mu = E[X]$. The variance of $X$ is defined as
+
+$$Var(X) = E\left[(X−\mu)^2\right]$$
+
+The standard deviation of $X$ is written $\sigma(X)$ and is the square root of the variance:
+
+$$\sigma(X) = \sqrt{Var(X)}.$$
+
+**[PSDR] Theorem 3.9**
+\begin{align*}
+Var(X) = & E\left[(X - E[X])^2\right] \\
+       = & E\left[X^2\right] − E[X]^2
+\end{align*}
+
+## Example 1
+
+Let $X \sim Binom(3,0.5)$. Compute the standard deviation and variance of $X$.
+
+The first moment is $E[X] = np$ (mean) for a Binomial random variable. We need to find the second moment $E[X^2]$.
+
+Suppose that the MGF is $M_X(s) = (1- p + pe^s)^n$. Then,
+
+$$E[X^2] = \frac{d2}{ds^2} M_X(s) \Big|_{s=0} = np(np-p+1) = n^2p^2 - np^2 + np.$$
+
+So,
+
+\begin{align*}
+Var(X) = & E\left[X^2\right] − E[X]^2 \\
+       = & n^2p^2 - np^2 + np - n^2p^2 \\
+       = np(1-p) \\
+\end{align*}
+
+$$\sigma(X) = \sqrt{np(1-p)}$$
+
+$$\sigma = \sqrt{3(0.50)(0.50)}$$
+
+## Variance Properties
+
+**[PSDR] Theorem 3.10**
+
+1. Let $X$ be a random variable and $c$ a constant. Then
+
+$$Var(cX) = c^2 Var(X)$$
+$$\sigma(cX) = |c|\sigma(X)$$
+
+2. Let $X_1, X_2, \cdots, X_n$  be independent random variables. Then
+
+$$Var(X_1 + X_2 + \cdots + X_n) = Var(X_1) + Var(X_2) + \dots + Var(X_n)$$
+
+## Mini-Activity
+
+[Mini-Assignment: Variance for DRVs](ma-mth461a-20221006.pdf){target="_blank"}
+
+Back to [Tentative Topics Schedule](../../topics.html).
