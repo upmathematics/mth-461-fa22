@@ -76,7 +76,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Bayes Theorem},
+  pdftitle={Covariance and Correlation for DRVs},
   colorlinks=true,
   linkcolor={Maroon},
   filecolor={Maroon},
@@ -84,14 +84,14 @@
   urlcolor={blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{\textbf{Bayes Theorem}}
+\title{\textbf{Covariance and Correlation for DRVs}}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Mini-Assignment 2022-09-13 - MTH 461 - Fall 2022}
+\subtitle{Mini-Assignment 2022-10-11 - MTH 461 - Fall 2022}
 \author{}
 \date{\vspace{-2.5em}}
 
@@ -124,46 +124,31 @@
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Consider a scenario where you have \emph{two} urns with contents shown in a table below. One urn is chosen at random and \emph{three} balls are selected.
+  Suppose that \(X\) and \(Y\) are random variables, and \(Z = aX + bY\) for some scalar constants \(a\) and \(b\). Use the definition and properties of the covariance to compute the formulas of the following expressions.
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    If two balls are red, what is the probability that it came from Urn 1?
+    \(Var(Z)\)
   \item
-    If the balls are two reds and one black, what is the probability that it came from Urn 1?
+    \(Cov(Z,aX)\)
+  \item
+    \(Cov(Z,bY)\)
   \end{enumerate}
-\end{enumerate}
-
-\begin{longtable}[]{@{}ccc@{}}
-\toprule()
-& \textbf{Red} & \textbf{Black} \\
-\midrule()
-\endhead
-\textbf{Urn 1} & 3 & 3 \\
-\textbf{Urn 2} & 4 & 2 \\
-\bottomrule()
-\end{longtable}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
 \item
-  Consider a scenario where you draw \(three\) cards from \(two\) standard decks shuffled together. Note that the two decks can be distinguishable but you won't be able to distinguish them when drawing.
+  Let \(X\) and \(Y\) be two random variables associated with the throws of two ordinary dice. In both cases the mean is \(E[X] = E[Y] = \frac{7}{2}\) and the variance is \(Var(X) = Var(Y) = \frac{35}{12}\). Suppose the two dice behave so as to give only the (equiprobable) pairs (1,6), (2,5), (3,4), (4,3), (5,2) and (6,1).
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    If you have all three queens, what is the probability that they all came from the same deck?
+    What is \(E[XY]\)?
   \item
-    If you have two kings and one queen, what is the probability that they all came from the same deck?
+    What is \(Cov(X,Y)\)?
+  \item
+    What is \(\rho(X,Y)\)?
   \end{enumerate}
 \end{enumerate}
-
-\hfill\break
-
-(Hint for problems 1 and 2: Use the counting arguments method when you apply Bayes' Theorem and the law of total probability. Visualizing using a forward and backward tree is also useful.)
 
 \end{document}
