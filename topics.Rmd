@@ -39,10 +39,9 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  10/11  |         [Covariance and Correlation for DRVs](topics/20221011/covariance-and-correlation-for-drvs.html)         |            Ch. 3.5 Cont.            |            Ch. 3.6            |         [[pdf](topics/20221011/ma-mth461a-20221011.pdf){target="_blank"}] [[Rmd](topics/20221011/ma-mth461a-20221011.Rmd){target="_blank"}] [[tex](topics/20221011/ma-mth461a-20221011.tex){target="_blank"}]         |     10/11    |
 |  10/13  |        -         |             -            |         -         |         -         |     10/13    |
 |   _-_   |              _Fall Vacation_              |               _-_               |           _-_           |         _-_         |      _-_     |
-|  10/25  |                   Introduction to the Mini-Project \& Reviews                  |                -                |            -            |          -          |       10/25      |
-|  10/27  |     Continuous Random Variables (CRVs)    |               TBA               |           TBA           |         TBA         |     10/27    |
-|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **11/1**  |
-|   11/1  |       Probability Density Functions       |               TBA               |           TBA           |         TBA         |     11/1     |
+|  10/25  |                   Re-Orientation \& Continuous Random Variables (CRVs)                 |                -                |            -            |          -          |       10/25      |
+|  10/27  |     Probability Density Functions    |               TBA               |           TBA           |         TBA         |     10/27    |
+|   11/1  |       Expected Values for CRVs       |               TBA               |           TBA           |         TBA         |     11/1     |
 |   11/3  |    Moment Generating Functions for CRVs   |               TBA               |           TBA           |         TBA         |     11/3     |
 |   11/8  |  Joint \& Marginal Distributions for CRVs |               TBA               |           TBA           |         TBA         |     11/8     |
 |  11/10  |     Covariance \& Correlation for CRVs    |               TBA               |           TBA           |         TBA         |     11/10    |
@@ -54,7 +53,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
-|  **-**  |              **Module 3 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
+|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
 |  **-**  |           **Mini-Project Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
 
 <br>
