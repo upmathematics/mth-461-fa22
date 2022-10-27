@@ -40,13 +40,13 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  10/13  |        -         |             -            |         -         |         -         |     10/13    |
 |   _-_   |              _Fall Vacation_              |               _-_               |           _-_           |         _-_         |      _-_     |
 |  10/25  |                   Re-Orientation \& Continuous Random Variables (CRVs)                 |                -                |            -            |          [[pdf](topics/20221025/ma-mth461a-20221025.pdf){target="_blank"}] [[Rmd](topics/20221025/ma-mth461a-20221025.Rmd){target="_blank"}] [[tex](topics/20221025/ma-mth461a-20221025.tex){target="_blank"}]          |       10/25      |
-|  10/27  |     Probability Density Functions    |               TBA               |           TBA           |         TBA         |     10/27    |
-|   11/1  |       Expected Values for CRVs       |               TBA               |           TBA           |         TBA         |     11/1     |
-|   11/3  |    Moment Generating Functions for CRVs   |               TBA               |           TBA           |         TBA         |     11/3     |
-|   11/8  |  Joint \& Marginal Distributions for CRVs |               TBA               |           TBA           |         TBA         |     11/8     |
-|  11/10  |     Covariance \& Correlation for CRVs    |               TBA               |           TBA           |         TBA         |     11/10    |
-|  11/15  |        Exponential Random Variables       |               TBA               |           TBA           |         TBA         |     11/15    |
-|  11/17  |          Normal Random Variables          |               TBA               |           TBA           |         TBA         |     11/17    |
+|  10/27  |     Joint \& Marginal Distributions for CRVs    |               -               |           -           |         [[pdf](topics/20221027/ma-mth461a-20221027.pdf){target="_blank"}] [[Rmd](topics/20221027/ma-mth461a-20221027.Rmd){target="_blank"}] [[tex](topics/20221027/ma-mth461a-20221027.tex){target="_blank"}]         |     10/27    |
+|   11/1  |       Joint \& Marginal Distributions for CRVs Cont.       |               -               |           -           |         TBA         |     11/1     |
+|   11/3  |    Covariance \& Correlation for CRVs   |               -               |           -           |         TBA         |     11/3     |
+|   11/8  |  Covariance \& Correlation for CRVs Cont.  |               -               |           -           |         TBA         |     11/8     |
+|  11/10  |     Moment Generating Functions for CRVs    |               -               |           -           |         TBA         |     11/10    |
+|  11/15  |        Moment Generating Functions for CRVs Cont.       |               -               |           -           |         TBA         |     11/15    |
+|  11/17  |          Advanced R \& R Markdown          |               -               |           -           |         TBA         |     11/17    |
 |  11/22  |            Special Office Hours           |               TBA               |           TBA           |         TBA         |     11/22    |
 |   _-_   |          _Thanksgiving Vacation_          |               _-_               |           _-_           |         _-_         |      _-_     |
 |  11/29  |          The Law of Large Numbers         |               TBA               |           TBA           |         TBA         |     11/29    |

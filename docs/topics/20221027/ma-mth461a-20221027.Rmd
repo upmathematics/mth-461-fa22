@@ -1,6 +1,6 @@
 ---
-title: '**Independence and Conditional Probability**'
-subtitle: "Mini-Assignment 2022-09-08 - MTH 461 - Fall 2022"
+title: '**Joint \& Marginal Distributions for CRVs**'
+subtitle: "Mini-Assignment 2022-10-27 - MTH 461 - Fall 2022"
 header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
@@ -42,22 +42,21 @@ knitr::opts_chunk$set(echo = TRUE)
  * If you have questions or concerns, please feel free to ask the instructor.
 
 \newpage
-
-1. Consider an experiment where you draw *four* balls from an urn without replacement. There are 10 balls in the urn; 4 black and 6 red. Compute the probability of the following events. Write your solutions in standard probability notations.
-
-    a. Draw exactly 3 black balls.
-    b. Draw at least 3 black balls.
-    c. Draw at most 3 black balls.
-    d. Draw exactly 2 red balls.
-    e. Draw at least 2 red balls.
-    f. Draw at most 2 red balls.
-    
-2. Consider an experiment where you draw *three* cards from a standard deck without replacement. Compute the probability of the following events. Write your solutions in standard probability notations.
-
-    a. Draw a king in the second draw.
-    b. Draw a queen in the first draw.
-    c. Draw at least one red face card.
-    d. Draw at least one black face card.
-    e. Draw a queen in the third draw given that queens are drawn in the first and second draws.
-    f. Draw a king in the third draw given that any face card are drawn in the first and second draw.
   
+1. Let $X \sim Bernoulli(p)$ and $Y \sim Bernoulli(q)$ be independent, where $0 < p$,$q < 1$. The pmf for a Bernoulli distribution is given below.
+$$P(X = x; p) = p^x (1-p)^{1-x} \text{ for } x \in \{0,1\}.$$
+
+      a. Find the joint PMF and joint CDF for $X$ and $Y$. 
+      b. Find the expected value and variance of the jointly discrete random variable using the joint PMF. 
+  
+2. Let $X$ and $Y$ be two jointly continuous random variables with joint PDF given below.
+      $$f_{XY} = 
+\begin{cases}
+  cx^2 y & 0 \le y \le x \le 1 \\
+  0 & \text{otherwise}
+\end{cases}$$
+      a. Find $R_{XY}$ and show it in the $x-y$ plane. This means the integration region.
+      b. Find the constant $c$.
+      c. Find marginal PDFs, $f_{X}(x)$ and $f_{Y}(y)$.
+      d. Find $P\left(Y \le \frac{X}{2}\right)$.
+      e. Find $P\left(Y \le \frac{X}{4} | Y \le \frac{X}{2}\right)$.
