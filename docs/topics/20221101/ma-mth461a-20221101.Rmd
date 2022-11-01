@@ -1,0 +1,62 @@
+---
+title: '**Covariance \& Correlation for CRVs**'
+subtitle: "Mini-Assignment 2022-11-01 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+  
+Consider the unit disc
+$$D = \{(x,y)|x^2 + y^2 \le 1\}.$$
+
+Suppose that we choose a point $(X,Y)$ uniformly at random in $D$. That is, the joint PDF of $X$ and $Y$ is given by
+$$
+f_{XY}(x,y) = 
+\begin{cases}
+ c & (x,y) \in D\\
+ 0 & \text{otherwise} \\
+\end{cases}
+$$
+
+1. Draw the integration region $R_{XY}$ and find the constant $c$.
+
+2. Find the marginal distributions $f_X(x)$ and $f_Y(y)$, and determine if $X$ and $Y$ are independent.
+
+3. Find the $Cov(X,Y)$, and determine if $X$ and $Y$ are independent.
