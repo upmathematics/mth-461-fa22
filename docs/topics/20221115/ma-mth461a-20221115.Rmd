@@ -51,10 +51,12 @@ Find $E[(X+Y)^2]$.
 2. Suppose $X$ and $Y$ are independent Poisson random variables with parameters $\lambda_x$, $\lambda_y$, respectively. Find the distribution of $X + Y$. (Hint: Find the Joint MGF first, and then match the results to known MGFs.)
 
     Recall that the mgf for a Poisson random variable is given by
-    $$M_x(s) = e^{\lambda (e^s - 1)}.$$
+    $$M_x(s) = e^{\lambda (e^s - 1)}$$
+    where $\lambda$ is the parameter of the Poisson pmf.
 
-3. True or False? If $X \sim Exponential(\lambda_x)$ and $Y \sim Exponential(\lambda_y)$ then $X + Y \sim Exponential(\lambda_x + \lambda_y)$. Justify your answer. (Hint: Check first if X and Y are independent, find the joint MGF, then match results to known MGFs.)
+3. True or False? If $X \sim Exponential(\lambda_x)$ and $Y \sim Exponential(\lambda_y)$ then $X + Y \sim Exponential(\lambda_x + \lambda_y)$. Justify your answer. (Hint: Find MGF of $X + Y$, and see if it matches with the MGFs of $X$ and $Y$.)
 
     Recall that the mgf for an Exponential random variable is given by
-    $$M_X(s) = \frac{\lambda}{\lambda - s}.$$
+    $$M_X(s) = \frac{\lambda}{\lambda - s}$$
+    where $\lambda$ is the parameter of the Exponential pdf.
     
