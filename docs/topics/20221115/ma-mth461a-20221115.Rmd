@@ -43,6 +43,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
   
-1. 
+1. Let $X$ and $Y$ be two independent random variables with respective moment generating functions 
+$$M_X(s) = \frac{1}{1-5s}, \text{ if } s < \frac{1}{5}, \text{ and }$$
+$$M_Y(s) = \frac{1}{(1-5s)^2}, \text{ if } s < \frac{1}{5}.$$
+Find $E[(X+Y)^2]$.
 
-2. 
+2. Suppose $X$ and $Y$ are independent Poisson random variables with parameters $\lambda_x$, $\lambda_y$, respectively. Find the distribution of $X + Y$. (Hint: Find the Joint MGF first, and then match the results to known MGFs.)
+
+    Recall that the mgf for a Poisson random variable is given by
+    $$M_x(s) = e^{\lambda (e^s - 1)}.$$
+
+3. True or False? If $X \sim Exponential(\lambda_x)$ and $Y \sim Exponential(\lambda_y)$ then $X + Y \sim Exponential(\lambda_x + \lambda_y)$. Justify your answer. (Hint: Check first if X and Y are independent, find the joint MGF, then match results to known MGFs.)
+
+    Recall that the mgf for an Exponential random variable is given by
+    $$M_X(s) = \frac{\lambda}{\lambda - s}.$$
+    
