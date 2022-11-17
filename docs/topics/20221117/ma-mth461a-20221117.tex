@@ -1,0 +1,166 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO,R]{MTH 461A - Fall 2022}
+\fancyfoot[CO,C]{}
+\fancyfoot[R]{\thepage}
+\usepackage{float}
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Exponential \& Normal Random Variables Theory \& Applications},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\textbf{Exponential \& Normal Random Variables Theory \& Applications}}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Mini-Assignment 2022-11-17 - MTH 461 - Fall 2022}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hfill\break
+
+\textbf{Instructions:}
+
+\begin{itemize}
+\item
+  Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+\item
+  Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+\item
+  Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+\item
+  There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+\item
+  If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) \href{https://play.google.com/store/apps/details?id=com.appxy.tinyscanner\&hl=en_US\&gl=US}{``Tiny Scanner'' for Android} or (2) \href{https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753}{``Scanner App'' for iOS}.
+\item
+  \textbf{Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.}
+\item
+  If you have questions or concerns, please feel free to ask the instructor.
+\end{itemize}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Computers require fans to keep them from overheating. Let \(T\) be the random variable representing the lifetime of a particular make of fan in hours. Assume that \(T\) follows an exponential distribution with parameter \(\lambda = 0.0003\).
+
+  Recall that the pdf and cdf of an exponential random variable is given by
+  \[f(x;\lambda) = \lambda e^{-\lambda x} \hspace{10px} \text{ and } \hspace{10px} F(x;\lambda) = 1- e^{-\lambda x}\]
+
+  For the following subproblems, set-up the correct integrals but use R to compute the value of the integrals. You can use the functions \texttt{dexp(x,lambda)} for the pdf and \texttt{pexp(x,lambda)} for the cdf.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Determine the expected value of a general exponential distribution (i.e., in terms of general \(\lambda\)) and use it to find the expected lifetime of a fan with this specific value of \(\lambda = 0.0003\).
+  \item
+    Find the proportion of computer fans which will give at least 10,000 hours of service. Is this equal to the proportion of fans we expect?
+  \item
+    If the fan is redesigned so that exponential lifetime distribution now has parameter \(\lambda = 0.00035\), would you expect more fans or fewer fans to live for at least 10,000 hours?
+  \item
+    Determine the variance of the exponential lifetime distribution for \(\lambda = 0.0003\) and \(\lambda = 0.00035\). Compare the variances. Does less variance means a more better or worse fan design?
+  \end{enumerate}
+\item
+  Suppose that \(C\), the concentration (in mmol/L) of chloride in the blood of a randomly chosen healthy human, is a normal distributed random variable with mean \(\mu = 105\) and standard deviation \(\sigma = 5\).
+
+  Recall that the pdf of a normal random variable is given by
+  \[f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left( \frac{x-\mu}{\sigma} \right)^2}\]
+
+  For the following subproblems, set-up the correct integrals but use R to compute the value of the integrals. You can use the functions \texttt{dnorm(x,mu,sigma)} for the pdf and \texttt{pnorm(x,mu,sigma)} for the cdf.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    What is the probability that chloride concentration equals 105? Is less than 105? Is at most 105?
+  \item
+    What is the probability that chloride concentration differs from the mean by more than 1 standard deviation? Does this probability depend on the values of \(\mu\) and \(\sigma\)?
+  \item
+    What is the probability that a physician will see a healthy patient during a routine test will have a chloride concentration above 120 mmol/L?
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}

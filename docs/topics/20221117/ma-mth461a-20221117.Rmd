@@ -1,0 +1,67 @@
+---
+title: '**Exponential & Normal Random Variables Theory & Applications**'
+subtitle: "Mini-Assignment 2022-11-17 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+  
+1. Computers require fans to keep them from overheating. Let $T$ be the random variable representing the lifetime of a particular make of fan in hours. Assume that $T$ follows an exponential distribution with parameter $\lambda = 0.0003$.
+
+    Recall that the pdf and cdf of an exponential random variable is given by
+    $$f(x;\lambda) = \lambda e^{-\lambda x} \hspace{10px} \text{ and } \hspace{10px} F(x;\lambda) = 1- e^{-\lambda x}$$
+    
+    For the following subproblems, set-up the correct integrals but use R to compute the value of the integrals. You can use the functions `dexp(x,lambda)` for the pdf and `pexp(x,lambda)` for the cdf.
+
+    a. Determine the expected value of a general exponential distribution (i.e., in terms of general $\lambda$) and use it to find the expected lifetime of a fan with this specific value of $\lambda = 0.0003$.
+    b. Find the proportion of computer fans which will give at least 10,000 hours of service. Is this equal to the proportion of fans we expect?
+    c. If the fan is redesigned so that exponential lifetime distribution now has parameter $\lambda = 0.00035$, would you expect more fans or fewer fans to live for at least 10,000 hours?
+    d. Determine the variance of the exponential lifetime distribution for $\lambda = 0.0003$ and $\lambda = 0.00035$. Compare the variances. Does less variance means a more better or worse fan design?
+
+2. Suppose that $C$, the concentration (in mmol/L) of chloride in the blood of a randomly chosen healthy human, is a normal distributed random variable with mean $\mu = 105$ and standard deviation $\sigma = 5$.
+
+    Recall that the pdf of a normal random variable is given by
+    $$f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left( \frac{x-\mu}{\sigma} \right)^2}$$
+    
+     For the following subproblems, set-up the correct integrals but use R to compute the value of the integrals. You can use the functions `dnorm(x,mu,sigma)` for the pdf and `pnorm(x,mu,sigma)` for the cdf.
+
+    a. What is the probability that chloride concentration equals 105? Is less than 105? Is at most 105?
+    b. What is the probability that chloride concentration differs from the mean by more than 1 standard deviation? Does this probability depend on the values of $\mu$ and $\sigma$?
+    c. What is the probability that a physician will see a healthy patient during a routine test will have a chloride concentration above 120 mmol/L?
