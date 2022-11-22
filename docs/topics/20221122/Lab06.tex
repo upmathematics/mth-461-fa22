@@ -1,0 +1,226 @@
+%%%%%%%%% MASTER -- compiles the 4 sections
+
+%For Student Version
+\documentclass[10pt,letterpaper]{exam}
+
+%For Solution
+%\documentclass[10pt,letterpaper,answers]{exam}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{plain}                                                      %%
+
+%\usepackage{fancyhdr}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+ \usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage[dvipsnames]{xcolor}
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
+\newcommand\SK[1]{\textcolor{red}{#1}}
+\newcommand{\EMR}{\textcolor{violet}} % Erica Rutter
+\newcommand{\SSS}{\textcolor{blue}} % Erica Rutter
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{enumitem}
+
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{tikz,pgfplots,pgfplotstable}
+\usetikzlibrary{positioning,calc,shapes,arrows}
+\tikzstyle{a1}=[thick,serif cm-latex',line width=2]
+\tikzstyle{a2}=[thick,latex'-latex',line width=2]                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+%\usepackage[superscript,biblabel]{cite}
+
+
+%\renewcommand{\citedash}{--}    
+\newcommand{\required}[1]{\section*{\hfil #1\hfil}}                    %%
+\renewcommand{\refname}{\hfil References\hfil}                   %%
+%\bibliographystyle{plain}                                              %%
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%PUT YOUR MACROS HERE
+
+\usepackage{soul}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\setlength{\parskip}{0.20cm}
+\setlength{\parindent}{0cm} % Default is 15pt.
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*2}{*2}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{-2pt}{-5pt}
+\definecolor{pptorange}{rgb}{0.94,0.61,0.098}
+\definecolor{pptgreen}{rgb}{0.11,0.65,0.47}
+\definecolor{pptred}{rgb}{0.75,0,0}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\usepackage[super,comma]{natbib}
+\bibliographystyle{unsrtnat}
+\renewcommand{\bibsection}{}
+
+
+\usepackage{color,hyperref}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=blue,urlcolor=blue,
+            anchorcolor=lue,citecolor=blue}
+
+%%%%%%
+%For Color in Tables
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.7}
+\newcolumntype{r}{>{\columncolor{Red}}c}
+
+
+% header information
+
+%\pagestyle{fancyplain}
+%\lhead{{\bf Math 32} }
+%\chead{{\bf {Probability and Statistics} } }
+%\rhead{{\bf Fall Semester 2020}}
+
+\lhead{\textbf{Math 32}}
+\chead{\textbf{Probability and Statistics}}
+\rhead{\textbf{Fall Semester 2020}}
+
+% user defined macros
+
+\newcommand{\secskip}{\vspace{6pt}}
+\newcommand{\vect}[1]{\vec{#1}}
+\newcolumntype{L}{>{\centering\arraybackslash}m{4cm}}
+
+\begin{document}
+
+\begin{Large}
+\begin{center}
+\textbf{Discussion Section \#6}\\
+\textbf{Due: To be submitted to CatCourses by 11:59pm.}
+\end{center}
+\end{Large}
+
+\begin{large}
+\section*{Instructions:}
+\vspace{-.5cm}
+This week you will use R to take functions of random variables by generating samples. 
+You will receive some basic guidance in R from your TAs and a piece of code that you will only need to slightly modify. You are welcome to work alone or in small groups but everyone is responsible for turning in their own code/assignment. 
+
+This week, you are responsible for submitting:
+\begin{itemize}
+\item (2 Points) Your modified R script.
+\item (8 Points) A written report (PDF) which show your answers to the questions and a picture  for each problem. 
+\end{itemize}
+
+As with Homework, simply providing the correct answer, without justification, is not considered complete. For credit you \textbf{must} either show you steps (if it's a calculation problem) or explain/justify your reasoning (if it's a short answer problem).
+
+\section*{Assignment:}
+\vspace{-.5cm}
+
+\begin{enumerate}
+
+\item  (4 Points) Let $X$ be a uniformly distributed random variable on the interval $[0,1]$. You will consider the CDF and PDF of $Y = X^{3}$.
+
+\begin{enumerate}
+\item (2 Points) Using pencil/paper and repeating the methods we have discussed in class and in the textbook, determine the CDF and PDF of $Y$.
+
+\begin{solution}
+Let $F_X$ and $f_X$ be the CDF and PDF of $X$ respectively. Because $X = U[0,1]$ we know that:
+
+$$f_X(x) = 1 \text{ and } F_X = \begin{cases}
+0 & x < 0, \\
+x & 0 \leq x \leq 1, \\
+1 & 1 < x
+\end{cases}
+$$
+
+We are interested in the CDF and PDF of $Y$.  As we did in class, we will begin from the CDF of $Y$ and move to the CDF of $X$:
+
+$$F_Y(y) = P(Y \leq y) = P(X^{3} \leq y) = P(X \leq y^{1/3}) = F_x\left( y^{1/3} \right).$$
+
+Therefore we have:
+$$F_Y(y) =  F_X\left(y^{1/3} \right) = \begin{cases}
+0 & y < 0, \\
+y^{1/3} & 0 \leq y \leq 1, \\
+1 & 1 < y.
+\end{cases}
+.$$
+
+If we want the PDF of $Y$, we just take the derivative:
+
+$$
+\frac{d}{dy} F_Y(y) = f_Y(t) = \begin{cases}
+0 & y < 0,\\
+(1/3) y^{-2/3}& 0 \leq y \leq 1 \\
+0 & 1 < y.
+\end{cases}
+$$
+
+
+\end{solution}
+
+\item (2 Points for Plots) Modify the R code (lines: 15, 29, 36, 40 \& 58) you were given to:
+\begin{itemize}
+\item  generate samples of $X$, samples of $Y$ 
+\item create histograms of both $X$ and $Y$
+\item annotate those histograms (as in the sample code) with the true PDF in red.
+\end{itemize}
+\end{enumerate}
+
+\item (4 Points) Let $X_1,X_2, \text{ and } X_3$ be a independently generated uniformly distributed random variable on the interval $[0,1]$. You will consider the CDF and PDF of $Y = \max \{ X_1, X_2, X_3 \}$.
+
+\begin{enumerate}
+\item (2 Points) Using pencil/paper and repeating the methods we have discussed in class and in the textbook, determine the CDF and PDF of $Y$.
+
+\begin{solution}
+We will repeat the same process we did in an earlier lecture. Let $Y =  \max \{ X_1, X_2, X_3 \}$. We will start from the CDF of $Y$ and proceed to the CDF of $X$ (given above).
+
+\begin{eqnarray}
+F_Y(y) = P(Y \leq y ) & = & P\left( \max \{ X_1, X_2, X_3 \} \leq y\right) \nonumber \\
+& = & P( X_1 \leq y \text{ and } X_2 \leq y \text{ and } X_3 \leq y) \nonumber.
+\end{eqnarray} 
+The first line comes from the definition of the CDF of $Y$ and $Y$, where the second line comes from the definition of maximum. Because $X_1, X_2$ and $X_3$ are independent and have the same distribution we have,
+
+$$F_Y(y)=P( X_1 \leq y \text{ and } X_2 \leq y \text{ and } X_3 \leq y)=  \prod_{i = 1}^{3} P(X_i \leq y)
+ = \left( F_X(y) \right)^3.$$
+
+Thus we have:
+\begin{equation}
+F_Y(y) = \begin{cases}
+0 & y < 0 \\
+y^3 & 0 \leq y \leq 1 \\
+1 & 1 < y.
+\end{cases}
+\end{equation}
+
+To get to the PDF of $Y$ we just take the derivative:
+$$
+\frac{d}{dy} F_Y(y) = f_Y(t) = \begin{cases}
+0 & y < 0,\\
+3 y^2& 0 \leq y \leq 1 \\
+0 & 1 < y.
+\end{cases}
+$$
+
+\end{solution}
+
+\item (2 Points for Plots) Modify the R code (lines: 82, 97, 101 \& 119) you were given to:
+\begin{itemize}
+\item  generate samples of $X_1,X_2, \text{ and } X_3$, samples of $Y$ 
+\item create histograms of one of the $X_i$ and $Y$
+\item annotate those histograms (as in the sample code) with the true PDF in red.
+\end{itemize}
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+
+\end{large}
+
+\end{document}
