@@ -9,8 +9,6 @@ navbar:
       href: syllabus.html
     - text: "Topics"
       href: topics.html
-    - text: "Mini-Projects"
-      href: mini-projects.html
 
 output:
   html_document:

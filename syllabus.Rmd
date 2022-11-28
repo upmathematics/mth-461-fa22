@@ -133,9 +133,9 @@ The syllabus, tentative topics schedule, lecture slides, assignments, mini-proje
 
 ### Assignments
 
-The course is structured with Mini-Assignments due each class time at end-of-class or end-of-day (27 mini-assignments in total), and Module assignments due every three weeks (5 Modules in total). There are 2 mini-projects where we apply concepts and tools learned in class to understand real world data sets. All assignment materials are - or will be - shown in the Topics Schedule. All assignments and mini-project reports are submitted through Teams Assignments.
+The course is structured with Mini-Assignments due each class time at end-of-class or end-of-day (27 mini-assignments in total), and 2 Module assignments. All assignment materials are - or will be - shown in the Topics Schedule. All assignments reports are submitted through Teams Assignments.
 
-Modules and the mini-projects are the main sources of evaluation. The mini-assignments are low-stakes sources of evaluation. There will be no exams. The class can move really fast and it is important that you keep up with the assignments, and take feedback seriously.
+Modules are the main sources of evaluation. The mini-assignments are low-stakes sources of evaluation. There will be no exams. The class can move really fast and it is important that you keep up with the assignments, and take feedback seriously.
 
 <br>
 

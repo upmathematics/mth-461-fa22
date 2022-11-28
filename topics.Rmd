@@ -53,8 +53,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
-|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **12/9**   |
-|  **-**  |           **Mini-Project Due**          |              **-**              |          **-**          |        **-**        |   **12/15**  |
+|  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **-**        |   **12/15**   |
 
 <br>
 

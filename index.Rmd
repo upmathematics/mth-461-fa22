@@ -12,7 +12,6 @@ subtitle: "Fall 2022 - University of Portland"
 | [Home](index.html)          | -                                                                                    |
 | [Syllabus](syllabus.html)   | About the class, class materials and resources, class assessment and expectations |
 | [Topics](topics.html) | Tentative topics, notes, assignments, and books and online resources list        |
-| [Mini-Projects](mini-projects.html)         | Mini-project information and expectations                                           |
 
 <br>
 

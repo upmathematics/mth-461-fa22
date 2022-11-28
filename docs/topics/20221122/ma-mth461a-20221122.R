@@ -33,7 +33,7 @@ pdfOriginal = rep(1/2,numXCoords); #<- Change: Copy Line 90 Here.
 ###############################################################
 
 #(1) Transform your samples
-transformedSample = sample1^3; #<- Change this line
+transformedSample = sample1^2; #<- Change this line
 
 #(2) What is the PDF of your sample (as a function of x)
 xRangeTransformed = seq(min(transformedSample),max(transformedSample),length.out=numXCoords);
@@ -58,7 +58,7 @@ lines(xRangeOrig, pdfOriginal,col='red')
 plotTitle = paste("Sample Squared\n \ # Samples =" , NumSamples,sep = "");
 hist(transformedSample,probability=TRUE,
      xlab="y", ylab="f(y)",
-     main=plotTitle,xlim=c(0,max(xRangeTransformed)))
+     main=plotTitle,xlim=c(0,max(xRangeTransformed)),ylim=c(0,0.20))
 #Add the transformed PDF
 lines(xRangeTransformed, pdfTransformed,col='red')
 
