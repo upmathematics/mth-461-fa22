@@ -49,7 +49,7 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  11/17  |         Exponential \& Normal Random Variables Theory \& Applications           |               -               |           -           |         [[pdf](topics/20221117/ma-mth461a-20221117.pdf){target="_blank"}] [[Rmd](topics/20221117/ma-mth461a-20221117.Rmd){target="_blank"}] [[tex](topics/20221117/ma-mth461a-20221117.tex){target="_blank"}]         |     11/17    |
 |  11/22  |            Simulations of Random Variables Using R           |               -               |           -           |         [[zip](topics/20221122/ma-mth461a-20221122.zip){target="_blank"}]         |     11/22    |
 |   _-_   |          _Thanksgiving Vacation_          |               _-_               |           _-_           |         _-_         |      _-_     |
-|  11/29  |          The Law of Large Numbers         |               [[zip](topics/20221129/ma-mth461a-20221129.zip){target="_blank"}]               |           TBA           |         TBA         |     11/29    |
+|  11/29  |          The Law of Large Numbers         |               -               |           -           |         [[zip](topics/20221129/ma-mth461a-20221129.zip){target="_blank"}]         |     11/29    |
 |   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
 |   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
 |   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
