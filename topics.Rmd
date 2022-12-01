@@ -50,9 +50,9 @@ The "Reading" column in the table below contains a number on which it refers to 
 |  11/22  |            Simulations of Random Variables Using R           |               -               |           -           |         [[zip](topics/20221122/ma-mth461a-20221122.zip){target="_blank"}]         |     11/22    |
 |   _-_   |          _Thanksgiving Vacation_          |               _-_               |           _-_           |         _-_         |      _-_     |
 |  11/29  |          The Law of Large Numbers         |               -               |           -           |         [[zip](topics/20221129/ma-mth461a-20221129.zip){target="_blank"}]         |     11/29    |
-|   12/1  |         The Central Limit Theorem         |               TBA               |           TBA           |         TBA         |     12/1     |
-|   12/6  |              Point Estimators             |               TBA               |           TBA           |         TBA         |     12/6     |
-|   12/8  |       Maximum Likelihood Estimation       |               TBA               |           TBA           |         TBA         |     12/8     |
+|   12/1  |         The Central Limit Theorem         |               -               |           -           |         [[zip](topics/20221201/ma-mth461a-20221201.zip){target="_blank"}]         |     12/1     |
+|   12/6  |              Maximum Likelihood Estimation             |               TBA               |           TBA           |         TBA         |     12/6     |
+|   12/8  |     Review         |               TBA               |           TBA           |         TBA         |     12/8     |
 |  **-**  |              **Module 2 Due**             |              **-**              |          **-**          |        **[[zip](modules/module-2/module-2-mth461-fall2022.zip){target="_blank"}]**        |   **12/15**   |
 
 <br>

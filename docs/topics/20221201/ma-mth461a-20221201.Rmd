@@ -1,0 +1,52 @@
+---
+title: '**Central Limit Theorem**'
+subtitle: "Mini-Assignment 2022-11-29 - MTH 461 - Fall 2022"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 461A - Fall 2022}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+    keep_tex: true
+urlcolor: blue
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * There are two ways you can write your answers, a: by handwriting (either physically or digitally), or b: by typing on a template document with file type options, which can be downloaded from the course website.
+ 
+ * If you had handwritten your answers/solutions on a physical paper, make sure to label it properly and please scan your document using a scanner app for convenience. Suggestions: (1) ["Tiny Scanner" for Android](https://play.google.com/store/apps/details?id=com.appxy.tinyscanner&hl=en_US&gl=US){target="_blank"} or (2) ["Scanner App" for iOS](https://apps.apple.com/us/app/scanner-app-scan-pdf-document/id595563753){target="_blank"}.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+  
+1. In a communication system each data packet consists of $1000$ bits. Due to the noise, each bit may be received in error with probability $0.1$. It is assumed bit errors occur independently. Let us define $X_i$ as the indicator random variable for the $i$th bit in the packet. That is, $X_i=1$ if the $i$th bit is received in error, and $X_i=0$ otherwise. Then the $X_i$'s are i.i.d. and $X_i \sim Bernoulli(p=0.1)$. Find the probability that there are more than $120$ errors in a certain data packet. 
+
+    Recall that for a Bernoulli random variabl $E[X] = p$ and $Var(X)=p(1-p)$.
+
+2. Suppose that in a population, the wait times at bus stops can be represented as an Exponential random variable with parameter $\lambda = 0.5$. This can be written as $X \sim Exponential(0.5)$.
+
+    a. What is the population mean? Recall that $E[X] = \frac{1}{\lambda}$ for an exponental random variable $X$.
+    b. Modify the `clt.R` script to simulate the exponential random variable, create a histogram, and draw a line that represent the population mean.
+    c. Simulate $N$ random samples where each sample have $k$ items from your simulations in (b), and compute the means of these samples. Plot your simulations. As you increase $N$ while $k$ is fixed, what happens to the mean of means? Explain in terms of the Central Limit Theorem.

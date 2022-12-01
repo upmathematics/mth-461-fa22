@@ -55,7 +55,7 @@ ggplotCoinTosses = function(n=30, p=.50) {
   # plot the results together
   plot1 = ggplot(trial1, aes(x=index,y=cum_mean)) +
     geom_line(colour = "blue") +
-    geom_abline(intercept=0.5,slope=0, color = 'red', size=.5) + ### <- modify this line   
+    geom_abline(intercept=0.50,slope=0, color = 'red', size=.5) + ### <- modify this line   
     theme(plot.title = element_text(size=rel(1.5)),
           panel.background = element_rect()) +
     labs(x = "n (number of tosses)", 
@@ -73,7 +73,7 @@ ggplotCoinTosses = function(n=30, p=.50) {
     
     ### modify the lines below line
     annotate("text",
-             label=paste("P(Heads) with Fair Coin = 0.50"), 
+             label=paste("P(Heads) = 0.50"), 
              y=(max_y - .80), 
              x=10^(log10(n)/2), colour="red")
   

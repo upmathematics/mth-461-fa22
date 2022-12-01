@@ -38,7 +38,7 @@ cat("Numerical Integration", "\t\t= ",numericalIntegral,"\n")
 # (3) Monte Carlo Integrator #
 ##############################
 
-maxSamples = 5000;
+maxSamples = 1000;
 
 xVals=runif(maxSamples,minX,maxX);
 yVals=runif(maxSamples,minY,maxY);
