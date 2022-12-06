@@ -1,6 +1,6 @@
 ---
-title: '**Central Limit Theorem**'
-subtitle: "Mini-Assignment 2022-12-01 - MTH 461 - Fall 2022"
+title: '**Maximum Likelihood Estimation**'
+subtitle: "Mini-Assignment 2022-12-06 - MTH 461 - Fall 2022"
 header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
@@ -41,10 +41,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
   
-1. In a communication system each data packet consists of $1000$ bits. Due to the noise, each bit may be received in error with probability $0.1$. It is assumed bit errors occur independently. Let us define $X_i$ as the indicator random variable for the $i$th bit in the packet. That is, $X_i=1$ if the $i$th bit is received in error, and $X_i=0$ otherwise. Then the $X_i$'s are i.i.d. and $X_i \sim Bernoulli(p=0.1)$. Find the probability that there are more than $120$ errors in a certain data packet. Recall that for a Bernoulli random variable, $E[X] = p$ and $Var(X)=p(1-p)$.
+1. Suppose $X_i \sim Exponential(\theta)$ and we have observed $(x_1,x_2,x_3,x_4) = (1.23,3.32,1.98,2.12)$.
 
-2. Suppose that in a population, the wait times at bus stops can be represented as an Exponential random variable with parameter $\lambda = 0.5$. This can be written as $X \sim Exponential(0.5)$.
+    a. Find the likelihood function.
+    b. Find the maximum likelihood estimate.
+    
+    Recall that the PDF of the Exponential random variable with parameter $\lambda$ is
+    $$f(x;\lambda) = \lambda e^{-\lambda x}.$$
 
-    a. What is the population mean? Recall that $E[X] = \frac{1}{\lambda}$ for an exponental random variable $X$.
-    b. Modify the `clt.R` script to simulate the exponential random variable, create a histogram, and draw a line that represent the population mean.
-    c. Simulate $N$ random samples where each sample have $k$ items from your simulations in (b), and compute the means of these samples. Plot your simulations. As you increase $N$ while $k$ is fixed, what happens to the mean of means? Explain in terms of the Central Limit Theorem.
+2. Suppose $X_i \sim Poisson(\theta)$ and we have observed $(x_1,x_2,x_3,x_4) = (2,3,3,5)$
+
+    a. Find the likelihood function.
+    b. Find the maximum likelihood estimate.
+    
+    Recall that the PMF of the Poisson random variable with parameter $\lambda$ is
+    $$f(x;\lambda) = \frac{\lambda^x e^{-\lambda}}{x!}.$$
+    
